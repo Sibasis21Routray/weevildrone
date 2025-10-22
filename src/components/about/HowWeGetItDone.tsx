@@ -1,13 +1,13 @@
 // HowWeGetItDone.tsx
 import { motion } from "framer-motion";
-import { ReactElement } from "react";
+import type { ReactElement } from "react";
 import {
   FaMapMarkedAlt,
   FaCogs,
   FaCheckCircle,
   FaRocket,
 } from "react-icons/fa";
-
+import type { Variants } from "framer-motion";
 
 interface ProcessCard {
   id: number;
@@ -59,7 +59,7 @@ const processCards: ProcessCard[] = [
 ];
 
 
-  const cardVariants = {
+  const cardVariants: Variants = {
     hidden: {
       opacity: 0,
       y: 50,

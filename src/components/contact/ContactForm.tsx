@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { FiMail, FiUser, FiMessageSquare } from "react-icons/fi";
+import type { Variants } from "framer-motion"; 
 
 interface FormData {
   name: string;
@@ -18,7 +19,7 @@ const ContactForm: React.FC = () => {
     message: "",
   });
 
-  const container = {
+  const container: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -29,7 +30,7 @@ const ContactForm: React.FC = () => {
     },
   };
 
-  const item = {
+  const item: Variants = {
     hidden: { opacity: 0, y: 20 },
     visible: {
       opacity: 1,

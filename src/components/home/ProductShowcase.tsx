@@ -83,7 +83,7 @@ const ProductShowcase = () => {
   ];
 
   const slideVariants = {
-    enter: (direction) => ({
+    enter: (direction:any) => ({
       x: direction > 0 ? 1200 : -1200,
       opacity: 0,
       rotateY: direction > 0 ? 60 : -60,
@@ -98,7 +98,7 @@ const ProductShowcase = () => {
       scale: 1,
       z: 0,
     },
-    exit: (direction) => ({
+    exit: (direction:any) => ({
       zIndex: 0,
       x: direction < 0 ? 1200 : -1200,
       opacity: 0,
@@ -109,11 +109,11 @@ const ProductShowcase = () => {
   };
 
   const swipeConfidenceThreshold = 10000;
-  const swipePower = (offset, velocity) => {
+  const swipePower = (offset:any, velocity:any) => {
     return Math.abs(offset) * velocity;
   };
 
-  const paginate = (newDirection) => {
+  const paginate = (newDirection:any) => {
     setDirection(newDirection);
     setCurrentIndex((prevIndex) => {
       let nextIndex = prevIndex + newDirection;
@@ -277,6 +277,7 @@ const ProductShowcase = () => {
                   dragConstraints={{ left: 0, right: 0 }}
                   dragElastic={0.8}
                   onDragEnd={(e, { offset, velocity }) => {
+                    console.log(e)
                     const swipe = swipePower(offset.x, velocity.x);
                     if (swipe < -swipeConfidenceThreshold) {
                       paginate(1);

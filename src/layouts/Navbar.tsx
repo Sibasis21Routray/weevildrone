@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link, useLocation } from "react-router-dom";
+import type { Variants } from "framer-motion";
 
 // Types
 interface NavItem {
@@ -42,7 +43,7 @@ const Navbar: React.FC<NavbarProps> = () => {
     setIsOpen(false);
   }, [location.pathname]);
 
-  const menuVariants = {
+  const menuVariants: Variants = {
     closed: {
       opacity: 0,
       height: 0,
@@ -61,7 +62,7 @@ const Navbar: React.FC<NavbarProps> = () => {
     },
   };
 
-  const itemVariants = {
+  const itemVariants: Variants = {
     closed: {
       opacity: 0,
       y: -20,

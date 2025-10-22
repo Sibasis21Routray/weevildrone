@@ -1,5 +1,6 @@
 import { useRef } from "react";
 import { motion } from "framer-motion";
+import type { Variants } from "framer-motion";
 
 function Hero() {
   const heroRef = useRef(null);
@@ -14,7 +15,7 @@ function Hero() {
     { number: 12, suffix: "hr", label: "Flight Time" },
   ];
 
-  const containerVariants = {
+  const containerVariants :Variants= {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -24,7 +25,7 @@ function Hero() {
     },
   };
 
-  const itemVariants = {
+  const itemVariants: Variants = {
     hidden: { y: 50, opacity: 0 },
     visible: {
       y: 0,
@@ -36,31 +37,8 @@ function Hero() {
     },
   };
 
-  // const ringVariants = {
-  //   initial: { scale: 0, opacity: 0 },
-  //   animate: (index: number) => ({
-  //     scale: 1 + index * 0.5,
-  //     opacity: [0.3, 0.1, 0.3],
-  //     transition: {
-  //       duration: 3,
-  //       delay: index * 0.5,
-  //       repeat: Infinity,
-  //       ease: "easeInOut",
-  //     },
-  //   }),
-  // };
 
-  const droneVariants = {
-    hidden: { opacity: 0, scale: 0.8 },
-    visible: {
-      opacity: 1,
-      scale: 1,
-      transition: {
-        duration: 1,
-        delay: 0.5,
-      },
-    },
-  };
+ 
 
   return (
     <div ref={heroRef} className="relative ">

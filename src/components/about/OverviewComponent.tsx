@@ -1,19 +1,17 @@
 import { motion } from "framer-motion";
 import {
   FaRocket,
-  FaEye,
-  FaBullseye,
-  FaHistory,
   FaLightbulb,
   FaLeaf,
   FaUserCheck,
   FaAward,
   FaCogs,
-  FaShieldAlt,
 } from "react-icons/fa";
+import type { Variants } from "framer-motion";
+
 
 const MissionValues = () => {
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -23,7 +21,7 @@ const MissionValues = () => {
     },
   };
 
-  const itemVariants = {
+  const itemVariants: Variants = {
     hidden: { opacity: 0, y: 30 },
     visible: {
       opacity: 1,
@@ -35,7 +33,7 @@ const MissionValues = () => {
     },
   };
 
-  const cardVariants = {
+  const cardVariants: Variants = {
     hidden: { opacity: 0, scale: 0.9 },
     visible: {
       opacity: 1,
@@ -55,30 +53,7 @@ const MissionValues = () => {
     },
   };
 
-  // Data for Vision, Mission & Story
-  const visionMissionData = [
-    {
-      id: 1,
-      icon: FaEye,
-      title: "Our Vision",
-      description:
-        "To innovate and manufacture with perfection and precision every thought a client.",
-    },
-    {
-      id: 2,
-      icon: FaBullseye,
-      title: "Our Mission",
-      description:
-        "To provide cutting-edge drone solutions that seemingly never existed.",
-    },
-    {
-      id: 3,
-      icon: FaHistory,
-      title: "Our Story",
-      description:
-        "Started in 2019 with a vision to redefine and extend the potential of unmanned aerial systems. Over the years, we have evolved into a trusted partner for industries across the world.",
-    },
-  ];
+  
 
   // Data for Core Values
   const coreValuesData = [

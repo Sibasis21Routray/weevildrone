@@ -1,8 +1,7 @@
 import { motion } from "framer-motion";
 import { GiTargetPoster } from "react-icons/gi";
-import { FaCogs, FaFire, FaFlag, FaHandshake, FaSeedling } from "react-icons/fa";
+import {  FaHandshake } from "react-icons/fa";
 import { FaFontAwesomeFlag } from "react-icons/fa";
-import { LiaIndustrySolid } from "react-icons/lia";
 import { FaGraduationCap } from "react-icons/fa6";
 
 

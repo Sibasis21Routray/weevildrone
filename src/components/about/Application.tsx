@@ -5,6 +5,8 @@ import {
   FaCamera,
   FaChartLine,
 } from "react-icons/fa";
+import type { Variants } from "framer-motion";
+
 
 const Application = () => {
   const containerVariants = {
@@ -17,7 +19,7 @@ const Application = () => {
     },
   };
 
-  const itemVariants = {
+  const itemVariants: Variants = {
     hidden: { opacity: 0, y: 30 },
     visible: {
       opacity: 1,
@@ -29,7 +31,7 @@ const Application = () => {
     },
   };
 
-  const imageVariants = {
+  const imageVariants: Variants = {
     hidden: { opacity: 0, scale: 0.9 },
     visible: {
       opacity: 1,

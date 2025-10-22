@@ -5,8 +5,6 @@ import {
   FaInstagram,
   FaTwitter,
   FaLinkedin,
-  FaPlay,
-  FaExternalLinkAlt,
 } from "react-icons/fa";
 
 const Footer = () => {
@@ -70,7 +68,7 @@ const Footer = () => {
     "Emergency Response",
   ];
 
-  const handleSubscribe = (e) => {
+  const handleSubscribe = (e:any) => {
     e.preventDefault();
     // Handle subscription logic here
     console.log("Subscribed:", email);
@@ -193,7 +191,7 @@ const Footer = () => {
               Our Services
             </h4>
             <ul className="space-y-3">
-              {serviceLinks.map((service, index) => (
+              {serviceLinks.map((service) => (
                 <motion.li
                   key={service}
                   whileHover={{ x: 5 }}
