@@ -14,10 +14,10 @@ function Hero() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
   useEffect(() => {
-    const handleMouseMove = (e:any) => {
+    const handleMouseMove = (e: any) => {
       setMousePosition({
-        x: (e.clientX / window.innerWidth - 0.5) * 10,
-        y: (e.clientY / window.innerHeight - 0.5) * 10,
+        x: (e.clientX / window.innerWidth - 0.5) * 20,
+        y: (e.clientY / window.innerHeight - 0.5) * -20,
       });
     };
 
@@ -38,22 +38,22 @@ function Hero() {
         }}
       />
 
-      {/* Video Background - Fixed */}
-      <div className="absolute inset-0 ml-[200px]">
+      {/* Video Background - Fully Responsive */}
+      <div className="absolute inset-0">
         <video
-          src="https://videos.pexels.com/video-files/10240606/10240606-uhd_2560_1440_24fps.mp4"
-          className="w-full h-full object-contain opacity-80"
+          src="https://www.pexels.com/download/video/3946074/"
+          className="w-full h-full object-cover opacity-60 lg:opacity-80"
           autoPlay
           loop
           muted
           playsInline
         />
-        {/* Radial gradient to focus on center drone */}
+        {/* Radial gradient overlay */}
         <div
-          className="absolute inset-0 bg-radial-gradient"
+          className="absolute inset-0"
           style={{
             background:
-              "radial-gradient(circle at center, transparent 30%, rgba(0,0,0,0.7) 70%, rgba(0,0,0,0.95) 100%)",
+              "radial-gradient(circle at center, transparent 20%, rgba(0,0,0,0.5) 60%, rgba(0,0,0,0.9) 100%)",
           }}
         />
       </div>
@@ -87,50 +87,50 @@ function Hero() {
         style={{ opacity, scale }}
       >
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
             {/* Left Content */}
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 1, delay: 0.3 }}
-              className="space-y-6 lg:space-y-8"
+              className="mt-[20vh] space-y-12"
             >
-              {/* Main Heading with 3D Tilt Effect */}
-              <div className="space-y-4">
+              {/* Main Heading with True 3D Effect */}
+              <div className="space-y-4 " style={{ perspective: "1000px" }}>
                 <motion.div
                   style={{
-                    rotateX: mousePosition.y,
                     rotateY: mousePosition.x,
+                    rotateX: mousePosition.y,
                     transformStyle: "preserve-3d",
                   }}
-                  transition={{ type: "spring", stiffness: 100, damping: 10 }}
-                  className="perspective-1000"
+                  transition={{ type: "spring", stiffness: 150, damping: 15 }}
                 >
                   <motion.h1
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.6 }}
-                    className="text-4xl sm:text-5xl lg:text-7xl xl:text-7xl font-black tracking-tighter leading-none text-left"
+                    className="flex justify-center text-4xl sm:text-5xl lg:text-7xl xl:text-7xl font-black tracking-tighter leading-none text-left"
+                    style={{ transformStyle: "preserve-3d" }}
                   >
-                    <span className="text-white block drop-shadow-[4px_4px_0px_rgba(0,0,0,0.6)] relative">
-                      The Future
-                      <span className="absolute inset-0 translate-z-[-10px] text-transparent bg-gradient-to-r from-gray-800 to-black opacity-60 blur-sm">
-                        The Future
-                      </span>
+                    <span
+                      className="text-white block drop-shadow-[4px_4px_0px_rgba(0,0,0,0.6)] relative"
+                      style={{ transform: "translateZ(40px)" }}
+                    >
+                      The Future Takes
                     </span>
-                    <span className="text-white block drop-shadow-[4px_4px_0px_rgba(0,0,0,0.6)] relative">
-                      Takes
-                      <span className="absolute inset-0 translate-z-[-10px] text-transparent bg-gradient-to-r from-gray-800 to-black opacity-60 blur-sm">
-                        Takes
-                      </span>
-                    </span>
-                    <span className="relative text-transparent bg-gradient-to-r from-orange-400 via-orange-500 to-red-600 bg-clip-text block drop-shadow-[4px_4px_0px_rgba(0,0,0,0.6)]">
+                    <span
+                      className="relative text-transparent bg-gradient-to-r from-orange-400 via-orange-500 to-red-600 bg-clip-text block drop-shadow-[4px_4px_0px_rgba(0,0,0,0.6)]"
+                      style={{
+                        transform: "translateZ(60px)",
+                        transformStyle: "preserve-3d",
+                      }}
+                    >
                       Flight
-                      {/* 3D Layer behind */}
-                      <span className="absolute inset-0 translate-z-[-15px] text-transparent bg-gradient-to-r from-orange-600 via-red-700 to-red-900 bg-clip-text blur-sm opacity-60">
-                        Flight
-                      </span>
-                      <span className="absolute inset-0 translate-z-[-25px] text-transparent bg-gradient-to-r from-red-800 to-black bg-clip-text blur-md opacity-40">
+                      {/* 3D depth layers */}
+                      <span
+                        className="absolute inset-0 text-transparent bg-gradient-to-r from-orange-600 via-red-700 to-red-900 bg-clip-text blur-sm opacity-60"
+                        style={{ transform: "translateZ(-20px)" }}
+                      >
                         Flight
                       </span>
                     </span>
@@ -162,7 +162,7 @@ function Hero() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 1.2 }}
-                className="grid grid-cols-3 gap-4 sm:gap-6 pt-4"
+                className="grid grid-cols-3 gap-4 sm:gap-6 pt-4 mt-[5vh]"
               >
                 <div className="space-y-1">
                   <div className="text-2xl sm:text-3xl font-black text-white">

@@ -17,10 +17,10 @@ const ContactUs = () => {
           viewport={{ once: true }}
           className="order-2"
         >
-          <div className="lg:mt-[10vh] ">
+          <div className="] ">
             <img
-              src="/contact/contactus.png"
-              className="object-fill h-[60vh]"
+              src="https://static.vecteezy.com/system/resources/previews/017/055/715/non_2x/contact-us-button-web-banner-templates-illustration-free-vector.jpg"
+              className="object-cover h-[60vh]"
             />
           </div>
 
@@ -58,8 +58,8 @@ const ContactUs = () => {
                   <Mail className="h-6 w-6 " />
                 </div>
                 <div className="flex-1">
-                  <a href="mailto:connect@shankhya.ai" className="text-lg ">
-                    connect@shankhya.ai
+                  <a href="mailto:connect@Weevildrone.ai" className="text-lg ">
+                    connect@Weevildrone.ai
                   </a>
                 </div>
               </div>

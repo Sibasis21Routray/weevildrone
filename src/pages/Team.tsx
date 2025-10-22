@@ -1,8 +1,11 @@
+import OurTeam from "../components/team/OurTeam"
 
 
 function Team() {
   return (
-    <div>Team</div>
+    <div>
+      <OurTeam/>
+    </div>
   )
 }
 
