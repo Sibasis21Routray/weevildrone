@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+#root {
+  text-align: center;
+  overflow-y: hidden;
+}
+
+
+
+@theme {
+  --color-primary: #FFFFFF;  
+  --color-secondary: #333333; 
+  --color-tertiary: #FF6900; 
+}
+
+ .perspective-1000 {
+          perspective: 1000px;
+        }
+        .translate-z-[-100px] {
+          transform: translateZ(-100px);
+        }
+        .translate-z-[-150px] {
+          transform: translateZ(-100px);
+        }
+        .translate-z-[-250px] {
+          transform: translateZ(-100px);
+        }
