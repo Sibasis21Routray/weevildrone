@@ -21,12 +21,12 @@ const Navbar: React.FC<NavbarProps> = () => {
   const location = useLocation();
 
   const navItems: NavItem[] = [
-    { id: "home", label: "Home", path: "/" },
+    // { id: "home", label: "Home", path: "/" },
     { id: "about", label: "About", path: "/about" },
     { id: "ourservices", label: "Services", path: "/ourservices" },
-    { id: "contact", label: "Contact", path: "/contactus" },
     { id: "gallery", label: "Gallery", path: "/gallery" },
     { id: "team", label: "Team", path: "/team" },
+    { id: "contact", label: "Contact", path: "/contactus" },
   ];
 
   useEffect(() => {

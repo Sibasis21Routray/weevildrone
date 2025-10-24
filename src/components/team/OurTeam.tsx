@@ -1,8 +1,23 @@
 import { motion } from "framer-motion";
 import { FaLinkedin, FaEnvelope } from "react-icons/fa";
 import type { Variants } from "framer-motion";
+import { useState, useEffect } from "react";
 
 const OurTeam = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  // Force animation to trigger on component mount
+  useEffect(() => {
+    setIsVisible(true);
+
+    // Additional trigger to ensure animations play
+    const timer = setTimeout(() => {
+      setIsVisible(true);
+    }, 100);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   const teamMembers = [
     {
       id: 1,
@@ -83,8 +98,7 @@ const OurTeam = () => {
     },
   };
 
- 
-  const cardVariants:Variants = {
+  const cardVariants: Variants = {
     hidden: { opacity: 0, scale: 0.9 },
     visible: {
       opacity: 1,
@@ -122,9 +136,8 @@ const OurTeam = () => {
           <motion.div
             className="text-center"
             initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 1, y: 0 }} // Fallback to visible
             transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
           >
             <h2 className="text-4xl md:text-5xl font-bold text-secondary mb-4">
               Meet The Team
@@ -139,39 +152,34 @@ const OurTeam = () => {
 
       {/* Cards Grid */}
       <div className="relative -mt-60">
-        {" "}
-        {/* Negative margin to pull cards up */}
         <div className="max-w-7xl mx-auto px-4">
           <motion.div
             variants={containerVariants}
             initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
+            animate={isVisible ? "visible" : "hidden"}
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
           >
             {teamMembers.map((member) => (
               <motion.div
                 key={member.id}
                 variants={cardVariants}
-                
-                className="bg-white rounded-2xl shadow-lg overflow-hidden group"
+                whileHover="hover"
+                className="bg-white rounded-2xl shadow-lg overflow-hidden group border-2 border-tertiary/20 hover:border-tertiary/40 transition-colors duration-300"
               >
                 {/* Image Section */}
-                <div className="relative h-64 overflow-hidden">
-                  <img
-                    src={member.image}
-                    alt={member.name}
-                    className="w-full h-full object-fill transition-transform duration-500 "
-                  />
-
-                  {/* Social Links */}
-                  <div className="absolute top-4 right-4 flex space-x-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <button className="w-8 h-8 bg-tertiary rounded-full flex items-center justify-center text-white hover:bg-orange-600 transition-colors duration-300">
-                      <FaLinkedin className="w-4 h-4" />
-                    </button>
-                    <button className="w-8 h-8 bg-tertiary rounded-full flex items-center justify-center text-white hover:bg-orange-600 transition-colors duration-300">
-                      <FaEnvelope className="w-4 h-4" />
-                    </button>
+                <div className="relative mt-5">
+                  {/* Circular Photo Container */}
+                  <div className="relative w-48 h-48 mx-auto rounded-full overflow-hidden border-4 border-white shadow-lg">
+                    <img
+                      src={member.image}
+                      alt={member.name}
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                      onError={(e) => {
+                        // Fallback for broken images
+                        e.currentTarget.src =
+                          "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Ccircle cx='100' cy='100' r='100' fill='%23f3f4f6'/%3E%3Ctext x='100' y='110' text-anchor='middle' font-family='Arial' font-size='16' fill='%236b7280'%3EPhoto%3C/text%3E%3C/svg%3E";
+                      }}
+                    />
                   </div>
                 </div>
 
@@ -185,6 +193,7 @@ const OurTeam = () => {
                     <p className="text-tertiary font-semibold text-sm mb-1">
                       {member.position}
                     </p>
+                    <p className="text-gray-500 text-xs">{member.company}</p>
                   </div>
 
                   {/* Description */}
@@ -220,9 +229,6 @@ const OurTeam = () => {
                     </div>
                   </div>
                 </div>
-
-                {/* Accent Border */}
-                <div className="h-1 bg-gradient-to-r from-tertiary to-orange-400"></div>
               </motion.div>
             ))}
           </motion.div>
@@ -230,14 +236,13 @@ const OurTeam = () => {
       </div>
 
       {/* Rest of the content */}
-      <div className="max-w-7xl mx-auto px-4 pb-16">
+      <div className="max-w-7xl mx-auto px-4 pb-1">
         {/* Team Stats */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          viewport={{ once: true }}
-          className="mt-32 bg-white rounded-2xl shadow-lg p-8" // Increased mt to account for overlap
+          className="mt-32 bg-white rounded-2xl shadow-lg p-8"
         >
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
@@ -262,9 +267,8 @@ const OurTeam = () => {
         {/* CTA Section */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.6 }}
-          viewport={{ once: true }}
           className="text-center mt-12"
         >
           <button className="bg-tertiary text-white px-8 py-3 rounded-full font-semibold hover:bg-orange-600 transition-colors duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">

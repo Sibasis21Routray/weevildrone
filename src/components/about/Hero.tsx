@@ -52,7 +52,7 @@ function Hero() {
           <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3')] bg-cover bg-center opacity-30"></div>
         </div>
 
-        <div className="relative container mx-auto px-7 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+        <div className="relative container mx-auto px-7 grid grid-cols-1 lg:grid-cols-2  items-center">
           {/* Content */}
           <motion.div
             ref={textRef}
@@ -80,9 +80,15 @@ function Hero() {
             </motion.div>
 
             {/* Stats */}
-            <motion.div variants={itemVariants} className="stats-section flex">
+            <motion.div
+              variants={itemVariants}
+              className="stats-section grid grid-cols-2 gap-4 sm:flex sm:gap-0 mb-10 lg:mb-0 "
+            >
               {stats.map((stat, index) => (
-                <div key={index} className="text-center w-full pl-6 pr-6">
+                <div
+                  key={index}
+                  className="text-center w-full pl-4 pr-4 sm:pl-6 sm:pr-6"
+                >
                   <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-1 sm:mb-2">
                     <span className="stat-number">{stat.number}</span>
                     <span className="text-[#FF6900]">{stat.suffix}</span>
@@ -108,7 +114,6 @@ function Hero() {
                 alt="Weevil Drone"
                 className="w-full  object-contain drop-shadow-2xl "
               />
-              
             </div>
           </motion.div>
         </div>
