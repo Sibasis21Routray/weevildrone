@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { FaDownLong } from "react-icons/fa6";
+// import { FaDownLong } from "react-icons/fa6";
 
 interface HeroProps {
   name: string;
@@ -11,7 +11,7 @@ interface HeroProps {
 }
 
 const Hero: React.FC<HeroProps> = ({
-  name,
+  
   title,
   description,
   image,

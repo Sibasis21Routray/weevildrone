@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import {
   FaMap,
   FaSatellite,
-  FaCogs,
+  
   FaIndustry,
   FaTree,
   FaTruck,

@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { FaLinkedin, FaEnvelope } from "react-icons/fa";
+
 import type { Variants } from "framer-motion";
 import { useState, useEffect } from "react";
 

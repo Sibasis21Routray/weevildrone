@@ -207,7 +207,7 @@ export const ImageGallery: React.FC<GalleryProps> = ({
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3 }}
           >
-            {categories.map((category) => (
+            {categories.map((category:any) => (
               <motion.button
                 key={category}
                 className={`px-6 py-2 rounded-full font-medium capitalize transition-all ${

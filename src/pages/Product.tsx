@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import Hero from "../components/products/Hero";
-import ProductDetails from "../components/products/ProductDetails";
+// import ProductDetails from "../components/products/ProductDetails";
 import ProductGallery from "../components/products/ProductGallery";
 import { products } from "../data/ProductDetails";
 
@@ -25,12 +25,12 @@ if (!product) return <div>Product not found</div>;
       />
       <ProductGallery photos={product.gallery} videos={product.videos} />
 
-      <ProductDetails
+      {/* <ProductDetails
         keyFeatures={product.keyFeatures}
         generalSpecifications={product.generalSpecifications}
         electricPowerSystem={product.electricPowerSystem}
         communicationAndPerformance={product.communicationAndPerformance}
-      />
+      /> */}
     </div>
   );
 }
