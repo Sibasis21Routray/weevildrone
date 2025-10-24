@@ -39,7 +39,7 @@ function Hero() {
       />
 
       {/* Video Background - Fully Responsive */}
-      <div className="absolute inset-0">
+      <div className="absolute inset-0 -mt-[50vh]">
         <video
           src="https://www.pexels.com/download/video/3946074/"
           className="w-full h-full object-cover opacity-60 lg:opacity-80"
@@ -73,7 +73,7 @@ function Hero() {
 
       {/* Gradient Accents */}
       <motion.div
-        className="absolute top-0 left-1/4 w-96 h-96 bg-gradient-to-br from-orange-500/20 to-transparent rounded-full blur-3xl"
+        className="absolute top-0 left-1/4 w-96 h-96 rounded-full blur-3xl"
         animate={{
           scale: [1, 1.2, 1],
           opacity: [0.3, 0.5, 0.3],
@@ -83,20 +83,23 @@ function Hero() {
 
       {/* Main Content - Split Layout */}
       <motion.div
-        className="absolute inset-0 flex items-center z-20"
+        className="absolute inset-0 flex items-start z-20 mt-10"
         style={{ opacity, scale }}
       >
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
+        <div className="container  ">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start m-2">
             {/* Left Content */}
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 1, delay: 0.3 }}
-              className="mt-[20vh] space-y-12"
+              className="sm:mt-0 lg:mt-[10vh]  space-y-12"
             >
               {/* Main Heading with True 3D Effect */}
-              <div className="space-y-4 " style={{ perspective: "1000px" }}>
+              <div
+                className="space-y-4  w-screen mr-12 "
+                style={{ perspective: "1000px" }}
+              >
                 <motion.div
                   style={{
                     rotateY: mousePosition.x,
@@ -109,17 +112,17 @@ function Hero() {
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.6 }}
-                    className="flex justify-center text-4xl sm:text-5xl lg:text-7xl xl:text-7xl font-black tracking-tighter leading-none text-left"
+                    className="flex flex-col gap-5 justify-center text-4xl sm:text-5xl lg:text-7xl xl:text-7xl font-black tracking-tighter leading-none text-center "
                     style={{ transformStyle: "preserve-3d" }}
                   >
                     <span
                       className="text-white block drop-shadow-[4px_4px_0px_rgba(0,0,0,0.6)] relative"
                       style={{ transform: "translateZ(40px)" }}
                     >
-                      The Future Takes
+                      Engineering the Future of
                     </span>
                     <span
-                      className="relative text-transparent bg-gradient-to-r from-orange-400 via-orange-500 to-red-600 bg-clip-text block drop-shadow-[4px_4px_0px_rgba(0,0,0,0.6)]"
+                      className=" relative text-transparent bg-gradient-to-r from-orange-400 via-orange-500 to-red-600 bg-clip-text block drop-shadow-[4px_4px_0px_rgba(0,0,0,0.6)]"
                       style={{
                         transform: "translateZ(60px)",
                         transformStyle: "preserve-3d",
@@ -137,12 +140,12 @@ function Hero() {
                   </motion.h1>
                 </motion.div>
 
-                <motion.div
+                {/* <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.8 }}
                   className="w-24 h-1 bg-gradient-to-r from-orange-500 to-red-600 rounded-full shadow-[4px_4px_0px_rgba(0,0,0,0.5)]"
-                />
+                /> */}
               </div>
 
               {/* Description */}
@@ -150,11 +153,13 @@ function Hero() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 1 }}
-                className="text-white/60 text-base sm:text-lg lg:text-xl leading-tight max-w-md text-left"
+                className="text-white/60 text-base sm:text-lg lg:text-xl leading-tight  text-left m-2"
               >
-                Precision-engineered aerial systems combining cutting-edge
-                autonomy with unparalleled performance. Experience flight
-                redefined.
+                At Weevils Drones, we design, manufacture, and deploy advanced
+                drones that redefine operational excellence. We empower
+                businesses across industries and a multitude of platforms, with
+                cutting edge technology to achieve efficiency, precision, and
+                sustainability like never before.
               </motion.p>
 
               {/* Stats */}

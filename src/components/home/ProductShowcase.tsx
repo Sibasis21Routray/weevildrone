@@ -1,86 +1,14 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
 
+import {products} from "../../data/ProductDetails"
+import { useNavigate } from "react-router-dom";
+
 const ProductShowcase = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [direction, setDirection] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
-
-  const products = [
-    {
-      id: 1,
-      name: "Aero-Defender X1",
-      category: "Defense Series",
-      description:
-        "Advanced surveillance drone with AI-powered tracking and real-time data transmission.",
-      specs: ["8K Camera", "120min Flight", "50km Range", "AI Tracking"],
-      image: "/drons/3.png",
-      color: "from-yellow-500 to-orange-600",
-      accent: "bg-yellow-500",
-    },
-    {
-      id: 2,
-      name: "Agri-Spray Pro",
-      category: "Agriculture Series",
-      description:
-        "Precision agriculture drone for efficient crop monitoring and spraying",
-      specs: ["20L Tank", "GPS Mapping", "Auto Spray", "Weather Resistant"],
-      image: "/drons/1.png",
-      color: "from-yellow-500 to-orange-600",
-      accent: "bg-yellow-500",
-    },
-    {
-      id: 3,
-      name: "Fire-Rescue HX",
-      category: "Emergency Series",
-      description:
-        "Firefighting drone with thermal imaging and emergency payload delivery",
-      specs: [
-        "Thermal Camera",
-        "10kg Payload",
-        "Water Resistant",
-        "Rescue Hook",
-      ],
-      image: "/drons/2.png",
-      color: "from-yellow-500 to-orange-600",
-      accent: "bg-yellow-500",
-    },
-    {
-      id: 4,
-      name: "Survey-Map Elite",
-      category: "Mapping Series",
-      description:
-        "High-precision mapping and surveying drone for industrial applications",
-      specs: ["LiDAR Sensor", "CMOS Camera", "3D Mapping", "RTK GPS"],
-      image: "/drons/varchas.png",
-      color: "from-yellow-500 to-orange-600",
-      accent: "bg-yellow-500",
-    },
-    {
-      id: 5,
-      name: "Nano-Scout Mini",
-      category: "Compact Series",
-      description:
-        "Ultra-compact drone for indoor inspection and confined space operations",
-      specs: ["250g Weight", "Obstacle Avoid", "30min Flight", "4K Streaming"],
-      image:
-        "https://weevildrone.co.in/wp-content/uploads/2025/08/Add-a-heading-38.png",
-      color: "from-yellow-500 to-orange-600",
-      accent: "bg-yellow-500",
-    },
-    {
-      id: 6,
-      name: "Cargo-Lift Max",
-      category: "Logistics Series",
-      description:
-        "Heavy-lift cargo drone for industrial transport and delivery",
-      specs: ["25kg Capacity", "Dual GPS", "Auto Landing", "Long Range"],
-      image:
-        "https://weevildrone.co.in/wp-content/uploads/2025/08/Add-a-heading-38.png",
-      color: "from-yellow-500 to-orange-600",
-      accent: "bg-yellow-500",
-    },
-  ];
+  const navigate = useNavigate();
 
   const slideVariants = {
     enter: (direction:any) => ({
@@ -113,14 +41,13 @@ const ProductShowcase = () => {
     return Math.abs(offset) * velocity;
   };
 
-  const paginate = (newDirection:any) => {
+  const paginate = (newDirection: any) => {
+    let nextIndex = currentIndex + newDirection;
+    if (nextIndex < 0) nextIndex = products.length - 1;
+    if (nextIndex >= products.length) nextIndex = 0;
+
     setDirection(newDirection);
-    setCurrentIndex((prevIndex) => {
-      let nextIndex = prevIndex + newDirection;
-      if (nextIndex < 0) nextIndex = products.length - 1;
-      if (nextIndex >= products.length) nextIndex = 0;
-      return nextIndex;
-    });
+    setCurrentIndex(nextIndex);
   };
 
   useEffect(() => {
@@ -192,7 +119,7 @@ const ProductShowcase = () => {
               </div>
             </motion.div>
 
-            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-light text-secondary tracking-tight mb-6">
+            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-light text-secondary tracking-tight mb-6 ">
               Advanced
               <span className="font-medium bg-gradient-to-r from-tertiary to-orange-600 bg-clip-text text-transparent">
                 {" "}
@@ -208,7 +135,7 @@ const ProductShowcase = () => {
 
           {/* 3D Slider - Optimized Height */}
           <div
-            className="relative flex-1 max-h-[500px] sm:max-h-[550px] lg:max-h-[600px] mt-[15vh]"
+            className="relative flex-1 max-h-[500px] sm:max-h-[550px] lg:max-h-[600px] mt-[23vh]"
             style={{ perspective: "2000px" }}
           >
             {/* Side Preview - Previous */}
@@ -255,7 +182,7 @@ const ProductShowcase = () => {
 
             {/* Main Center Card */}
             <div
-              className="absolute inset-0 flex items-center justify-center px-4 lg:px-32"
+              className="absolute inset-0 flex items-center justify-center px-4 lg:px-32 text-left"
               style={{ perspective: "2000px" }}
             >
               <AnimatePresence initial={false} custom={direction} mode="wait">
@@ -277,7 +204,7 @@ const ProductShowcase = () => {
                   dragConstraints={{ left: 0, right: 0 }}
                   dragElastic={0.8}
                   onDragEnd={(e, { offset, velocity }) => {
-                    console.log(e)
+                    console.log(e);
                     const swipe = swipePower(offset.x, velocity.x);
                     if (swipe < -swipeConfidenceThreshold) {
                       paginate(1);
@@ -360,6 +287,7 @@ const ProductShowcase = () => {
                           </div>
 
                           <motion.button
+                            onClick={() => { navigate(products[currentIndex].url);  console.log(">>>>>>",products[currentIndex].url);}}
                             whileHover={{
                               scale: 1.03,
                               boxShadow: "0 20px 40px rgba(255, 105, 0, 0.3)",
@@ -392,9 +320,9 @@ const ProductShowcase = () => {
           </div>
         </div>
         {/* Compact Navigation */}
-        <div className=" flex items-end justify-center gap-4 sm:gap-6 mt-[30vh] ">
+        <div className=" flex items-end justify-center gap-4 sm:gap-6 mt-[35vh] md:mt-[30vh] ">
           <motion.button
-            whileHover={{ scale: 1.1, rotate: -90 }}
+            whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
             onClick={() => paginate(-1)}
             className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-secondary/5 backdrop-blur-md border border-secondary/10 flex items-center justify-center hover:bg-tertiary transition-all duration-300 group"
@@ -446,7 +374,7 @@ const ProductShowcase = () => {
           </div>
 
           <motion.button
-            whileHover={{ scale: 1.1, rotate: 90 }}
+            whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
             onClick={() => paginate(1)}
             className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-secondary/5 backdrop-blur-md border border-secondary/10 flex items-center justify-center hover:bg-tertiary transition-all duration-300 group"
