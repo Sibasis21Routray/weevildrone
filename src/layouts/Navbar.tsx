@@ -21,7 +21,6 @@ const Navbar: React.FC<NavbarProps> = () => {
   const location = useLocation();
 
   const navItems: NavItem[] = [
-    // { id: "home", label: "Home", path: "/" },
     { id: "about", label: "About", path: "/about" },
     { id: "ourservices", label: "Services", path: "/ourservices" },
     { id: "gallery", label: "Gallery", path: "/gallery" },
@@ -31,10 +30,13 @@ const Navbar: React.FC<NavbarProps> = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
+      setIsScrolled(window.scrollY > 10);
     };
 
     window.addEventListener("scroll", handleScroll);
+    // Set initial state
+    handleScroll();
+    
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -65,7 +67,7 @@ const Navbar: React.FC<NavbarProps> = () => {
   const itemVariants: Variants = {
     closed: {
       opacity: 0,
-      y: -20,
+      y: -10,
       transition: {
         duration: 0.2,
       },
@@ -90,15 +92,15 @@ const Navbar: React.FC<NavbarProps> = () => {
     <motion.nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-primary shadow-lg backdrop-blur-md bg-opacity-95"
-          : "bg-transparent"
+          ? "bg-white shadow-lg backdrop-blur-md bg-opacity-95 "
+          : "bg-white bg-opacity-90 backdrop-blur-sm"
       }`}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center py-4">
+        <div className="flex justify-between items-center py-3 md:py-4">
           {/* Logo */}
           <motion.div
             className="flex items-center space-x-2"
@@ -106,17 +108,16 @@ const Navbar: React.FC<NavbarProps> = () => {
             whileTap={{ scale: 0.95 }}
           >
             <Link to="/" className="flex items-center space-x-2 no-underline">
-             
-                <img
-                  src="https://weevildrone.co.in/wp-content/uploads/2025/09/cropped-WhatsApp-Image-2025-08-27-at-1.11.53-PM.jpeg"
-                  alt="Logo"
-                  className="h-8 w-auto"
-                />
+              <img
+                src="https://weevildrone.co.in/wp-content/uploads/2025/09/cropped-WhatsApp-Image-2025-08-27-at-1.11.53-PM.jpeg"
+                alt="Logo"
+                className="h-8 w-auto md:h-10"
+              />
             </Link>
           </motion.div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-3 lg:space-x-4">
             {navItems.map((item, index) => (
               <motion.div
                 key={item.id}
@@ -131,16 +132,16 @@ const Navbar: React.FC<NavbarProps> = () => {
               >
                 <Link
                   to={item.path}
-                  className={`font-medium transition-colors duration-200 relative ${
+                  className={`font-medium text-sm lg:text-base transition-colors duration-200 relative px-2 py-1 ${
                     isActivePath(item.path)
-                      ? "text-tertiary"
-                      : "text-secondary hover:text-tertiary"
+                      ? "text-[#FF6900] font-semibold"
+                      : "text-gray-700 hover:text-[#FF6900]"
                   }`}
                 >
                   {item.label}
                   {isActivePath(item.path) && (
                     <motion.div
-                      className="absolute bottom-0 left-0 w-full h-0.5 bg-tertiary"
+                      className="absolute bottom-0 left-0 w-full h-0.5 bg-[#FF6900]"
                       layoutId="activeIndicator"
                       transition={{ duration: 0.3 }}
                     />
@@ -148,58 +149,45 @@ const Navbar: React.FC<NavbarProps> = () => {
                 </Link>
                 {!isActivePath(item.path) && (
                   <motion.div
-                    className="absolute bottom-0 left-0 w-0 h-0.5 bg-tertiary"
+                    className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#FF6900]"
                     whileHover={{ width: "100%" }}
                     transition={{ duration: 0.3 }}
                   />
                 )}
               </motion.div>
             ))}
-
-            {/* CTA Button */}
-            {/* <motion.button
-              className="bg-tertiary text-primary px-6 py-2 rounded-full font-medium hover:bg-opacity-90 transition-all duration-200 shadow-lg"
-              whileHover={{
-                scale: 1.05,
-                boxShadow: "0 10px 25px -5px rgba(255, 105, 0, 0.4)",
-              }}
-              whileTap={{ scale: 0.95 }}
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{
-                duration: 0.5,
-                delay: 0.5,
-                ease: "easeOut",
-              }}
-            >
-              Get Started
-            </motion.button> */}
           </div>
 
           {/* Mobile Menu Button */}
           <motion.button
-            className="md:hidden flex flex-col items-center justify-center w-8 h-8 space-y-1.5"
+            className="md:hidden flex flex-col items-center justify-center w-8 h-8 relative"
             onClick={() => setIsOpen(!isOpen)}
             whileTap={{ scale: 0.9 }}
             aria-label="Toggle menu"
           >
             <motion.span
-              className={`w-6 h-0.5 bg-secondary block transition-all ${
-                isOpen ? "rotate-45 translate-y-2" : ""
+              className={`w-6 h-0.5 bg-gray-700 block transition-all ${
+                isOpen ? "rotate-45 translate-y-1" : ""
               }`}
-              animate={{ rotate: isOpen ? 45 : 0, y: isOpen ? 2 : 0 }}
+              animate={{ 
+                rotate: isOpen ? 45 : 0, 
+                y: isOpen ? 1 : 0 
+              }}
             />
             <motion.span
-              className={`w-6 h-0.5 bg-secondary block transition-all ${
+              className={`w-6 h-0.5 bg-gray-700 block transition-all mt-1.5 ${
                 isOpen ? "opacity-0" : "opacity-100"
               }`}
               animate={{ opacity: isOpen ? 0 : 1 }}
             />
             <motion.span
-              className={`w-6 h-0.5 bg-secondary block transition-all ${
-                isOpen ? "-rotate-45 -translate-y-2" : ""
+              className={`w-6 h-0.5 bg-gray-700 block transition-all mt-1.5 ${
+                isOpen ? "-rotate-45 -translate-y-1" : ""
               }`}
-              animate={{ rotate: isOpen ? -45 : 0, y: isOpen ? -2 : 0 }}
+              animate={{ 
+                rotate: isOpen ? -45 : 0, 
+                y: isOpen ? -1 : 0 
+              }}
             />
           </motion.button>
         </div>
@@ -208,13 +196,13 @@ const Navbar: React.FC<NavbarProps> = () => {
         <AnimatePresence>
           {isOpen && (
             <motion.div
-              className="md:hidden bg-primary border-t border-gray-200"
+              className="md:hidden bg-white border-t border-gray-200 shadow-lg"
               variants={menuVariants}
               initial="closed"
               animate="open"
               exit="closed"
             >
-              <div className="py-4 space-y-4">
+              <div className="py-3 space-y-1">
                 {navItems.map((item, index) => (
                   <motion.div
                     key={item.id}
@@ -226,10 +214,10 @@ const Navbar: React.FC<NavbarProps> = () => {
                   >
                     <Link
                       to={item.path}
-                      className={`block px-4 py-2 font-medium transition-colors duration-200 ${
+                      className={`block px-4 py-3 font-medium transition-all duration-200 border-l-4 ${
                         isActivePath(item.path)
-                          ? "text-tertiary bg-tertiary bg-opacity-10 rounded-md mx-2"
-                          : "text-secondary hover:text-tertiary hover:bg-gray-100 rounded-md mx-2"
+                          ? "text-[#FF6900] bg-orange-50 border-[#FF6900]"
+                          : "text-gray-700 hover:text-[#FF6900] hover:bg-gray-50 border-transparent hover:border-orange-200"
                       }`}
                       onClick={() => setIsOpen(false)}
                     >
@@ -237,17 +225,6 @@ const Navbar: React.FC<NavbarProps> = () => {
                     </Link>
                   </motion.div>
                 ))}
-                <motion.button
-                  className="w-full mx-4 bg-tertiary text-primary px-6 py-3 rounded-full font-medium hover:bg-opacity-90 transition-all duration-200"
-                  variants={itemVariants}
-                  initial="closed"
-                  animate="open"
-                  exit="closed"
-                  custom={navItems.length}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  Get Started
-                </motion.button>
               </div>
             </motion.div>
           )}

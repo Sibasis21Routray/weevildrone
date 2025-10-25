@@ -6,7 +6,7 @@ import Application from '../components/about/Application'
 
 function AboutUs() {
   return (
-    <div className=''>
+    <div className='overflow-hidden'>
       <Hero />
       <HowWeGetItDone />
       <Application/>

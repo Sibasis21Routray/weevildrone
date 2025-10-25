@@ -5,7 +5,7 @@ import { TrainingServices } from '../components/services/TrainingServices';
 
 function OurServices() {
   return (
-    <div>
+    <div className='overflow-hidden '>
       <Hero />
       {/* <ServiceStats /> */}
       <TrainingServices />

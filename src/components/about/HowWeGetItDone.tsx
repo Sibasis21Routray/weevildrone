@@ -24,7 +24,7 @@ const processCards: ProcessCard[] = [
     id: 1,
     icon: <FaMapMarkedAlt className="w-6 h-6" />,
     bgImage:
-      "https://cdn.pixabay.com/photo/2024/05/26/10/15/bird-8788491_1280.jpg",
+      "https://irp.cdn-website.com/381aca84/dms3rep/multi/Aerial+Drone+Photography+December+2023.jpg",
     title: "Aerial Mapping",
     description:
       "High-precision drone mapping services that provide accurate topographic data for construction, agriculture, and surveying projects.",
@@ -33,8 +33,8 @@ const processCards: ProcessCard[] = [
     id: 2,
     icon: <FaCogs className="w-6 h-6" />,
     bgImage:
-      "https://cdn.pixabay.com/photo/2024/05/26/10/15/bird-8788491_1280.jpg",
-    title: "Automated Flight Planning",
+      "https://flightapprentice.com/wp-content/uploads/2020/03/cross_country_header-1024x712.jpeg",
+    title: "Flight Planning",
     description:
       "Our intelligent software creates optimized drone flight paths for efficient and safe data collection in various environments.",
   },
@@ -42,7 +42,7 @@ const processCards: ProcessCard[] = [
     id: 3,
     icon: <FaCheckCircle className="w-6 h-6" />,
     bgImage:
-      "https://cdn.pixabay.com/photo/2024/05/26/10/15/bird-8788491_1280.jpg",
+      "https://cdn.prod.website-files.com/65a4fdb423a76722fd6d8265/65cdbc33b9d510ec993c0ca8_654cb08a6abde0a5598a3040_Operator%2520in%2520Control%2520Room-min.jpeg",
     title: "Real-Time Inspection",
     description:
       "Conduct real-time aerial inspections for infrastructure, utilities, and agriculture with live video feeds and analytics.",
@@ -51,7 +51,7 @@ const processCards: ProcessCard[] = [
     id: 4,
     icon: <FaRocket className="w-6 h-6" />,
     bgImage:
-      "https://cdn.pixabay.com/photo/2024/05/26/10/15/bird-8788491_1280.jpg",
+      "https://www.dragonspears.com/hubfs/images/blog/4-reasons-to-embrace-application-deployment-automation-1260x630px.jpg",
     title: "Deployment & Support",
     description:
       "From setup to flight operations and post-mission analytics, we provide full deployment and ongoing technical support.",
@@ -160,30 +160,7 @@ const processCards: ProcessCard[] = [
                     {/* Smaller text */}
                     {card.description}
                   </p>
-                  {/* Hover Indicator */}
-                  <div className="mt-3 pt-3 border-t border-gray-100">
-                    {" "}
-                    {/* Reduced spacing */}
-                    <div className="flex items-center text-tertiary font-medium text-sm">
-                      <span>Learn more</span>
-                      <motion.svg
-                        className="w-4 h-4 ml-1"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                        initial={{ x: 0 }}
-                        whileHover={{ x: 5 }}
-                        transition={{ duration: 0.2 }}
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M9 5l7 7-7 7"
-                        />
-                      </motion.svg>
-                    </div>
-                  </div>
+                  
                 </div>
               </div>
 
@@ -194,7 +171,7 @@ const processCards: ProcessCard[] = [
         </div>
 
         {/* Bottom CTA */}
-        <motion.div
+        {/* <motion.div
           className="text-center mt-12"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -204,7 +181,7 @@ const processCards: ProcessCard[] = [
           <button className="bg-tertiary text-white px-8 py-3 rounded-full font-semibold hover:bg-orange-600 transition-colors duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
             Start Your Project
           </button>
-        </motion.div>
+        </motion.div> */}
       </div>
     </section>
   );

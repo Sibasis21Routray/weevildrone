@@ -85,34 +85,34 @@ function Hero() {
 
       {/* Bottom section */}
       <div
-        className="bg-white w-full h-[40vh] absolute bottom-0"
+        className="bg-white w-full h-[40vh]  absolute bottom-0 "
         style={{
           clipPath: "polygon(0 0, 100% 50px, 100% 100%, 0 100%)",
         }}
       >
         {/* Optional: Add content in the bottom white section */}
-        <div className="max-w-6xl mx-auto px-4 pt-6  text-center">
-         
-
-          <div className="w-full  py-2 px-4">
-            <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-center">
-              {features.map((feature, index) => (
-                <div
-                  key={index}
-                  className=" rounded-xl p-5  transition"
-                >
-                  <div className="flex flex-col items-center space-y-3">
-                    {feature.icon}
-                    <h3 className="text-lg font-semibold text-[#333333]">
-                      {feature.title}
-                    </h3>
-                    <p className="text-sm text-gray-600">{feature.desc}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
+        <div className="max-w-6xl mx-auto px-4 pt-6 text-center">
+  <div className="w-full py-2 px-4">
+    <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-5 lg:gap-6 text-center">
+      {features.map((feature, index) => (
+        <div
+          key={index}
+          className="rounded-xl p-4 md:p-5 transition"
+        >
+          <div className="flex flex-col items-center space-y-2 md:space-y-3">
+            {feature.icon}
+            <h3 className="text-base md:text-lg font-semibold text-[#333333]">
+              {feature.title}
+            </h3>
+            <p className="text-xs md:text-sm text-gray-600 hidden md:block lg:block">
+              {feature.desc}
+            </p>
           </div>
         </div>
+      ))}
+    </div>
+  </div>
+</div>
       </div>
     </div>
   );
