@@ -34,7 +34,6 @@ const Hero: React.FC = () => {
         {/* Bluetooth */}
         <motion.div 
           className="group relative flex flex-col items-center space-y-2 sm:space-y-3"
-          whileHover={{ scale: 1.05, x: 4 }}
           transition={{ type: "spring", stiffness: 300 }}
         >
           {/* Hover glow effect */}
@@ -52,7 +51,6 @@ const Hero: React.FC = () => {
         {/* Warranty */}
         <motion.div 
           className="group relative flex flex-col items-center space-y-2 sm:space-y-3"
-          whileHover={{ scale: 1.05, x: 4 }}
           transition={{ type: "spring", stiffness: 300 }}
         >
           {/* Hover glow effect */}
@@ -70,7 +68,6 @@ const Hero: React.FC = () => {
         {/* Shipping */}
         <motion.div 
           className="group relative flex flex-col items-center space-y-2 sm:space-y-3"
-          whileHover={{ scale: 1.05, x: 4 }}
           transition={{ type: "spring", stiffness: 300 }}
         >
           {/* Hover glow effect */}
@@ -96,7 +93,6 @@ const Hero: React.FC = () => {
         {/* Active */}
         <motion.div 
           className="flex flex-col items-end"
-          whileHover={{ scale: 1.05 }}
         >
           <div className="text-sm sm:text-base lg:text-lg font-bold text-[#FF6900] mb-1 tracking-wider uppercase">Cinematic</div>
           <div className="w-1 h-6 sm:h-7 lg:h-8 bg-[#FF6900] rounded-full" />
@@ -177,17 +173,17 @@ const Hero: React.FC = () => {
             transition={{ duration: 0.8, delay: 1.5 }}
           >
             <div className="flex items-center space-x-1 sm:space-x-2">
-              <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-[#FF6900] animate-pulse"></div>
+             
               <span className="text-[10px] sm:text-xs lg:text-xs text-gray-300 uppercase tracking-widest">Innovation</span>
             </div>
             <div className="w-1 h-1 rounded-full bg-gray-500"></div>
             <div className="flex items-center space-x-1 sm:space-x-2">
-              <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-[#FF6900] animate-pulse" style={{ animationDelay: '0.3s' }}></div>
+             
               <span className="text-[10px] sm:text-xs lg:text-xs text-gray-300 uppercase tracking-widest">Precision</span>
             </div>
             <div className="w-1 h-1 rounded-full bg-gray-500"></div>
             <div className="flex items-center space-x-1 sm:space-x-2">
-              <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-[#FF6900] animate-pulse" style={{ animationDelay: '0.6s' }}></div>
+              
               <span className="text-[10px] sm:text-xs lg:text-xs text-gray-300 uppercase tracking-widest">Excellence</span>
             </div>
           </motion.div>
