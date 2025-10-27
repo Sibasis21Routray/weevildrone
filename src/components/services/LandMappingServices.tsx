@@ -2,7 +2,6 @@ import { motion } from "framer-motion";
 import {
   FaMap,
   FaSatellite,
-  FaCogs,
   FaIndustry,
   FaTree,
   FaTruck,
@@ -77,24 +76,24 @@ const sectorApplications = [
 
 export const LandMappingServices: React.FC = () => {
   return (
-    <section id="mapping" className="py-20 bg-[var(--color-secondary)]">
+    <section id="mapping" className="py-12 lg:py-20 bg-[var(--color-secondary)]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
-          className="text-center mb-16"
+          className="text-center mb-12 lg:mb-16"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
           <h2
-            className="text-4xl font-bold mb-4"
+            className="text-3xl lg:text-4xl font-bold mb-4"
             style={{ color: "var(--color-primary)" }}
           >
             Land Mapping Services
           </h2>
           <p
-            className="text-xl max-w-3xl mx-auto"
+            className="text-lg lg:text-xl max-w-3xl mx-auto"
             style={{ color: "var(--color-primary)" }}
           >
             Advanced drone-based land mapping solutions for agriculture,
@@ -109,72 +108,70 @@ export const LandMappingServices: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
           viewport={{ once: true }}
-          className="m-12"
+          className="mb-8 lg:m-12"
         >
-          <div className="bg-gradient-to-r from-[var(--color-tertiary)] to-orange-600 rounded-lg p-6 shadow-2xl">
-            <div className="flex items-center justify-center space-x-4">
-              <FaSatellite className="text-white text-3xl" />
+          <div className="bg-gradient-to-r from-[var(--color-tertiary)] to-orange-600 rounded-lg p-4 lg:p-6 shadow-2xl">
+            <div className="flex flex-col lg:flex-row items-center justify-center space-y-4 lg:space-y-0 lg:space-x-4">
+              <FaSatellite className="text-white text-2xl lg:text-3xl" />
               <div className="text-center">
-                <h3 className="text-xl font-bold text-white mb-1">
+                <h3 className="text-lg lg:text-xl font-bold text-white mb-1">
                   Cutting-Edge DGPS RTK Technology
                 </h3>
-                <p className="text-white text-sm">
+                <p className="text-white text-xs lg:text-sm">
                   Advanced drone-based mapping with millimeter-level accuracy
                   for precision agriculture and industrial applications
                 </p>
               </div>
-              <FaSatellite className="text-white text-3xl" />
+              <FaSatellite className="text-white text-2xl lg:text-3xl" />
             </div>
           </div>
         </motion.div>
 
         {/* Row 1: Agricultural Expertise + Tea Garden Image */}
-        <div className="grid lg:grid-cols-2 gap-8 mb-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 mb-8 lg:mb-12">
           {/* Agricultural Expertise Card */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="bg-white rounded-lg shadow-2xl p-6 border-2 border-gray-200 h-full"
+            className="bg-white rounded-lg shadow-2xl p-4 lg:p-6 border-2 border-gray-200 h-full"
           >
-            <div className="flex items-center space-x-4 mb-4">
-              <div className="w-12 h-12 bg-[var(--color-tertiary)] rounded-lg flex items-center justify-center">
-                <FaTree className="text-white text-2xl" />
+            <div className="flex items-center space-x-3 lg:space-x-4 mb-4">
+              <div className="w-10 h-10 lg:w-12 lg:h-12 bg-[var(--color-tertiary)] rounded-lg flex items-center justify-center">
+                <FaTree className="text-white text-xl lg:text-2xl" />
               </div>
               <h3
-                className="text-2xl font-bold"
+                className="text-xl lg:text-2xl font-bold"
                 style={{ color: "var(--color-secondary)" }}
               >
                 Agricultural Sector Expertise
               </h3>
             </div>
-            <p className="text-gray-700 mb-6 text-md leading-tight text-left ">
+            <p className="text-gray-700 mb-4 lg:mb-6 text-sm lg:text-md leading-tight text-left">
               Specialized in agricultural land geo-fencing with DGPS RTK survey
               technology. Successfully completed mapping of Goodrick Tea Garden
               (2.54 Hectares) at North Bengal, West Bengal.
             </p>
 
             {/* Stats Grid */}
-            <div className="grid grid-cols-2 gap-4">
-              <div className="bg-[var(--color-secondary)] rounded-lg p-4 text-center">
-                <FaChartLine className="text-white text-2xl mx-auto mb-2" />
-                <div className="text-xl font-bold text-white mb-1">
+            <div className="grid grid-cols-2 gap-3 lg:gap-4">
+              <div className="bg-[var(--color-secondary)] rounded-lg p-3 lg:p-4 text-center">
+                <FaChartLine className="text-white text-xl lg:text-2xl mx-auto mb-2" />
+                <div className="text-lg lg:text-xl font-bold text-white mb-1">
                   3-4 kms/day
                 </div>
-                <div className="text-gray-300 text-sm">Production Rate</div>
+                <div className="text-gray-300 text-xs lg:text-sm">Production Rate</div>
               </div>
-              <div className="bg-[var(--color-tertiary)] rounded-lg p-4 text-center">
-                <FaMap className="text-white text-2xl mx-auto mb-2" />
-                <div className="text-xl font-bold text-white mb-1">
+              <div className="bg-[var(--color-tertiary)] rounded-lg p-3 lg:p-4 text-center">
+                <FaMap className="text-white text-xl lg:text-2xl mx-auto mb-2" />
+                <div className="text-lg lg:text-xl font-bold text-white mb-1">
                   2.54 Hectares
                 </div>
-                <div className="text-gray-300 text-sm">Coverage</div>
+                <div className="text-gray-300 text-xs lg:text-sm">Coverage</div>
               </div>
             </div>
-            <p
-              className="text-center mt-3 text-sm italic text-secondary"
-            >
+            <p className="text-center mt-3 text-xs lg:text-sm italic text-secondary">
               Precision mapping of Goodrick Tea Garden (2.54 Hectares) in North
               Bengal, West Bengal
             </p>
@@ -191,28 +188,28 @@ export const LandMappingServices: React.FC = () => {
             <img
               src="https://weevildrone.co.in/wp-content/uploads/2025/09/Goodrick-Tea-Project_1-1536x1151.jpg"
               alt="Precision mapping of Goodrick Tea Garden (2.54 Hectares) in North Bengal, West Bengal"
-              className="rounded-lg shadow-2xl w-full h-96 object-cover border-4 border-white"
+              className="rounded-lg shadow-2xl w-full h-64 lg:h-96 object-cover border-4 border-white"
             />
           </motion.div>
         </div>
 
         {/* Row 2: Tea Garden Image 2 + Sector Applications */}
-        <div className="grid lg:grid-cols-2 gap-8 mb-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 mb-8 lg:mb-12">
           {/* Tea Garden Image 2 */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="flex flex-col"
+            className="flex flex-col order-2 lg:order-1"
           >
             <img
               src="https://weevildrone.co.in/wp-content/uploads/2025/09/Goodrick-Tea-Project_3_1.png"
               alt="Precision mapping analysis of Goodrick Tea Garden"
-              className="rounded-lg shadow-2xl w-full h-72 object-cover border-4 border-white mt-12"
+              className="rounded-lg shadow-2xl w-full h-56 lg:h-72 object-cover border-4 border-white lg:mt-12"
             />
             <p
-              className="text-center mt-3 text-sm italic"
+              className="text-center mt-3 text-xs lg:text-sm italic"
               style={{ color: "var(--color-primary)" }}
             >
               Detailed mapping analysis and data visualization
@@ -225,30 +222,31 @@ export const LandMappingServices: React.FC = () => {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
+            className="order-1 lg:order-2"
           >
             <h3
-              className="text-2xl font-bold mb-6 text-center"
+              className="text-xl lg:text-2xl font-bold mb-4 lg:mb-6 text-center"
               style={{ color: "var(--color-primary)" }}
             >
               Multi-Sector Applications
             </h3>
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 lg:gap-4">
               {sectorApplications.map((app, index) => (
                 <motion.div
                   key={app.sector}
-                  className="bg-white rounded-lg shadow-lg p-4 border border-gray-200 hover:shadow-xl transition-all duration-300 h-32 flex flex-col justify-center"
+                  className="bg-white rounded-lg shadow-lg p-3 lg:p-4 border border-gray-200 hover:shadow-xl transition-all duration-300 h-28 lg:h-32 flex flex-col justify-center"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   viewport={{ once: true }}
                   whileHover={{ scale: 1.03 }}
                 >
-                  <div className="flex items-center space-x-3 mb-2">
-                    <div className="bg-[var(--color-tertiary)] w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <app.icon className="text-white text-sm" />
+                  <div className="flex items-center space-x-2 lg:space-x-3 mb-2">
+                    <div className="bg-[var(--color-tertiary)] w-7 h-7 lg:w-8 lg:h-8 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <app.icon className="text-white text-xs lg:text-sm" />
                     </div>
                     <h4
-                      className="font-semibold text-sm"
+                      className="font-semibold text-sm lg:text-sm"
                       style={{ color: "var(--color-secondary)" }}
                     >
                       {app.sector}
@@ -264,29 +262,31 @@ export const LandMappingServices: React.FC = () => {
         </div>
 
         {/* Row 3: Tea Garden Image 3 + Technical Specifications */}
-        <div className="gap-8">
+        <div className="">
           {/* Tea Garden Image 3 */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="flex flex-col"
+            className="flex flex-col justify-center lg:order-1"
           >
             <img
               src="https://weevildrone.co.in/wp-content/uploads/2025/09/Goodrick-Tea-Project_0.jpg"
               alt="Goodrick Tea Garden aerial mapping results"
-              className="rounded-lg shadow-2xl w-full h-80 object-cover border-4 border-white"
+              className="rounded-lg shadow-2xl w-screen h-64 lg:h-80 object-cover border-4 border-white"
             />
             <p
-              className="text-center mt-3 text-sm italic mb-5"
+              className="text-center mt-3 text-xs lg:text-sm italic mb-4 lg:mb-5"
               style={{ color: "var(--color-primary)" }}
             >
               Aerial view of completed mapping project
             </p>
           </motion.div>
 
-          {/*  Technical Specifications */}
+         
+        </div>
+         {/*  Technical Specifications */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -332,7 +332,7 @@ export const LandMappingServices: React.FC = () => {
                     </div>
 
                     {/* Features */}
-                    <ul className="space-y-1">
+                    <ul className="space-y-3 mt-5">
                       {spec.features.map((feature, featureIndex) => (
                         <li
                           key={featureIndex}
@@ -341,7 +341,7 @@ export const LandMappingServices: React.FC = () => {
                           <span className="text-[var(--color-tertiary)] mt-1 text-xs flex-shrink-0">
                             •
                           </span>
-                          <span className="text-gray-600 text-xs leading-tight">
+                          <span className="text-gray-600 text-sm leading-tight">
                             {feature}
                           </span>
                         </li>
@@ -352,7 +352,6 @@ export const LandMappingServices: React.FC = () => {
               })}
             </div>{" "}
           </motion.div>
-        </div>
       </div>
     </section>
   );

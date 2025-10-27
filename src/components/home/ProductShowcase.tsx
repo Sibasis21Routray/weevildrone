@@ -67,7 +67,7 @@ const ProductShowcase = () => {
   const { prev, next } = getAdjacentIndices();
 
   return (
-    <section className="w-full bg-primary py-6 sm:py-8 lg:py-12 overflow-hidden relative h-screen flex items-center">
+    <section className="w-full bg-primary py-6 sm:py-8 lg:py-1 overflow-hidden relative flex items-start ">
       {/* Dynamic Background */}
       <motion.div
         className="absolute inset-0 overflow-hidden"
@@ -135,7 +135,7 @@ const ProductShowcase = () => {
 
           {/* 3D Slider - Optimized Height */}
           <div
-            className="relative flex-1 max-h-[500px] sm:max-h-[550px] lg:max-h-[600px] mt-[23vh]"
+            className="relative flex-1 max-h-[700px] sm:max-h-[650px] lg:max-h-[650px] mt-[25vh] lg:mt-[20vh]"
             style={{ perspective: "2000px" }}
           >
             {/* Side Preview - Previous */}
@@ -220,11 +220,11 @@ const ProductShowcase = () => {
                   <div className="relative rounded-3xl overflow-hidden shadow-[0_20px_80px_rgba(0,0,0,0.15)] border border-secondary/10 backdrop-blur-sm bg-white/95">
                     <div className="flex flex-col lg:flex-row">
                       {/* Image Section  */}
-                      <div className="relative lg:w-1/2 h-48 sm:h-64 lg:h-80 overflow-hidden">
+                      <div className="relative lg:w-1/2 h-48 sm:h-64 lg:h-80 overflow-hidden ">
                         <motion.img
                           src={products[currentIndex].image}
                           alt={products[currentIndex].name}
-                          className="w-full h-full object-cover"
+                          className="w-full h-full object-fill"
                           initial={{ scale: 1.3 }}
                           animate={{ scale: 1 }}
                           transition={{
@@ -290,7 +290,7 @@ const ProductShowcase = () => {
                             onClick={() => { navigate(products[currentIndex].url);  console.log(">>>>>>",products[currentIndex].url);}}
                             whileHover={{
                               scale: 1.03,
-                              boxShadow: "0 20px 40px rgba(255, 105, 0, 0.3)",
+                             
                             }}
                             whileTap={{ scale: 0.97 }}
                             className={`w-full px-6 py-3 bg-gradient-to-r ${products[currentIndex].color} text-white font-bold shadow-lg transition-all duration-300 flex items-center justify-center gap-2 group text-sm sm:text-base`}

@@ -65,16 +65,16 @@ const LatestNews = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.2 }}
                 viewport={{ once: true }}
-                className={`flex flex-col lg:flex-row bg-white border border-secondary/10 hover:border-secondary/20 transition-all duration-300 group ${
+                className={`flex flex-col md:flex-row bg-white border border-secondary/10 hover:border-secondary/20 transition-all duration-300 group ${
                   !isImageLeft ? "lg:flex-row-reverse" : ""
                 }`}
               >
                 {/* Image Section */}
-                <div className="relative h-64 lg:h-80 lg:w-1/2 overflow-hidden">
+                <div className="relative h-64 lg:h-80 md:w-1/2 overflow-hidden">
                   <img
                     src={news.image}
                     alt={news.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    className="w-full h-full object-fill group-hover:scale-105 transition-transform duration-500"
                   />
                   <div className="absolute top-4 left-4">
                     <span className="bg-tertiary text-primary px-3 py-1 text-sm font-medium">
@@ -84,7 +84,7 @@ const LatestNews = () => {
                 </div>
 
                 {/* Content Section */}
-                <div className="p-6 lg:p-8 lg:w-1/2 flex flex-col justify-center">
+                <div className="p-6 lg:p-8 md:w-1/2 flex flex-col justify-center">
                   <h3 className="text-xl font-semibold text-secondary mb-3 group-hover:text-tertiary transition-colors">
                     {news.title}
                   </h3>

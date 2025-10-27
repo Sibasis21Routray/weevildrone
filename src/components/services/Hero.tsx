@@ -1,35 +1,34 @@
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 import { Cpu, Wrench, Shield, Zap } from "lucide-react";
 
 function Hero() {
-
-    const features = [
-      {
-        icon: <Cpu className="w-8 h-8 text-[#FF6900]" />,
-        title: "Smart Design",
-        desc: "AI-powered drones for precision and performance.",
-      },
-      {
-        icon: <Wrench className="w-8 h-8 text-[#FF6900]" />,
-        title: "Custom Build",
-        desc: "Tailored drones for diverse industrial needs.",
-      },
-      {
-        icon: <Shield className="w-8 h-8 text-[#FF6900]" />,
-        title: "Reliable & Safe",
-        desc: "Designed to ensure maximum safety and stability.",
-      },
-      {
-        icon: <Zap className="w-8 h-8 text-[#FF6900]" />,
-        title: "High Performance",
-        desc: "Built for efficiency and long-range operations.",
-      },
-    ];
+  const features = [
+    {
+      icon: <Cpu className="w-8 h-8 text-[#FF6900]" />,
+      title: "Smart Design",
+      desc: "AI-powered drones for precision and performance.",
+    },
+    {
+      icon: <Wrench className="w-8 h-8 text-[#FF6900]" />,
+      title: "Custom Build",
+      desc: "Tailored drones for diverse industrial needs.",
+    },
+    {
+      icon: <Shield className="w-8 h-8 text-[#FF6900]" />,
+      title: "Reliable & Safe",
+      desc: "Designed to ensure maximum safety and stability.",
+    },
+    {
+      icon: <Zap className="w-8 h-8 text-[#FF6900]" />,
+      title: "High Performance",
+      desc: "Built for efficiency and long-range operations.",
+    },
+  ];
   return (
     <div className="relative h-screen overflow-hidden">
       {/* Top section */}
       <div
-        className="bg-tertiary w-full h-[60vh] relative"
+        className="bg-tertiary w-full h-[40vh] lg:h-[50vh] relative"
         style={{
           clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 50px))",
         }}
@@ -68,7 +67,7 @@ function Hero() {
       </div>
 
       {/* Drone Image - Centered between sections */}
-      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20 w-full max-w-4xl px-4">
+      <div className="absolute top-1/3 lg:top-1/2   left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20 w-full max-w-4xl px-4">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -76,37 +75,34 @@ function Hero() {
           className="flex justify-center"
         >
           <img
-            src="/drone.png"
+            src="/DroneHero.png"
             alt="Weevil Drone"
-            className="w-full max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl object-contain drop-shadow-2xl"
+            className="w-full max-w-lg md:max-w-2xl lg:max-w-xl xl:max-w-2xl object-contain drop-shadow-2xl"
           />
         </motion.div>
       </div>
 
       {/* Bottom section */}
       <div
-        className="bg-white w-full h-[40vh] absolute bottom-0"
+        className="bg-white w-full h-[40vh]  absolute bottom-12 lg:bottom-0 "
         style={{
           clipPath: "polygon(0 0, 100% 50px, 100% 100%, 0 100%)",
         }}
       >
-        {/* Optional: Add content in the bottom white section */}
-        <div className="max-w-6xl mx-auto px-4 pt-6  text-center">
-         
-
-          <div className="w-full  py-2 px-4">
-            <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-center">
+        {/* the bottom white section */}
+        <div className="max-w-6xl mx-auto px-4 pt-6 text-center">
+          <div className="w-full py-2 px-4">
+            <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-4 md:gap-5 lg:gap-6 text-center">
               {features.map((feature, index) => (
-                <div
-                  key={index}
-                  className=" rounded-xl p-5  transition"
-                >
-                  <div className="flex flex-col items-center space-y-3">
+                <div key={index} className="rounded-xl p-4 md:p-5 transition">
+                  <div className="flex flex-col items-center space-y-2 md:space-y-3">
                     {feature.icon}
-                    <h3 className="text-lg font-semibold text-[#333333]">
+                    <h3 className="text-base md:text-lg font-semibold text-[#333333]">
                       {feature.title}
                     </h3>
-                    <p className="text-sm text-gray-600">{feature.desc}</p>
+                    <p className="text-xs md:text-sm text-gray-600 hidden md:block lg:block">
+                      {feature.desc}
+                    </p>
                   </div>
                 </div>
               ))}

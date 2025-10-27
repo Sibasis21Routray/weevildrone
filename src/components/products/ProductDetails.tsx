@@ -1,184 +1,429 @@
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useState } from "react";
 
+// Define all possible specification interfaces
 interface KeyFeature {
   icon: React.ReactNode;
   text: string;
 }
 
 interface GeneralSpecifications {
-  wingspan: string;
-  length: string;
-  height: string;
-  flyingWeight: string;
-  construction: string;
-  power: string;
-  assembly: string;
+  wingspan?: string;
+  length?: string;
+  height?: string;
+  flyingWeight?: string;
+  construction?: string;
+  power?: string;
+  assembly?: string;
+  type?: string;
+  maxSpeed?: string;
+  flightTime?: string;
+  communication?: string;
+  flightController?: string;
+  controlMode?: string;
+  swarmSupport?: string;
+  frameSize?: string;
+  range?: string;
+  cruiseSpeed?: string;
+  topSpeed?: string;
+  aircraftType?: string;
+  application?: string;
+  takeoffWeight?: string;
+  payloadCapacity?: string;
+  flightEndurance?: string;
+  serviceCeiling?: string;
+  maxHeight?: string;
+  maxFlightTime?: string;
+  maxPayload?: string;
+  engineType?: string;
+  material?: string;
+  [key: string]: string | undefined;
 }
 
 interface ElectricPowerSystem {
-  pusherMotor: string;
-  pusherPropeller: string;
-  vtolMotor: string;
-  vtolESC: string;
-  vtolPropeller: string;
-  battery: string;
-  servos: string;
+  pusherMotor?: string;
+  pusherPropeller?: string;
+  vtolMotor?: string;
+  vtolESC?: string;
+  vtolPropeller?: string;
+  battery?: string;
+  servos?: string;
+  motor?: string;
+  esc?: string;
+  propeller?: string;
+  [key: string]: string | undefined;
 }
 
 interface CommunicationAndPerformance {
-  communication: string;
-  flightPerformance: string;
+  communication?: string;
+  flightPerformance?: string;
+  communicationSystem?: string;
+  flightCapabilities?: string;
+}
+
+interface PerformanceSpecifications {
+  serviceCeiling?: string;
+  maxHeight?: string;
+  maxFlightTime?: string;
+  maxPayload?: string;
+  engineType?: string;
+  material?: string;
+  [key: string]: string | undefined;
+}
+
+interface RadarIntegration {
+  detection?: string;
+  range?: string;
+  detectionSpeed?: string;
+  trackingTime?: string;
+  outputFormat?: string;
+  integration?: string;
+  [key: string]: string | undefined;
+}
+
+interface CommunicationSystem {
+  opticalFiberLength?: string;
+  groundControlUnit?: string;
+  lcdDisplay?: string;
+  communicationType?: string;
+  controlRange?: string;
+  [key: string]: string | undefined;
+}
+
+interface FlightCharacteristics {
+  vtolOperation?: string;
+  forwardFlight?: string;
+  transitionCapability?: string;
+  missionProfile?: string;
+  [key: string]: string | undefined;
 }
 
 interface ProductDetailsProps {
+  sectionRef: React.RefObject<HTMLDivElement>;
   keyFeatures: KeyFeature[];
-  generalSpecifications: GeneralSpecifications;
-  electricPowerSystem: ElectricPowerSystem;
-  communicationAndPerformance: CommunicationAndPerformance;
+  generalSpecifications?: GeneralSpecifications;
+  electricPowerSystem?: ElectricPowerSystem;
+  communicationAndPerformance?: CommunicationAndPerformance;
+  performanceSpecifications?: PerformanceSpecifications;
+  radarIntegration?: RadarIntegration;
+  communicationSystem?: CommunicationSystem;
+  flightCharacteristics?: FlightCharacteristics;
+  additionalKeyComponentsAndApplications?: any;
+  radarDroneIntegrationWorkflowAndApplications?: any;
+  vtolTechnologyAndApplications?: any;
+  advancedFeaturesAndApplications?: any;
 }
 
 const ProductDetails: React.FC<ProductDetailsProps> = ({
+  sectionRef,
   keyFeatures,
   generalSpecifications,
   electricPowerSystem,
   communicationAndPerformance,
+  performanceSpecifications,
+  radarIntegration,
+  communicationSystem,
+  flightCharacteristics,
+  additionalKeyComponentsAndApplications,
+  radarDroneIntegrationWorkflowAndApplications,
+  vtolTechnologyAndApplications,
+  advancedFeaturesAndApplications,
 }) => {
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-      },
-    },
+  const [activeTab, setActiveTab] = useState<string>('general');
+
+  // Dynamic tabs based on available data
+  const availableTabs = [
+    { id: 'general', label: 'General', data: generalSpecifications },
+    { id: 'power', label: 'Power', data: electricPowerSystem },
+    { id: 'performance', label: 'Performance', data: performanceSpecifications },
+    { id: 'communication', label: 'Communication', data: communicationSystem },
+    { id: 'radar', label: 'Radar', data: radarIntegration },
+    { id: 'flight', label: 'Flight', data: flightCharacteristics },
+  ].filter(tab => tab.data && Object.keys(tab.data).length > 0);
+
+  // Additional content sections
+  const additionalSections = [
+    { id: 'components', label: 'Components & Applications', data: additionalKeyComponentsAndApplications },
+    { id: 'workflow', label: 'Integration Workflow', data: radarDroneIntegrationWorkflowAndApplications },
+    { id: 'technology', label: 'Technology', data: vtolTechnologyAndApplications },
+    { id: 'advanced', label: 'Advanced Features', data: advancedFeaturesAndApplications },
+  ].filter(section => section.data);
+
+  // Helper function to format keys for display
+  const formatKey = (key: string): string => {
+    return key
+      .replace(/([A-Z])/g, " $1")
+      .replace(/([a-z])([A-Z])/g, "$1 $2")
+      .split(' ')
+      .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+      .join(' ');
   };
 
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.6,
-        ease: "easeOut",
-      },
-    },
-  };
+  // Render specification cards
+  const renderSpecificationCards = (data: any, title: string) => (
+    <div className="bg-white rounded-lg border border-gray-200">
+      <div className="bg-gray-900 px-4 py-3">
+        <h4 className="text-lg font-semibold text-white">{title}</h4>
+      </div>
+      <div className="p-4">
+        <div className="space-y-3">
+          {Object.entries(data).map(([key, value]) => (
+            <div
+              key={key}
+              className="flex flex-col sm:flex-row sm:items-start gap-1 p-3 bg-gray-50 rounded-lg"
+            >
+              <span className="text-gray-700 font-medium text-sm sm:w-2/5">
+                {formatKey(key)}
+              </span>
+              <span className="text-gray-900 font-semibold text-sm sm:w-3/5">
+                {value as string}
+              </span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+
+  // Render content sections
+  const renderContentSection = (data: any, title: string) => (
+    <div className="bg-white rounded-lg border border-gray-200">
+      <div className="bg-gray-900 px-4 py-3">
+        <h4 className="text-lg font-semibold text-white">{title}</h4>
+      </div>
+      <div className="p-4 space-y-4">
+        {data.militaryTrainingApplications && (
+          <div>
+            <h5 className="text-base font-semibold text-gray-900 mb-2">Military Training Applications</h5>
+            <p className="text-gray-700 text-sm leading-relaxed">{data.militaryTrainingApplications}</p>
+          </div>
+        )}
+        {data.keyComponents && (
+          <div>
+            <h5 className="text-base font-semibold text-gray-900 mb-2">Key Components</h5>
+            <p className="text-gray-700 text-sm leading-relaxed">{data.keyComponents}</p>
+          </div>
+        )}
+        {data.integrationWorkflow && Array.isArray(data.integrationWorkflow) && (
+          <div>
+            <h5 className="text-base font-semibold text-gray-900 mb-2">Integration Workflow</h5>
+            <ol className="list-decimal list-inside space-y-1 text-sm text-gray-700">
+              {data.integrationWorkflow.map((step: string, index: number) => (
+                <li key={index} className="leading-relaxed">{step}</li>
+              ))}
+            </ol>
+          </div>
+        )}
+        {data.advancedCapabilities && (
+          <div>
+            <h5 className="text-base font-semibold text-gray-900 mb-2">Advanced Capabilities</h5>
+            <p className="text-gray-700 text-sm leading-relaxed">{data.advancedCapabilities}</p>
+          </div>
+        )}
+        {data.hybridDesignAdvantages && (
+          <div>
+            <h5 className="text-base font-semibold text-gray-900 mb-2">Hybrid Design Advantages</h5>
+            <p className="text-gray-700 text-sm leading-relaxed">{data.hybridDesignAdvantages}</p>
+          </div>
+        )}
+        {data.missionApplications && (
+          <div>
+            <h5 className="text-base font-semibold text-gray-900 mb-2">Mission Applications</h5>
+            <p className="text-gray-700 text-sm leading-relaxed">{data.missionApplications}</p>
+          </div>
+        )}
+        {data.opticalFiberAdvantages && (
+          <div>
+            <h5 className="text-base font-semibold text-gray-900 mb-2">Optical Fiber Advantages</h5>
+            <p className="text-gray-700 text-sm leading-relaxed">{data.opticalFiberAdvantages}</p>
+          </div>
+        )}
+        {data.tacticalApplications && (
+          <div>
+            <h5 className="text-base font-semibold text-gray-900 mb-2">Tactical Applications</h5>
+            <p className="text-gray-700 text-sm leading-relaxed">{data.tacticalApplications}</p>
+          </div>
+        )}
+      </div>
+    </div>
+  );
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 bg-primary">
-      <motion.div
-        className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12"
-        variants={containerVariants}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, margin: "-50px" }}
-      >
-        {/* Key Features Section */}
-        <motion.div className="lg:col-span-2" variants={itemVariants}>
-          <h2 className="text-3xl font-bold text-secondary mb-8">
-            Key Features
+    <div className="bg-white py-12 " ref={sectionRef}>
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Section Header */}
+        <div className="text-left mb-12">
+          <div className="flex items-center space-x-3 mb-3">
+            <div className="w-8 h-0.5 bg-orange-500" />
+            <span className="text-xs uppercase tracking-wider text-gray-600 font-medium">
+              Specifications
+            </span>
+          </div>
+          <h2 className="text-3xl font-bold text-gray-900 mb-3">
+            Technical <span className="text-orange-500">Details</span>
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {keyFeatures.map((feature, index) => (
-              <motion.div
-                key={index}
-                className="flex items-start gap-4 p-6 bg-white rounded-xl shadow-lg border border-secondary/10 hover:shadow-xl transition-shadow duration-300"
-                variants={itemVariants}
-                whileHover={{ scale: 1.02 }}
-              >
-                <div className="flex-shrink-0 w-12 h-12 bg-tertiary/10 rounded-lg flex items-center justify-center text-tertiary text-xl">
-                  {feature.icon}
-                </div>
-                <p className="text-secondary/80 text-lg leading-relaxed">
-                  {feature.text}
-                </p>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
+          <p className="text-gray-600 text-base max-w-2xl">
+            Comprehensive specifications and features
+          </p>
+        </div>
 
-        {/* General Specifications */}
-        <motion.div
-          className="bg-white rounded-2xl shadow-lg border border-secondary/10 p-8"
-          variants={itemVariants}
-        >
-          <h3 className="text-2xl font-bold text-secondary mb-6 pb-4 border-b border-secondary/10">
-            General Specifications
-          </h3>
-          <div className="space-y-4">
-            {Object.entries(generalSpecifications).map(([key, value]) => (
-              <div
-                key={key}
-                className="flex justify-between items-center py-3 border-b border-secondary/5 last:border-b-0"
-              >
-                <span className="text-secondary/70 font-medium capitalize">
-                  {key.replace(/([A-Z])/g, " $1").trim()}:
-                </span>
-                <span className="text-secondary font-semibold text-right">
-                  {value}
-                </span>
-              </div>
-            ))}
-          </div>
-        </motion.div>
-
-        {/* Electric Power System */}
-        <motion.div
-          className="bg-white rounded-2xl shadow-lg border border-secondary/10 p-8"
-          variants={itemVariants}
-        >
-          <h3 className="text-2xl font-bold text-secondary mb-6 pb-4 border-b border-secondary/10">
-            Electric Power System
-          </h3>
-          <div className="space-y-4">
-            {Object.entries(electricPowerSystem).map(([key, value]) => (
-              <div
-                key={key}
-                className="flex justify-between items-center py-3 border-b border-secondary/5 last:border-b-0"
-              >
-                <span className="text-secondary/70 font-medium capitalize">
-                  {key.replace(/([A-Z])/g, " $1").trim()}:
-                </span>
-                <span className="text-secondary font-semibold text-right">
-                  {value}
-                </span>
-              </div>
-            ))}
-          </div>
-        </motion.div>
-
-        {/* Communication & Performance */}
-        <motion.div
-          className="lg:col-span-2 bg-gradient-to-br from-tertiary/5 to-secondary/5 rounded-2xl shadow-lg border border-secondary/10 p-8"
-          variants={itemVariants}
-        >
-          <h3 className="text-2xl font-bold text-secondary mb-6">
-            Communication & Performance
-          </h3>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div className="space-y-12">
+          {/* Key Features Section */}
+          {keyFeatures && keyFeatures.length > 0 && (
             <div>
-              <h4 className="text-lg font-semibold text-secondary mb-3 flex items-center gap-2">
-                <div className="w-2 h-2 bg-tertiary rounded-full"></div>
-                Communication System
-              </h4>
-              <p className="text-secondary/70 leading-relaxed">
-                {communicationAndPerformance.communication}
-              </p>
+              <div className="flex items-center space-x-3 mb-6">
+                <div className="w-1 h-6 bg-orange-500" />
+                <h3 className="text-xl font-bold text-gray-900">
+                  Key Features
+                </h3>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {keyFeatures.map((feature, index) => (
+                  <div
+                    key={index}
+                    className="flex  items-center gap-3 p-4 bg-gray-50 rounded-lg border border-gray-200"
+                  >
+                    <div className="flex-shrink-0 w-10 h-10 bg-orange-100 rounded-lg flex items-center justify-center text-orange-600 text-lg">
+                      {feature.icon}
+                    </div>
+                    <p className="text-gray-700 text-sm leading-relaxed">
+                      {feature.text}
+                    </p>
+                  </div>
+                ))}
+              </div>
             </div>
+          )}
+
+          {/* Tabbed Specifications Section */}
+          {availableTabs.length > 0 && (
             <div>
-              <h4 className="text-lg font-semibold text-secondary mb-3 flex items-center gap-2">
-                <div className="w-2 h-2 bg-tertiary rounded-full"></div>
-                Flight Performance
-              </h4>
-              <p className="text-secondary/70 leading-relaxed">
-                {communicationAndPerformance.flightPerformance}
-              </p>
+              <div className="flex items-center space-x-3 mb-6">
+                <div className="w-1 h-6 bg-orange-500" />
+                <h3 className="text-xl font-bold text-gray-900">
+                  Technical Specifications
+                </h3>
+              </div>
+
+              {/* Tab Navigation */}
+              <div className="flex flex-wrap gap-2 mb-6">
+                {availableTabs.map((tab) => (
+                  <button
+                    key={tab.id}
+                    onClick={() => setActiveTab(tab.id)}
+                    className={`px-4 py-2 rounded-lg font-medium text-sm transition-all duration-200 ${
+                      activeTab === tab.id
+                        ? "bg-orange-500 text-white shadow-sm"
+                        : "bg-white text-gray-700 border border-gray-300 hover:border-orange-300"
+                    }`}
+                  >
+                    {tab.label}
+                  </button>
+                ))}
+              </div>
+
+              {/* Tab Content */}
+              <div>
+                {activeTab === "general" &&
+                  generalSpecifications &&
+                  renderSpecificationCards(
+                    generalSpecifications,
+                    "General Specifications"
+                  )}
+
+                {activeTab === "power" &&
+                  electricPowerSystem &&
+                  renderSpecificationCards(electricPowerSystem, "Power System")}
+
+                {activeTab === "performance" &&
+                  performanceSpecifications &&
+                  renderSpecificationCards(
+                    performanceSpecifications,
+                    "Performance Specifications"
+                  )}
+
+                {activeTab === "communication" &&
+                  communicationSystem &&
+                  renderSpecificationCards(
+                    communicationSystem,
+                    "Communication System"
+                  )}
+
+                {activeTab === "radar" &&
+                  radarIntegration &&
+                  renderSpecificationCards(
+                    radarIntegration,
+                    "Radar Integration"
+                  )}
+
+                {activeTab === "flight" &&
+                  flightCharacteristics &&
+                  renderSpecificationCards(
+                    flightCharacteristics,
+                    "Flight Characteristics"
+                  )}
+              </div>
             </div>
-          </div>
-        </motion.div>
-      </motion.div>
+          )}
+
+          {/* Communication & Performance Section */}
+          {communicationAndPerformance && (
+            <div>
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                {communicationAndPerformance.communicationSystem && (
+                  <div className="bg-white rounded-lg border border-gray-200">
+                    <div className="bg-gray-900 px-4 py-3">
+                      <h4 className="text-lg font-semibold text-white">
+                        Communication System
+                      </h4>
+                    </div>
+                    <div className="p-4 text-left">
+                      <p className="text-gray-700 text-sm leading-relaxed">
+                        {communicationAndPerformance.communicationSystem}
+                      </p>
+                    </div>
+                  </div>
+                )}
+
+                {communicationAndPerformance.flightCapabilities && (
+                  <div className="bg-white rounded-lg border border-gray-200">
+                    <div className="bg-gray-900 px-4 py-3">
+                      <h4 className="text-lg font-semibold text-white">
+                        Flight Capabilities
+                      </h4>
+                    </div>
+                    <div className="p-4 text-left">
+                      <p className="text-gray-700 text-sm leading-relaxed">
+                        {communicationAndPerformance.flightCapabilities}
+                      </p>
+                    </div>
+                  </div>
+                )}
+              </div>
+            </div>
+          )}
+
+          {/* Additional Content Sections */}
+          {additionalSections.length > 0 && (
+            <div>
+              <div className="flex items-center space-x-3 mb-6">
+                <div className="w-1 h-6 bg-orange-500" />
+                <h3 className="text-xl font-bold text-gray-900">
+                  Additional Information
+                </h3>
+              </div>
+
+              <div className="space-y-6 text-left">
+                {additionalSections.map((section) => (
+                  <div key={section.id}>
+                    {renderContentSection(section.data, section.label)}
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+        </div>
+      </div>
     </div>
   );
 };

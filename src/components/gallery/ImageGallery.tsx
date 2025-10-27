@@ -176,7 +176,7 @@ export const ImageGallery: React.FC<GalleryProps> = ({
   };
 
   return (
-    <div className="min-h-screen px-4 sm:px-6 lg:px-8">
+    <div className=" px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
        
 
@@ -189,7 +189,7 @@ export const ImageGallery: React.FC<GalleryProps> = ({
           className="text-center mb-16 mt-10"
         >
 
-          <h2 className="text-4xl sm:text-5xl lg:text-5xl font-light text-secondary tracking-tight mb-6">
+          <h2 className=" text-3xl md:text-4xl lg:text-5xl font-light text-secondary tracking-tight mb-6">
             Explore our collection of
             <span className="font-medium bg-gradient-to-r from-tertiary to-orange-600 bg-clip-text text-transparent">
               {" "}
@@ -207,7 +207,7 @@ export const ImageGallery: React.FC<GalleryProps> = ({
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3 }}
           >
-            {categories.map((category) => (
+            {categories.map((category:any) => (
               <motion.button
                 key={category}
                 className={`px-6 py-2 rounded-full font-medium capitalize transition-all ${
@@ -269,7 +269,7 @@ export const ImageGallery: React.FC<GalleryProps> = ({
                   />
 
                   {/* Fixed Overlay - only visible on hover */}
-                  <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-50 transition-opacity duration-300 flex items-end">
+                  {/* <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-50 transition-opacity duration-300 flex items-end">
                     <div className="p-4 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 w-full">
                       <h3
                         className="text-lg font-semibold mb-1 truncate"
@@ -286,16 +286,16 @@ export const ImageGallery: React.FC<GalleryProps> = ({
                         </p>
                       )}
                     </div>
-                  </div>
+                  </div> */}
 
                   {/* Category Badge */}
-                  {image.category && (
+                  {/* {image.category && (
                     <div className="absolute top-3 left-3">
                       <span className="px-2 py-1 text-xs rounded-full bg-[var(--color-tertiary)] text-[var(--color-primary)]">
                         {image.category}
                       </span>
                     </div>
-                  )}
+                  )} */}
                 </motion.div>
               ))}
             </motion.div>
@@ -439,12 +439,12 @@ export const ImageGallery: React.FC<GalleryProps> = ({
                 transition={{ delay: 0.2 }}
               >
                 <div className="flex justify-between items-start mb-2">
-                  <h3
+                  {/* <h3
                     className="text-2xl font-bold flex-1"
                     style={{ color: "var(--color-primary)" }}
                   >
                     {selectedImage.title || selectedImage.alt}
-                  </h3>
+                  </h3> */}
                   <span
                     className="text-sm opacity-75 ml-4"
                     style={{ color: "var(--color-primary)" }}
@@ -453,21 +453,21 @@ export const ImageGallery: React.FC<GalleryProps> = ({
                   </span>
                 </div>
 
-                {selectedImage.description && (
+                {/* {selectedImage.description && (
                   <p
                     className="text-lg mb-3"
                     style={{ color: "var(--color-primary)" }}
                   >
                     {selectedImage.description}
                   </p>
-                )}
+                )} */}
 
                 <div className="flex flex-wrap items-center gap-2">
-                  {selectedImage.category && (
+                  {/* {selectedImage.category && (
                     <span className="px-3 py-1 text-sm rounded-full bg-[var(--color-tertiary)] text-[var(--color-primary)]">
                       {selectedImage.category}
                     </span>
-                  )}
+                  )} */}
                   {selectedImage.tags && selectedImage.tags.length > 0 && (
                     <div className="flex flex-wrap gap-2">
                       {selectedImage.tags.map((tag, index) => (

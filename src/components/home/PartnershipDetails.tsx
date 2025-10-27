@@ -35,7 +35,6 @@ const PartnershipComponent = () => {
   return (
     <section className="w-full bg-primary mt-15">
       <div className="max-w-6xl mx-auto px-4">
-       
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 my-10">
           {cards.map((card, index) => (
             <motion.div
@@ -59,7 +58,7 @@ const PartnershipComponent = () => {
         </div>
 
         {/* Quotes Section - Enhanced */}
-        <div className="grid md:grid-cols-2 gap-6 lg:gap-8 mb-16">
+        <div className="grid sm:grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 mb-16">
           {/* Quote 1 */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -72,7 +71,7 @@ const PartnershipComponent = () => {
               <div className="absolute left-6 top-6 text-6xl text-tertiary transform -translate-y-2">
                 "
               </div>
-              <blockquote className="text-lg lg:text-xl text-secondary leading-relaxed mb-6 relative z-10 italic">
+              <blockquote className="text-sm lg:text-md text-secondary leading-relaxed mb-6 relative z-10 italic">
                 "Weevils is one of the most trusted drone manufacturers in
                 India. Together, we aim to build drones with more advanced
                 technology, right here at IIT Kharagpur."
@@ -100,7 +99,7 @@ const PartnershipComponent = () => {
               <div className="absolute left-6 top-6 text-6xl text-tertiary transform -translate-y-2">
                 "
               </div>
-              <blockquote className="text-lg lg:text-xl text-secondary leading-relaxed mb-6 relative z-10 italic">
+              <blockquote className="text-sm lg:text-md text-secondary leading-relaxed mb-6 relative z-10 italic">
                 "Our goal is to provide the country with drones equipped with
                 advanced technology at the right price. IIT Kharagpur will offer
                 scientific and technical support, ensuring no parts need to be

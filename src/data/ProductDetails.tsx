@@ -12,21 +12,24 @@ export const products = [
     title: "Professional VTOL UAV",
     category: "Defense Series",
     url: "/products/icarus",
-    layout:"right",
+    layout: "left",
     description:
       "Advanced vertical take-off and landing unmanned aerial vehicle designed for long-range missions with exceptional flight performance and reliability.",
 
     gallery: [
       {
-        image: "icarus_landed_view.jpg",
+        image:
+          "	https://weevildrone.co.in/wp-content/uploads/2025/09/Icarus_5-1-1536x1152.jpg",
         caption: "Icarus landed view",
       },
       {
-        image: "icarus_high_altitude.jpg",
+        image:
+          "https://weevildrone.co.in/wp-content/uploads/elementor/thumbs/Screenshot-2025-09-17-164335-rbvy6y46mwxiw845rw74fetnu52t581fv9iwdcyid2.png",
         caption: "High-altitude operational view",
       },
       {
-        image: "icarus_new_version.jpg",
+        image:
+          "https://weevildrone.co.in/wp-content/uploads/elementor/thumbs/Icarus_New-Ver_Frame_3-rbvxw33bnu28qfw5776bm5hwpum474x3pi4wq92a9i.jpg",
         caption: "New Icarus prototype - Frame 3",
       },
     ],
@@ -34,13 +37,13 @@ export const products = [
     videos: [
       {
         title: "Operational Flight Test",
-        url: "https://example.com/icarus-flight-test.mp4",
+        url: "https://weevildrone.co.in/wp-content/uploads/2025/09/Icarus_Flying_1.mp4",
         description:
           "Drone performance testing in high-altitude mountain terrain.",
       },
       {
         title: "Flight Demonstration",
-        url: "https://example.com/icarus-flight-demo.mp4",
+        url: "https://weevildrone.co.in/wp-content/uploads/2025/09/Icarus_3.mp4",
         description:
           "Complete VTOL takeoff, transition to forward flight, and smooth landing sequence.",
       },
@@ -87,11 +90,11 @@ export const products = [
       servos: "HITECH D85MG (6 total)",
     },
 
-    communicationAndPerformance: {
-      communication:
-        "GPS communication system with RF signal backup to connect ground station.",
-      flightPerformance:
-        "50-60 min flight time and 60–80 km range under standard conditions. Ground speed 30 m/s depending on wind.",
+    radioRequirementsAndFlightPerformance: {
+      communicationSystem:
+        "Communication between Icarus and ground station happens through GPS communication system. RF signals can be used for communication as well.",
+      flightCapabilities:
+        "The flight time of a VTOL composite model operating in autopilot mode depends on several factors such as battery capacity, motor efficiency and aerodynamic design. A typical flight time is approximately 50-60 min and up to 60-80 km under standard conditions with single charge. The ground speed is 30 m/s which depends on headwind and tail wind.",
     },
 
     specs: ["VTOL Capable", "Autopilot Mode", "Long Range"],
@@ -107,18 +110,21 @@ export const products = [
     url: "/products/eagle-eye",
     description:
       "Advanced mid-range fixed-wing unmanned aerial vehicle designed for reliable performance with exceptional flight efficiency and composite construction.",
-
+    layout: "left",
     //  Image gallery
     gallery: [
-      { image: "eagle_view.jpg", caption: "Eagle Eye UAV side view" },
-      { image: "eagle_flight.jpg", caption: "In-flight operational view" },
+      {
+        image: "https://weevildrone.co.in/wp-content/uploads/2025/07/i21.jpg",
+        caption: "Eagle Eye UAV side view",
+      },
+      // { image: "eagle_flight.jpg", caption: "In-flight operational view" },
     ],
 
     // Videos
     videos: [
       {
         title: "Operational Flight Test",
-        url: "https://example.com/eagle-operational-test.mp4",
+        url: "https://weevildrone.co.in/wp-content/uploads/2025/09/Gandiva_2.mp4#t=1,20",
         description: "Watch the Eagle Eye UAV in real test flight conditions.",
       },
     ],
@@ -164,11 +170,11 @@ export const products = [
       pusherMotor: "AT5220A KV 220",
     },
 
-    communicationAndPerformance: {
-      communication:
-        "RF-based communication with ground control station. GPS can be enabled for autopilot mode.",
-      flightPerformance:
-        "Typical flight time is 50–60 minutes with 60–80 km range under standard conditions. Ground speed: 30 m/s depending on wind.",
+    radioRequirementsAndFlightPerformance: {
+      communicationSystem:
+        "RF signals are used for communication between the Eagle Eye and the ground control station. These signals are used to transmit flight commands and receive telemetry data from the UAV. GPS communication can be used as an autopilot mode.",
+      flightCapabilities:
+        "The flight time of the Eagle Eye balsa & plywood model operating in autopilot mode depends on several factors such as battery capacity, motor efficiency and aerodynamic design. A typical flight time is approximately 50-60 min and up to 60-80 km under standard conditions with single charge. The ground speed is 30 m/s which depends on headwind and tail wind.",
     },
 
     specs: ["Fixed Wing", "Autopilot Mode", "RF + GPS System"],
@@ -187,10 +193,10 @@ export const products = [
 
     //  Media Gallery
     gallery: [
-      { image: "P1919214.jpg", caption: "Nayanavat UAV – Front View" },
       {
-        image: "nayanavat_view.jpg",
-        caption: "Nayanavat training field view",
+        image:
+          "https://weevildrone.co.in/wp-content/uploads/elementor/thumbs/P1919214-scaled-r1tlyi3e4c95faxjh9xp2u38etk61kexe94tpojnzk.jpg",
+        caption: "Nayanavat View",
       },
     ],
 
@@ -198,8 +204,8 @@ export const products = [
     videos: [
       {
         title: "Operational Flight Test",
-        url: "https://example.com/nayanavat-flight-test.mp4",
-        description: "Watch the Nayanavat UAV military training demonstration.",
+        url: "https://weevildrone.co.in/wp-content/uploads/2025/09/1-Bengal-Air-NCC_Training_4-Trim.mp4#t=1,20",
+        description: "Watch the Nayanavat demonstration.",
       },
     ],
 
@@ -244,11 +250,11 @@ export const products = [
     },
 
     //  Additional Information Section
-    additionalInfo: {
+    additionalKeyComponentsAndApplications: {
       militaryTrainingApplications:
-        "Used frequently for target practice in military training, offering safer and cost-effective alternatives to manned targets while simulating realistic aircraft maneuvers.",
+        "This drone is frequently used for target practice in military training, offering a safer and more cost-effective alternative to manned targets. These drones, often referred to as target drones, are designed to mimic the flight characteristics and radar signatures of various aircraft, including fighter jets, allowing for realistic training scenarios.",
       keyComponents:
-        "Robust construction with a gasoline engine for reliable training performance. Supports up to 2kg payload for additional mission equipment.",
+        "The Nayanavat OS features robust balsa wood and plywood construction designed to withstand training conditions. The gasoline engine provides reliable power delivery, while the compact design allows for easy transport and deployment in various training environments. Maximum payload capacity of 2kg enables additional equipment integration as needed.",
     },
 
     specs: ["Fuel Powered", "Military Training", "High Durability"],
@@ -264,28 +270,37 @@ export const products = [
     url: "/products/gandiva",
     description:
       "Advanced carbon fiber 450 class quadcopter with integrated radar detection capabilities, designed for high-speed interception missions and swarm deployment operations.",
-
+    layout: "left",
     //  Photo Gallery
     gallery: [
-      { image: "gandiva_landed.jpg", caption: "Gandiva landed view" },
       {
-        image: "gandiva_high_altitude.jpg",
+        image:
+          "https://weevildrone.co.in/wp-content/uploads/2025/09/Gandive_6.jpg",
+        caption: "Gandiva landed view",
+      },
+      {
+        image:
+          "https://weevildrone.co.in/wp-content/uploads/elementor/thumbs/Screenshot-2025-09-17-145242-rbvtfn132wf8ymy73cfvi52ed3flb2yjbda6owyid2.png",
         caption: "High-altitude operational view",
       },
-      { image: "gandiva_radar_sim.jpg", caption: "Radar simulation view" },
+      {
+        image:
+          "https://weevildrone.co.in/wp-content/uploads/elementor/thumbs/Screenshot-2025-09-17-150359-rbvtu2tu2a6tazz5s34kazwav69kjpa3mu1p2xjss6.png",
+        caption: "Radar simulation view",
+      },
     ],
 
     //  Video Demonstrations
     videos: [
       {
         title: "Operational Flight Test",
-        url: "https://example.com/gandiva-operational-test.mp4",
+        url: "https://weevildrone.co.in/wp-content/uploads/2025/09/Gandiva_2.mp4#t=1,20",
         description:
           "Watch the Gandiva demonstrate its high-speed interception capabilities and autonomous flight modes.",
       },
       {
         title: "Radar Integration Demo",
-        url: "https://example.com/gandiva-radar-demo.mp4",
+        url: "https://weevildrone.co.in/wp-content/uploads/2025/09/Gandiva_Radar-side-simulation-Trim.mp4",
         description:
           "Detailed walkthrough of the radar detection system and autonomous target engagement workflow.",
       },
@@ -333,17 +348,17 @@ export const products = [
       integration: "Supports MAVLink, TCP/IP, or custom API integration",
     },
 
-    // Integration Workflow & Applications
-    integrationWorkflow: [
-      "Detection: Radar identifies a suspicious UAV",
-      "Target Data: GPS and motion data extracted",
-      "Drone Dispatch: Gandiva moves to intercept",
-      "Engagement: Executes target interception mission",
-    ],
-
-    additionalInfo: {
+    //  Additional Information Section
+    radarDroneIntegrationWorkflowAndApplications: {
+      integrationWorkflow: [
+        "Detection: Radar identifies a suspicious UAV.",
+        "Target Data: GPS coordinates and motion vectors are extracted.",
+        "Drone Dispatch: Gandiva interceptor is dispatched to target location.",
+        "Interception: Drone engages target using onboard systems or directed countermeasures.",
+        "Autonomous Defense: Integrated air defense network responds to threats automatically.",
+      ],
       advancedCapabilities:
-        "High-speed interceptor drone with swarm coordination and radar-assisted navigation for modern defense operations. Integrated Arduflot controller enables smart autonomous missions with manual override.",
+        "The Gandiva Interceptor features high-speed carbon fiber construction enabling rapid deployment and interception capabilities. Swarm coordination allows multiple units to work together for comprehensive area coverage. The Arduflot-based flight controller provides reliable autonomous operation with manual override capabilities for complex mission scenarios.",
     },
 
     specs: ["High Speed", "Radar Detection", "Swarm Deployment"],
@@ -359,19 +374,22 @@ export const products = [
     url: "/products/varchas",
     description:
       "Advanced fixed-wing hybrid aircraft that combines vertical take-off and landing (VTOL) with long-endurance fixed-wing flight, featuring a vertically oriented body at take-off and landing and a horizontal orientation for forward flight.",
-
+    layout: "left",
     //  Media Gallery
     gallery: [
-      { image: "varchas_view.jpg", caption: "Varchas UAV – Front View" },
+      {
+        image:
+          "https://weevildrone.co.in/wp-content/uploads/2025/09/varchas-removebg-preview.png",
+        caption: "Varchas UAV – Front View",
+      },
     ],
 
     //  Video Demonstrations
     videos: [
       {
         title: "Operational Flight Test",
-        url: "https://example.com/varchas-flight-test.mp4",
-        description:
-          "Watch the Varchas UAV in VTOL and forward flight transition demo.",
+        url: "https://weevildrone.co.in/wp-content/uploads/2025/09/1-Bengal-Air-NCC_Training_4-Trim2.mp4#t=1,20",
+        description: "Watch the Varchas demonstration",
       },
     ],
 
@@ -418,11 +436,11 @@ export const products = [
     },
 
     //  VTOL Technology & Applications
-    vtolTechnologyApplications: {
+    vtolTechnologyAndApplications: {
       hybridDesignAdvantages:
-        "Combines helicopter-like VTOL convenience with fixed-wing endurance for versatile deployment without runway requirements.",
+        "The VARCHAS combines the best of both worlds - the convenience of vertical take-off and landing like a helicopter, with the efficiency and endurance of fixed-wing flight. This unique design eliminates the need for runways while providing extended flight times that traditional multirotor aircraft cannot achieve.",
       missionApplications:
-        "Suitable for surveillance missions, border patrol, environmental monitoring, and search & rescue operations.",
+        "Perfect for surveillance missions, border patrol, environmental monitoring, and search and rescue operations. The 45-60 minute flight endurance with 0.5 kg payload capacity makes it ideal for carrying advanced sensors, cameras, or communication equipment over extended periods and distances.",
     },
 
     specs: ["VTOL Hybrid", "45–60 min Endurance", "0.5 kg Payload"],
@@ -438,17 +456,21 @@ export const products = [
     url: "/products/indrajit",
     description:
       "10-inch First-Person View (FPV) Drone, Quad Copter with Optic Fiber Communication, designed for high-speed operations and specialized tactical applications with advanced digital control systems.",
-
+    layout: "left",
     //  Media Gallery
     gallery: [
-      { image: "indrajit_view.jpg", caption: "INDRAJIT FPV Drone View" },
+      {
+        image:
+          "https://weevildrone.co.in/wp-content/uploads/2025/09/indrajit-removebg-preview.png",
+        caption: "INDRAJIT FPV Drone View",
+      },
     ],
 
     //  Video Demonstrations
     videos: [
       {
         title: "Operational Flight Test",
-        url: "https://example.com/indrajit-flight-test.mp4",
+        url: "https://weevildrone.co.in/wp-content/uploads/2025/09/1-Bengal-Air-NCC_Training_2.mp4#t=1,20",
         description: "Watch the INDRAJIT FPV drone in tactical demonstration.",
       },
     ],
@@ -494,11 +516,11 @@ export const products = [
     },
 
     // Additional Information
-    additionalInfo: {
+    advancedFeaturesAndApplications: {
       opticalFiberAdvantages:
-        "Optical fiber communication ensures secure, interference-free control. Immune to electromagnetic interference and jamming.",
+        "The INDRAJIT's optical fiber communication system provides unparalleled security and reliability. Unlike radio frequency communications, optical fiber is immune to electromagnetic interference, jamming, and interception. The 2-20 kilometer fiber length allows for extended range operations while maintaining real-time control and high-definition video transmission.",
       tacticalApplications:
-        "Built for high-speed tactical missions with secure communication needs. Real-time control and HD display improves mission precision.",
+        "Designed for specialized tactical operations where secure communication is critical. The high-speed performance (up to 150 km/h) combined with the 10-inch carbon fiber frame provides exceptional maneuverability and durability. The 7-inch digital display ensures operators have clear, real-time situational awareness during critical missions.",
     },
 
     specs: ["FPV Control", "Optical Fiber Communication", "High Speed"],

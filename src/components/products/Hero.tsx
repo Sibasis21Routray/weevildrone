@@ -1,6 +1,6 @@
-import React from "react";
 import { motion } from "framer-motion";
-import { FaDownLong } from "react-icons/fa6";
+import { FaArrowAltCircleRight, FaArrowRight } from "react-icons/fa";
+import { FaArrowLeft } from "react-icons/fa6";
 
 interface HeroProps {
   name: string;
@@ -8,104 +8,173 @@ interface HeroProps {
   description: string;
   image?: string;
   layout?: string;
+  keyFeatures?: Array<{
+    icon: React.ReactNode;
+    text: string;
+  }>;
+  onScrollClick: () => void;
 }
 
 const Hero: React.FC<HeroProps> = ({
   name,
-  title,
   description,
   image,
   layout,
+  keyFeatures,
+  onScrollClick,
 }) => {
   return (
-    <div className="relative lg:h-screen overflow-hidden pl-0 lg:pl-5 bg-primary">
-      <div className="relative z-10 h-full flex items-center justify-center bg-primary md:mt-25 lg:mt-0">
-        <div className="container mx-auto px-4">
-          <div
-            className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mt-20 md:mt-0 ${
-              layout === "right" ? "lg:flex-row-reverse" : ""
+    <div
+      className=" bg-gradient-to-br from-gray-100 relative bg-cover bg-center bg-no-repeat overflow-hidden"
+      // style={{
+      //   backgroundImage:
+      //     "url('https://img.freepik.com/free-photo/background-gradient-lights_23-2149304995.jpg')",
+      // }}
+    >
+      {/* Main Container */}
+      <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 ">
+        <div
+          className={`grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center min-h-[80vh] ${
+            layout === "right" ? "lg:grid-flow-dense" : ""
+          }`}
+        >
+          {/* Text Content */}
+          <motion.div
+            className={`space-y-8 text-left ${
+              layout === "right" ? "lg:col-start-2" : ""
             }`}
+            initial={{ opacity: 0, x: layout === "right" ? 100 : -100 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            {/* Text Content */}
-            <motion.div
-              className="order-1"
-              initial={{ opacity: 0, x: layout === "right" ? 50 : -50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
+            {/* Product Name */}
+            <motion.h1
+              className="text-4xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3, duration: 0.8 }}
             >
-              <motion.h2
-                className="text-2xl md:text-4xl font-bold mb-6 leading-tight text-secondary"
-                initial={{ opacity: 0, scale: 0.95 }}
+              {name}
+              <motion.span
+                className="block text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-orange-600 mt-2"
+                initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
-                transition={{
-                  duration: 1,
-                  ease: [0.16, 1, 0.3, 1],
-                  delay: 0.4,
-                }}
+                transition={{ delay: 0.5 }}
               >
-                {title}
-              </motion.h2>
+                Professional Series
+              </motion.span>
+            </motion.h1>
 
-              <motion.div
-                className="text-lg mb-8 space-y-4 text-secondary/70"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 1, ease: "easeOut", delay: 0.6 }}
-              >
-                <p>{description}</p>
-              </motion.div>
-
-              {/* <motion.button
-                className="px-6 py-2 sm:px-8 sm:py-3 bg-tertiary text-primary font-medium rounded-lg hover:bg-tertiary/90 transition flex items-center justify-center gap-2 group shadow-lg"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                whileHover={{
-                  scale: 1.05,
-                  boxShadow: "0 10px 30px rgba(255, 105, 0, 0.3)",
-                }}
-                whileTap={{ scale: 0.95 }}
-                transition={{ duration: 0.6, ease: "easeOut", delay: 0.8 }}
-                onClick={() => {
-                  const link = document.createElement("a");
-                  link.href = "/ppt/arthaPpt.pptx";
-                  link.download = "MyPresentation.pptx";
-                  link.click();
-                }}
-              >
-                Download Presentation
-                <FaDownLong className="transition-transform group-hover:translate-y-1 w-4 h-4 sm:w-5 sm:h-5" />
-              </motion.button> */}
-            </motion.div>
-
-            {/* Image/Video Content */}
-            <motion.div
-              className={`relative aspect-video rounded-xl ${
-                layout === "right" ? "order-1 lg:order-2" : "order-2"
-              }`}
-              initial={{ opacity: 0, scale: 1.5 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8, delay: 1, ease: "easeIn" }}
+            {/* Description */}
+            <motion.p
+              className="text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.4 }}
             >
-              {/* Container for decorative elements and image */}
-              <div className="relative p-6 flex items-center justify-center">
-                <div className="flex items-center justify-center">
-                  <div className="relative">
-                    {/* Decorative background divs with theme colors */}
-                    <div className="absolute -inset-4 bg-tertiary/20 rounded-2xl transform rotate-3 z-0"></div>
-                    <div className="absolute -inset-3 bg-secondary/10 rounded-xl transform -rotate-2 z-0"></div>
-                    <div className="absolute -inset-2 bg-tertiary/10 rounded-lg transform rotate-1 z-0"></div>
+              {description}
+            </motion.p>
 
-                    {/* Main image */}
-                    <img
-                      src={image}
-                      alt="Hero background"
-                      className="relative w-full h-full object-cover rounded-xl shadow-2xl z-10 border border-secondary/10"
-                    />
-                  </div>
+            {/* Key Features Grid */}
+            {keyFeatures && (
+              <motion.div
+                className="grid grid-cols-1 sm:grid-cols-2 gap-4 py-1"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.6 }}
+              >
+                {keyFeatures.map((feature, index) => (
+                  <motion.div
+                    key={index}
+                    className="flex items-center space-x-3 p-3 rounded-lg bg-white border border-gray-200 hover:border-orange-300 transition-colors group"
+                    whileHover={{ scale: 1.02 }}
+                    transition={{ type: "spring", stiffness: 400, damping: 25 }}
+                  >
+                    <div className="flex-shrink-0 w-10 h-10 bg-orange-100 rounded-lg flex items-center justify-center group-hover:bg-orange-500 transition-colors">
+                      <div className="text-orange-600 group-hover:text-white text-lg transition-colors">
+                        {feature.icon}
+                      </div>
+                    </div>
+                    <span className="text-sm font-medium text-gray-700 group-hover:text-gray-900 transition-colors">
+                      {feature.text}
+                    </span>
+                  </motion.div>
+                ))}
+              </motion.div>
+            )}
+          </motion.div>
+
+          {/* Image Content */}
+          <motion.div
+            className={`relative ${layout === "right" ? "lg:col-start-1" : ""}`}
+            initial={{
+              opacity: 0,
+              scale: 0.95,
+              x: layout === "right" ? -100 : 100,
+            }}
+            animate={{ opacity: 1, scale: 1, x: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
+          >
+            <div className="relative">
+              {/* Main Image Container */}
+              <motion.div className="relative bg-white rounded-3xl  p-8 border border-gray-200 fex  justify-center ">
+                {/* Image */}
+                <div className="relative rounded-2xl overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200 p-4">
+                  <img
+                    src={image}
+                    alt={name}
+                    className="w-full h-auto object-contain rounded-xl transform hover:scale-105 transition-transform duration-500"
+                  />
+
+                  {/* Hover Effect Overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 rounded-xl" />
                 </div>
-              </div>
-            </motion.div>
-          </div>
+
+                {/* Trust Indicators */}
+                <motion.div
+                  className="flex items-center space-x-6 pt-6"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: 1 }}
+                >
+                  <div className="flex items-center space-x-2">
+                    <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                    <span className="text-sm text-gray-600">In Stock</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <div className="w-5 h-5 text-green-600">✓</div>
+                    <span className="text-sm text-gray-600">Free Shipping</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <div className="w-5 h-5 text-blue-600">🛡️</div>
+                    <span className="text-sm text-gray-600">
+                      2-Year Warranty
+                    </span>
+                  </div>
+                </motion.div>
+
+                {/* CTA Buttons */}
+                <motion.div
+                  className="flex flex-col sm:flex-row gap-4 pt-4"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.8 }}
+                >
+                  <button className="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-orange-600 hover:to-orange-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center justify-center space-x-2">
+                    <span>Buy Now</span>
+                    <span className="text-xl"><FaArrowRight/></span>
+                  </button>
+
+                  <button
+                    onClick={onScrollClick}
+                    className="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-xl font-semibold text-lg hover:border-orange-500 hover:text-orange-600 transition-all duration-300 bg-white"
+                  >
+                    View Specifications
+                  </button>
+                </motion.div>
+              </motion.div>
+            </div>
+          </motion.div>
         </div>
       </div>
     </div>

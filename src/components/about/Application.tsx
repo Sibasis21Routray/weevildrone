@@ -7,7 +7,6 @@ import {
 } from "react-icons/fa";
 import type { Variants } from "framer-motion";
 
-
 const Application = () => {
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -44,7 +43,7 @@ const Application = () => {
   };
 
   return (
-    <section className="py-5 px-4 bg-secondary text-left   ">
+    <section className="py-5 px-4 bg-secondary text-left">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <motion.div
@@ -54,7 +53,7 @@ const Application = () => {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">
+          <h2 className="text-3xl md:text-5xl font-bold text-primary mb-4 mt-4">
             Drone Applications
           </h2>
           <p className="text-lg text-primary max-w-2xl mx-auto">
@@ -69,32 +68,24 @@ const Application = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="space-y-2 "
+          className="space-y-6 lg:space-y-2"
         >
           {/* First Application - Image Left, Content Right */}
           <motion.div
             variants={itemVariants}
-            className="flex flex-col lg:flex-row items-center bg-tertiary p-2"
+            className="flex flex-col lg:flex-row items-center bg-tertiary rounded-lg lg:rounded-none overflow-hidden"
             style={{
-              clipPath:
-                "polygon(5% 0, 100% 0, 100% 50%, 100% 100%, 0 100%, 0 18%)",
               boxShadow: "0 4px 12px rgba(0,0,0,0.2)",
             }}
           >
             {/* Image Section */}
-            <div
-              className="lg:w-1/2 w-full"
-              style={{
-                clipPath:
-                  "polygon(9% 0, 100% 0, 100% 50%, 100% 100%, 0 100%, 0 17%)",
-              }}
-            >
+            <div className="lg:w-1/2 w-full">
               <motion.div
                 variants={imageVariants}
                 className="relative overflow-hidden"
               >
                 <img
-                  src="https://images.unsplash.com/photo-1473968512647-3e447244af8f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                  src="https://weevildrone.co.in/wp-content/uploads/2024/12/drone-quad-copter-green-corn-field_93200-2621.avif"
                   alt="Farming Surveillance"
                   className="w-full h-64 lg:h-72 object-cover"
                 />
@@ -102,34 +93,33 @@ const Application = () => {
                 {/* Text Overlay */}
                 <div className="absolute bottom-4 left-4">
                   <div className="flex space-x-3">
-                    <span className="bg-tertiary text-white px-3 py-1 rounded-full text-sm font-medium ">
+                    <span className="bg-tertiary text-white px-3 py-1 rounded-full text-sm font-medium">
                       Agricultural Technology
                     </span>
-                    <span className="bg-white/20 text-white px-3 py-1 rounded-full text-sm font-medium backdrop-blur-sm border border-white/30">
+                    <span className="bg-white/20 text-secondary px-3 py-1 rounded-full text-sm font-medium backdrop-blur-sm border border-white/30">
                       Precision Farming
                     </span>
                   </div>
                 </div>
 
                 {/* Gradient Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+                {/* <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" /> */}
               </motion.div>
             </div>
 
             {/* Content Section */}
-            <div className="lg:w-1/2 w-full pl-8">
+            <div className="lg:w-1/2 w-full p-6 lg:pl-8">
               <motion.div
                 initial={{ opacity: 0, x: 50 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 viewport={{ once: true }}
-                className=""
               >
                 <h3 className="text-2xl lg:text-3xl font-bold text-primary">
                   Farming Surveillance
                 </h3>
 
-                <p className="text-primary leading-tight mx-3 my-3">
+                <p className="text-primary leading-tight my-3">
                   Revolutionize your agricultural operations with our advanced
                   drone surveillance systems. Monitor crop health, optimize
                   resource allocation, and increase yield through real-time
@@ -190,27 +180,19 @@ const Application = () => {
           {/* Second Application - Image Right, Content Left */}
           <motion.div
             variants={itemVariants}
-            className="flex flex-col lg:flex-row-reverse items-center bg-tertiary p-2"
+            className="flex flex-col lg:flex-row-reverse items-center bg-tertiary rounded-lg lg:rounded-none overflow-hidden"
             style={{
-              clipPath:
-                "polygon(0 0, 95% 0, 100% 18%, 100% 100%, 0 100%, 0 50%)",
               boxShadow: "0 4px 12px rgba(0,0,0,0.2)",
             }}
           >
             {/* Image Section */}
-            <div
-              className="lg:w-1/2 w-full"
-              style={{
-                clipPath:
-                  "polygon(0 0, 91% 0, 100% 17%, 100% 100%, 0 100%, 0 50%)",
-              }}
-            >
+            <div className="lg:w-1/2 w-full">
               <motion.div
                 variants={imageVariants}
                 className="relative overflow-hidden"
               >
                 <img
-                  src="https://images.unsplash.com/photo-1473968512647-3e447244af8f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                  src="https://weevildrone.co.in/wp-content/uploads/2024/12/drone-construction-site_36051-636-1.avif"
                   alt="Mapping and Surveying"
                   className="w-full h-64 lg:h-72 object-cover"
                 />
@@ -218,34 +200,33 @@ const Application = () => {
                 {/* Text Overlay */}
                 <div className="absolute bottom-4 left-4">
                   <div className="flex space-x-3">
-                    <span className="bg-tertiary text-white px-3 py-1 rounded-full text-sm font-medium ">
+                    <span className="bg-tertiary text-white px-3 py-1 rounded-full text-sm font-medium">
                       Geospatial Solutions
                     </span>
-                    <span className="bg-white/20 text-white px-3 py-1 rounded-full text-sm font-medium backdrop-blur-sm border border-white/30">
+                    <span className="bg-white/20 text-secondary px-3 py-1 rounded-full text-sm font-medium backdrop-blur-sm border border-white/30">
                       Aerial Mapping
                     </span>
                   </div>
                 </div>
 
                 {/* Gradient Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+                {/* <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" /> */}
               </motion.div>
             </div>
 
             {/* Content Section */}
-            <div className="lg:w-1/2 w-full pl-8">
+            <div className="lg:w-1/2 w-full p-6 lg:pl-8">
               <motion.div
                 initial={{ opacity: 0, x: -50 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 viewport={{ once: true }}
-                className=""
               >
                 <h3 className="text-2xl lg:text-3xl font-bold text-primary">
                   Mapping and Surveying
                 </h3>
 
-                <p className="text-primary leading-tight my-3 mx-3">
+                <p className="text-primary leading-tight my-3">
                   Transform your mapping and surveying capabilities with our
                   drone technology. Capture precise topographic data, create
                   detailed 3D models, and conduct comprehensive land surveys

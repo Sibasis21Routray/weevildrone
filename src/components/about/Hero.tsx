@@ -10,8 +10,8 @@ function Hero() {
 
   const stats = [
     { number: 95, suffix: "%", label: "Success Rate" },
-    { number: 150, suffix: "+", label: "Projects Completed" },
-    { number: 40, suffix: "km", label: "Maximum Range" },
+    { number: 50, suffix: "+", label: "Projects Completed" },
+    { number: 3, suffix: "mins", label: "Average Response Time" },
     { number: 12, suffix: "hr", label: "Flight Time" },
   ];
 
@@ -110,7 +110,7 @@ function Hero() {
           >
             <div ref={targetDroneRef} className="relative">
               <motion.img
-                src="/drone.png"
+                src="/DroneHero.png"
                 alt="Weevil Drone"
                 className="w-full  object-contain drop-shadow-2xl "
               />

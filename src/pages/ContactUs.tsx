@@ -44,10 +44,7 @@ const ContactUs = () => {
 
   return (
     <div className="relative overflow-hidden min-h-screen bg-white">
-      <section
-        id="contact"
-        className="flex flex-col lg:flex-row lg:gap-[10vw]"
-      >
+      <section id="contact" className="flex flex-col lg:flex-row lg:gap-[10vw]">
         {/* Contact Form */}
         <motion.div
           initial={{ opacity: 0, x: 50 }}
@@ -85,8 +82,8 @@ const ContactUs = () => {
               whileHover={{ scale: 1.02, y: -2 }}
               className="group flex items-start gap-4 p-4 rounded-lg hover:bg-gray-50 transition-colors duration-300"
             >
-              <div className="p-2 bg-gray-100 rounded-lg group-hover:bg-blue-100 transition-colors duration-300">
-                <MapPin className="h-6 w-6 text-gray-600 group-hover:text-blue-600" />
+              <div className="p-2 bg-gray-100 rounded-lg  transition-colors duration-300">
+                <MapPin className="h-6 w-6 text-gray-600 " />
               </div>
               <div className="flex-1 text-gray-600">
                 <p className="font-medium">Our Address</p>
@@ -100,8 +97,8 @@ const ContactUs = () => {
               whileHover={{ scale: 1.02, y: -2 }}
               className="group flex items-start gap-4 p-4 rounded-lg hover:bg-gray-50 transition-colors duration-300"
             >
-              <div className="p-2 bg-gray-100 rounded-lg group-hover:bg-green-100 transition-colors duration-300">
-                <Mail className="h-6 w-6 text-gray-600 group-hover:text-green-600" />
+              <div className="p-2 bg-gray-100 rounded-lg transition-colors duration-300">
+                <Mail className="h-6 w-6 text-gray-600 " />
               </div>
               <div className="flex-1">
                 <p className="font-medium text-gray-600">Email Us</p>
@@ -109,7 +106,7 @@ const ContactUs = () => {
                   href="mailto:connect@Weevildrone.ai"
                   className="text-lg text-blue-600 hover:text-blue-800 transition-colors duration-300"
                 >
-                  connect@Weevildrone.ai
+                  info@Weevildrone.co.in
                 </a>
               </div>
             </motion.div>
@@ -119,14 +116,14 @@ const ContactUs = () => {
               whileHover={{ scale: 1.02, y: -2 }}
               className="group flex items-start gap-4 p-4 rounded-lg hover:bg-gray-50 transition-colors duration-300"
             >
-              <div className="p-2 bg-gray-100 rounded-lg group-hover:bg-red-100 transition-colors duration-300">
-                <Phone className="h-6 w-6 text-gray-600 group-hover:text-red-600" />
+              <div className="p-2 bg-gray-100 rounded-lg transition-colors duration-300">
+                <Phone className="h-6 w-6 text-gray-600" />
               </div>
               <div className="flex-1">
                 <p className="font-medium text-gray-600">Call Us</p>
                 <a
-                  href="tel:+971XXXXXXXXX"
-                  className="text-lg text-blue-600 hover:text-blue-800 transition-colors duration-300"
+                  href="tel:+91 89814 45777"
+                  className="text-gray-600 transition-colors duration-300"
                 >
                   +971 XX XXX XXXX
                 </a>

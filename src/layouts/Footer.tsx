@@ -1,15 +1,46 @@
 import { motion } from "framer-motion";
 import { Link, useLocation } from "react-router-dom";
 import { useState } from "react";
-import {
-  FaInstagram,
-  FaTwitter,
-  FaLinkedin,
-} from "react-icons/fa";
+import { FaInstagram, FaTwitter, FaLinkedin, FaLocationArrow, FaSearchLocation } from "react-icons/fa";
+import { FaLocationPin, FaMessage, FaX } from "react-icons/fa6";
+import { LocateIcon, Mail } from "lucide-react";
 
 const Footer = () => {
   const location = useLocation();
   const [email, setEmail] = useState("");
+
+  const productItems = [
+    {
+      id: "icarus",
+      label: "icarus",
+      path: "/products/icarus",
+    },
+    {
+      id: "eagle-eye",
+      label: "Eagle Eye",
+      path: "/products/eagle-eye",
+    },
+    {
+      id: "nayanavat",
+      label: "Nayanavat",
+      path: "/products/nayanavat",
+    },
+    {
+      id: "gandiva",
+      label: "Gandiva",
+      path: "/products/gandiva",
+    },
+    {
+      id: "varchas",
+      label: "Varchas",
+      path: "/products/varchas",
+    },
+    {
+      id: "indrajit",
+      label: "Indrajit",
+      path: "/products/indrajit",
+    },
+  ];
 
   const footerVariants = {
     hidden: { opacity: 0, y: 50 },
@@ -36,17 +67,17 @@ const Footer = () => {
     {
       name: "LinkedIn",
       icon: FaLinkedin,
-      url: "#",
+      url: "https://www.linkedin.com/company/weevils-drones",
     },
     {
       name: "Twitter",
-      icon: FaTwitter,
-      url: "#",
+      icon: FaX,
+      url: "https://x.com/WeEvilsDrones",
     },
     {
       name: "Instagram",
       icon: FaInstagram,
-      url: "#",
+      url: "https://www.instagram.com/weevildrone/",
     },
   ];
 
@@ -59,16 +90,7 @@ const Footer = () => {
     { name: "Contact", path: "/contactus" },
   ];
 
-  const serviceLinks = [
-    "Aerial Photography",
-    "Survey & Mapping",
-    "Agricultural Spraying",
-    "Industrial Inspection",
-    "Defense Solutions",
-    "Emergency Response",
-  ];
-
-  const handleSubscribe = (e:any) => {
+  const handleSubscribe = (e: any) => {
     e.preventDefault();
     // Handle subscription logic here
     console.log("Subscribed:", email);
@@ -128,7 +150,7 @@ const Footer = () => {
                   whileHover={{ scale: 1.2 }}
                   className="text-orange-500"
                 >
-                  📍
+                  <LocateIcon />
                 </motion.div>
                 <p className="text-sm">
                   Duplex No-A/10 (Hill View Resorts),
@@ -144,7 +166,7 @@ const Footer = () => {
                   whileHover={{ scale: 1.2 }}
                   className="text-orange-500"
                 >
-                  📧
+                  <Mail />
                 </motion.div>
                 <a
                   href="mailto:info@weevildrone.co.in"
@@ -157,7 +179,10 @@ const Footer = () => {
           </motion.div>
 
           {/* Quick Links */}
-          <motion.div variants={itemVariants} className="lg:col-span-1 mx-[5vw]">
+          <motion.div
+            variants={itemVariants}
+            className="lg:col-span-1 mx-[5vw]"
+          >
             <h4 className="text-lg font-semibold mb-6 text-orange-400">
               Quick Links
             </h4>
@@ -185,15 +210,15 @@ const Footer = () => {
             </ul>
           </motion.div>
 
-          {/* Services */}
+          {/* Products */}
           <motion.div variants={itemVariants} className="lg:col-span-1">
             <h4 className="text-lg font-semibold mb-6 text-orange-400">
-              Our Services
+              Our Products
             </h4>
             <ul className="space-y-3">
-              {serviceLinks.map((service) => (
+              {productItems.map((product) => (
                 <motion.li
-                  key={service}
+                  key={product.id}
                   whileHover={{ x: 5 }}
                   className="flex items-center gap-2 text-gray-300 hover:text-orange-400 transition-colors cursor-pointer"
                 >
@@ -204,7 +229,16 @@ const Footer = () => {
                   >
                     ✦
                   </motion.div>
-                  {service}
+                  <Link
+                    to={product.path}
+                    className={`hover:text-orange-400 transition-colors ${
+                      location.pathname === product.path
+                        ? "text-orange-400 font-semibold"
+                        : ""
+                    }`}
+                  >
+                    {product.label}
+                  </Link>
                 </motion.li>
               ))}
             </ul>

@@ -1,14 +1,13 @@
 import { motion } from "framer-motion";
 import {
-  FaRocket,
   FaLightbulb,
   FaLeaf,
   FaUserCheck,
-  FaAward,
-  FaCogs,
+  FaEye,
+  FaBullseye,
+  FaHistory,
 } from "react-icons/fa";
 import type { Variants } from "framer-motion";
-
 
 const MissionValues = () => {
   const containerVariants: Variants = {
@@ -53,7 +52,30 @@ const MissionValues = () => {
     },
   };
 
-  
+  // Data for Why Choose Us - Updated with appropriate icons
+  const whyChooseUsData = [
+    {
+      id: 1,
+      icon: FaEye, // Changed from FaCogs to FaEye for Vision
+      title: "Our Vision",
+      description:
+        "To innovate and manufacture with perfection and precision every thought a client .",
+    },
+    {
+      id: 2,
+      icon: FaBullseye, // Changed from FaRocket to FaBullseye for Mission
+      title: "Our Mission",
+      description:
+        "To provide cutting-edge drone solutions that seemingly never existed.",
+    },
+    {
+      id: 3,
+      icon: FaHistory, // Changed from FaAward to FaHistory for Story
+      title: "Our Story",
+      description:
+        "Started in 2019 with a vision to redefine and extend the potential of unmanned aerial systems. Over the years, we have evolved into a trusted partner for industries across the world. We have provided them with drones that have reinvented efficiency and reliability, In the skies of the future, our drones shall be technologically equipped to brave every challenge",
+    },
+  ];
 
   // Data for Core Values
   const coreValuesData = [
@@ -78,33 +100,8 @@ const MissionValues = () => {
     },
   ];
 
-  // Data for Why Choose Us
-  const whyChooseUsData = [
-    {
-      id: 1,
-      icon: FaCogs,
-      title: "Our Vision",
-      description:
-        "To innovate and manufacture with perfection and precision every thought a client .",
-    },
-    {
-      id: 2,
-      icon: FaRocket,
-      title: "Our Mission",
-      description:
-        "To provide cutting-edge drone solutions that seemingly never existed.",
-    },
-    {
-      id: 3,
-      icon: FaAward,
-      title: "Our Story",
-      description:
-        "Started in 2019 with a vision to redefine and extend the potential of unmanned aerial systems. Over the years, we have evolved into a trusted partner for industries across the world. We have provided them with drones that have reinvented efficiency and reliability, In the skies of the future, our drones shall be technologically equipped to brave every challenge",
-    },
-  ];
-
   return (
-    <section className="py-16 px-4  ">
+    <section className="py-16 px-4 md:px-10 lg:px-12">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <motion.div
@@ -131,7 +128,7 @@ const MissionValues = () => {
           viewport={{ once: true }}
           className="mb-16"
         >
-          <div className="flex flex-col lg:flex-row items-center gap-12 text-left">
+          <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12 text-left">
             {/* Bullet Points Section */}
             <div className="lg:w-1/2 w-full">
               <motion.div
@@ -164,7 +161,7 @@ const MissionValues = () => {
               </motion.div>
             </div>
 
-            {/* Image Section */}
+             {/* Image Section */}
             <div className="lg:w-1/2 w-full">
               <motion.div
                 initial={{ opacity: 0, x: 50 }}
@@ -176,7 +173,7 @@ const MissionValues = () => {
                 <img
                   src="https://media.licdn.com/dms/image/v2/D5612AQEDUDcu7Otl-w/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1655080622287?e=2147483647&v=beta&t=Kz8UKcGmr7qn6a9csEVeSKPtbqdZyv_igejPGmJ2RZs"
                   alt="Why Choose Our Drone Solutions"
-                  className="w-full h-96 object-cover "
+                  className="w-full h-96 object-fill "
                 />
               </motion.div>
             </div>
@@ -189,7 +186,7 @@ const MissionValues = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="mb-16 "
+          className="mb-16"
         >
           <motion.div variants={itemVariants} className="text-center mb-12">
             <h3 className="text-3xl md:text-4xl font-bold text-secondary mb-4">
@@ -201,13 +198,13 @@ const MissionValues = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 ">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {coreValuesData.map((item) => (
               <motion.div
                 key={item.id}
                 variants={cardVariants}
                 whileHover="hover"
-                className="bg-white p-6 text-center group "
+                className="bg-white p-6 text-center group"
               >
                 <div className="w-16 h-16 bg-tertiary rounded-full flex items-center justify-center text-white mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                   <item.icon className="w-8 h-8" />

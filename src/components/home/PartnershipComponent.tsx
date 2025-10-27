@@ -1,11 +1,11 @@
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 const PartnershipShowcase = () => {
+  const navigate = useNavigate();
   return (
-    <section className="w-full bg-primary py-0">
+    <section className="w-full bg-primary py-10">
       <div className="max-w-6xl mx-auto px-4">
-        
-
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -36,7 +36,7 @@ const PartnershipShowcase = () => {
           </h2>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-16 items-start">
+        <div className="grid lg:grid-cols-2 gap-16 items-start text-left">
           {/* Left Column - Main Content */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -50,14 +50,14 @@ const PartnershipShowcase = () => {
               <p className="text-secondary text-sm font-medium mb-1">
                 In collaboration with
               </p>
-              <p className="text-xl font-semibold text-secondary">
+              <p className="text-3xl font-semibold text-secondary">
                 Indian Institute of Technology Kharagpur
               </p>
             </div>
 
             {/* Main Content */}
             <div className="space-y-6 text-secondary">
-              <p className="text-lg leading-relaxed">
+              <p className="text-sm leading-relaxed">
                 Indian Institute of Technology (IIT) Kharagpur has entered into
                 a strategic partnership with{" "}
                 <span className="font-semibold">Weevils Drones</span>, a leading
@@ -70,7 +70,7 @@ const PartnershipShowcase = () => {
                 <p className="text-sm font-medium mb-2">
                   FACILITY INAUGURATION
                 </p>
-                <p className="text-2xl font-light">February 11, 2025</p>
+                <p className="text-sm font-light">February 11, 2025</p>
               </div>
 
               {/* <p className="text-lg leading-relaxed">
@@ -113,6 +113,7 @@ const PartnershipShowcase = () => {
                 </p>
 
                 <motion.button
+                  onClick={() => window.open("https://stepiitkgp.org/startups")}
                   whileHover={{ backgroundColor: "var(--color-tertiary)" }}
                   transition={{ duration: 0.2 }}
                   className="border border-primary px-8 py-3 text-sm font-medium tracking-wide hover:bg-tertiary hover:border-tertiary transition-colors"
@@ -135,7 +136,6 @@ const PartnershipShowcase = () => {
             </div>
           </motion.div>
         </div>
-
       </div>
     </section>
   );

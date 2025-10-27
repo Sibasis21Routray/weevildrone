@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { FaLinkedin, FaEnvelope } from "react-icons/fa";
+
 import type { Variants } from "framer-motion";
 import { useState, useEffect } from "react";
 
@@ -236,9 +236,9 @@ const OurTeam = () => {
       </div>
 
       {/* Rest of the content */}
-      <div className="max-w-7xl mx-auto px-4 pb-1">
+      <div className="max-w-7xl mx-auto px-4 pb-10">
         {/* Team Stats */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
@@ -262,10 +262,10 @@ const OurTeam = () => {
               <div className="text-sm text-gray-600">Client Satisfaction</div>
             </div>
           </div>
-        </motion.div>
+        </motion.div> */}
 
         {/* CTA Section */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.6 }}
@@ -274,7 +274,7 @@ const OurTeam = () => {
           <button className="bg-tertiary text-white px-8 py-3 rounded-full font-semibold hover:bg-orange-600 transition-colors duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
             Join Our Team
           </button>
-        </motion.div>
+        </motion.div> */}
       </div>
     </section>
   );

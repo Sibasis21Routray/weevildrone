@@ -2,7 +2,7 @@ import Hero from '../components/home/Hero'
 import PartnershipComponent from '../components/home/PartnershipDetails';
 import PartnershipShowcase from '../components/home/PartnershipComponent';
 import LatestNews from '../components/home/LatestNews';
-import SocialUpdatesSimple from '../components/home/SocialUpdatesSimple';
+// import SocialUpdatesSimple from '../components/home/SocialUpdatesSimple';
 import ProductShowcase from '../components/home/ProductShowcase';
 
 function Home() {
@@ -13,7 +13,7 @@ function Home() {
       <PartnershipShowcase/>
       <PartnershipComponent/>
       <LatestNews/>
-      <SocialUpdatesSimple/>
+      {/* <SocialUpdatesSimple/> */}
     </div>
   );
 }

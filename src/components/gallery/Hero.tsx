@@ -53,7 +53,7 @@ const Hero: React.FC<HeroSectionProps> = ({
   };
 
   return (
-    <section className="relative h-screen overflow-hidden">
+    <section className="relative md:h-fit sm:h-screen lg:h-screen overflow-hidden">
       {/* Background Images with Slideshow */}
       <div className="absolute inset-0">
         {backgroundImages.map((image, index) => (
