@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
-import { FaArrowAltCircleRight, FaArrowRight } from "react-icons/fa";
-import { FaArrowLeft } from "react-icons/fa6";
+import {  FaArrowRight } from "react-icons/fa";
+
 
 interface HeroProps {
   name: string;

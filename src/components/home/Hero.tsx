@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Truck, Shield, Bluetooth, BookCheck, Swords, PencilRuler } from "lucide-react";
+import {  Shield, Swords, PencilRuler } from "lucide-react";
 
 const Hero: React.FC = () => {
   return (

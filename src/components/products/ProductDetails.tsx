@@ -98,7 +98,7 @@ interface FlightCharacteristics {
 }
 
 interface ProductDetailsProps {
-  sectionRef: React.RefObject<HTMLDivElement>;
+  sectionRef: React.RefObject<HTMLDivElement | null>;
   keyFeatures: KeyFeature[];
   generalSpecifications?: GeneralSpecifications;
   electricPowerSystem?: ElectricPowerSystem;

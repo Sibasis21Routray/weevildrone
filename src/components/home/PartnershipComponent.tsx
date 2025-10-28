@@ -1,8 +1,6 @@
 import { motion } from "framer-motion";
-import { useNavigate } from "react-router-dom";
 
 const PartnershipShowcase = () => {
-  const navigate = useNavigate();
   return (
     <section className="w-full bg-primary py-10">
       <div className="max-w-6xl mx-auto px-4">

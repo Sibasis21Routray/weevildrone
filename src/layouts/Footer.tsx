@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 import { Link, useLocation } from "react-router-dom";
 import { useState } from "react";
-import { FaInstagram, FaTwitter, FaLinkedin, FaLocationArrow, FaSearchLocation } from "react-icons/fa";
-import { FaLocationPin, FaMessage, FaX } from "react-icons/fa6";
+import { FaInstagram, FaLinkedin, } from "react-icons/fa";
+import {  FaX } from "react-icons/fa6";
 import { LocateIcon, Mail } from "lucide-react";
 
 const Footer = () => {
