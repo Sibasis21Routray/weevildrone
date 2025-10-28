@@ -125,7 +125,7 @@ const ContactUs = () => {
                   href="tel:+91 89814 45777"
                   className="text-gray-600 transition-colors duration-300"
                 >
-                  +971 XX XXX XXXX
+                  +91 89814 45777
                 </a>
               </div>
             </motion.div>

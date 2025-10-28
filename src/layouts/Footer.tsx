@@ -316,29 +316,7 @@ const Footer = () => {
               © 2024 WEEVILS DRONES PRIVATE LIMITED. All rights reserved.
             </p>
 
-            <div className="flex gap-6 text-sm text-gray-400">
-              <motion.a
-                href="#"
-                whileHover={{ color: "#FF6900" }}
-                className="hover:text-orange-400 transition-colors"
-              >
-                Privacy Policy
-              </motion.a>
-              <motion.a
-                href="#"
-                whileHover={{ color: "#FF6900" }}
-                className="hover:text-orange-400 transition-colors"
-              >
-                Terms of Service
-              </motion.a>
-              <motion.a
-                href="#"
-                whileHover={{ color: "#FF6900" }}
-                className="hover:text-orange-400 transition-colors"
-              >
-                Cookie Policy
-              </motion.a>
-            </div>
+            
           </div>
         </motion.div>
       </div>

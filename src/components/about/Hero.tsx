@@ -10,9 +10,9 @@ function Hero() {
 
   const stats = [
     { number: 95, suffix: "%", label: "Success Rate" },
-    { number: 50, suffix: "+", label: "Projects Completed" },
+    { number: 100, suffix: "+", label: "Projects Completed" },
     { number: 3, suffix: "mins", label: "Average Response Time" },
-    { number: 12, suffix: "hr", label: "Flight Time" },
+    { number: 37, suffix: "+", label: "Years Experience" },
   ];
 
   const containerVariants :Variants= {

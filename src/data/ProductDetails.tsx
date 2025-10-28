@@ -524,7 +524,8 @@ export const products = [
     },
 
     specs: ["FPV Control", "Optical Fiber Communication", "High Speed"],
-    image: "/drones/indrajit .png",
+    image:
+      "https://weevildrone.co.in/wp-content/uploads/2025/09/indrajit-removebg-preview.png",
     color: "from-gray-700 to-black",
     accent: "bg-gray-800",
   },
