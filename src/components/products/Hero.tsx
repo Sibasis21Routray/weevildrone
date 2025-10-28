@@ -35,7 +35,7 @@ const Hero: React.FC<HeroProps> = ({
       {/* Main Container */}
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 ">
         <div
-          className={`grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center min-h-[80vh] ${
+          className={`grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start min-h-[80vh] mt-4 ${
             layout === "right" ? "lg:grid-flow-dense" : ""
           }`}
         >
@@ -75,28 +75,6 @@ const Hero: React.FC<HeroProps> = ({
             >
               {description}
             </motion.p>
-
-            {/* CTA Buttons */}
-            <motion.div
-              className="flex flex-col sm:flex-row gap-4 pt-4"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.8 }}
-            >
-              <button className="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-orange-600 hover:to-orange-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center justify-center space-x-2">
-                <span>Buy Now</span>
-                <span className="text-xl">
-                  <FaArrowRight />
-                </span>
-              </button>
-
-              <button
-                onClick={onScrollClick}
-                className="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-xl font-semibold text-lg hover:border-orange-500 hover:text-orange-600 transition-all duration-300 bg-white"
-              >
-                View Specifications
-              </button>
-            </motion.div>
           </motion.div>
 
           {/* Image Content */}
@@ -149,6 +127,28 @@ const Hero: React.FC<HeroProps> = ({
                 </motion.div>
               </motion.div>
             </div>
+          </motion.div>
+
+          {/*  Buttons */}
+          <motion.div
+            className="flex flex-col sm:flex-row gap-4 mt-0 lg:-mt-[30vh]"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.8 }}
+          >
+            <button className="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-8 py-4  font-semibold text-lg hover:from-orange-600 hover:to-orange-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center justify-center space-x-2">
+              <span>Buy Now</span>
+              <span className="text-xl">
+                <FaArrowRight />
+              </span>
+            </button>
+
+            <button
+              onClick={onScrollClick}
+              className="border-2 border-gray-300 text-gray-700 px-8 py-4  font-semibold text-lg hover:border-orange-500 hover:text-orange-600 transition-all duration-300 bg-white"
+            >
+              View Specifications
+            </button>
           </motion.div>
         </div>
       </div>
