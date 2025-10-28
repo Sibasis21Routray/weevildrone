@@ -109,7 +109,7 @@ const Hero: React.FC = () => {
 
       {/* heading */}
       <div className="relative  flex flex-col items-center justify-start px-3 sm:px-4  z-10">
-        {/* Background Text "WEEVILDRONE" - Responsive */}
+        {/* Background Text "WEEVILDRONE */}
         <motion.div
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -128,7 +128,7 @@ const Hero: React.FC = () => {
           </div>
         </motion.div>
 
-        {/* Title "Beyond Gravity" - Responsive */}
+        {/* Beyond Gravity */}
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -152,7 +152,7 @@ const Hero: React.FC = () => {
         className="absolute bottom-4 sm:bottom-48 lg:bottom-8 xl:bottom-12 left-1/2 -translate-x-1/2 w-full max-w-2xl  lg:max-w-2xl xl:max-w-4xl z-20 px-3 sm:px-4 lg:px-6"
       >
         <div className="text-center space-y-4 sm:space-y-5 lg:space-y-6">
-          {/* Description Text - Responsive */}
+          {/* Description Text  */}
           <p className="text-[#333333] text-xs sm:text-sm lg:text-base leading-relaxed  mx-auto font-light tracking-wide drop-shadow-sm px-2 sm:px-0">
             At Weevils Drones, we design, manufacture, and deploy advanced
             drones that redefine operational excellence. We empower businesses
@@ -161,7 +161,7 @@ const Hero: React.FC = () => {
             never before.
           </p>
 
-          {/* Bottom Decorative Elements - Responsive */}
+          {/* Bottom Decorative Elements  */}
           <motion.div
             className="flex items-center justify-center space-x-4 sm:space-x-5 lg:space-x-6"
             initial={{ opacity: 0 }}

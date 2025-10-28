@@ -21,7 +21,6 @@ const Hero: React.FC<HeroProps> = ({
   description,
   image,
   layout,
-  keyFeatures,
   onScrollClick,
 }) => {
   return (

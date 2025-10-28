@@ -1,6 +1,6 @@
 
 import { AiOutlineFieldTime } from "react-icons/ai";
-import { GiAirplane, GiElectric, GiGasPump, GiHelicopter, GiJetFighter, GiNetworkBars, GiSpeedometer, GiTargetDummy, GiWeight, GiWoodBeam } from "react-icons/gi";
+import {  GiElectric, GiGasPump, GiHelicopter, GiJetFighter, GiNetworkBars, GiSpeedometer, GiTargetDummy, GiWeight } from "react-icons/gi";
 import { RiRadarLine, RiRadioLine } from "react-icons/ri";
 // import { GiSteelClaws } from "react-icons/gi";
 import { FaNetworkWired, FaVideo } from "react-icons/fa";  
