@@ -25,7 +25,7 @@ const Hero: React.FC<HeroProps> = ({
 }) => {
   return (
     <div
-      className=" bg-gradient-to-br from-gray-100 relative bg-cover bg-center bg-no-repeat overflow-hidden"
+      className=" bg-primary relative bg-cover bg-center bg-no-repeat overflow-hidden"
       // style={{
       //   backgroundImage:
       //     "url('https://img.freepik.com/free-photo/background-gradient-lights_23-2149304995.jpg')",

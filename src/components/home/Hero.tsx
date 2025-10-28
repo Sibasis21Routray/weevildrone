@@ -149,11 +149,11 @@ const Hero: React.FC = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 0.9 }}
-        className="absolute bottom-4 sm:bottom-48 lg:bottom-8 xl:bottom-12 left-1/2 -translate-x-1/2 w-full max-w-xs sm:max-w-md lg:max-w-2xl xl:max-w-4xl z-20 px-3 sm:px-4 lg:px-6"
+        className="absolute bottom-4 sm:bottom-48 lg:bottom-8 xl:bottom-12 left-1/2 -translate-x-1/2 w-full max-w-2xl  lg:max-w-2xl xl:max-w-4xl z-20 px-3 sm:px-4 lg:px-6"
       >
         <div className="text-center space-y-4 sm:space-y-5 lg:space-y-6">
           {/* Description Text - Responsive */}
-          <p className="text-[#333333] text-xs sm:text-sm lg:text-base leading-relaxed max-w-full sm:max-w-lg lg:max-w-2xl xl:max-w-3xl mx-auto font-light tracking-wide drop-shadow-sm px-2 sm:px-0">
+          <p className="text-[#333333] text-xs sm:text-sm lg:text-base leading-relaxed  mx-auto font-light tracking-wide drop-shadow-sm px-2 sm:px-0">
             At Weevils Drones, we design, manufacture, and deploy advanced
             drones that redefine operational excellence. We empower businesses
             across industries and a multitude of platforms, with cutting edge

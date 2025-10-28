@@ -36,7 +36,7 @@ const trainingFeatures = [
 
 export const TrainingServices: React.FC = () => {
   return (
-    <section id="training" className="py-1 bg-[var(--color-primary)]">
+    <section id="training" className="py-1 bg-[var(--color-primary)] md:mt-10 lg:mt-4">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           className="text-center mb-16"

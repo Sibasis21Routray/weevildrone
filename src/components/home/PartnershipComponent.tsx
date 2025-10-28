@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 const PartnershipShowcase = () => {
   return (
-    <section className="w-full bg-primary py-10">
+    <section className="w-full bg-primary py-12">
       <div className="max-w-6xl mx-auto px-4">
         {/* Header */}
         <motion.div

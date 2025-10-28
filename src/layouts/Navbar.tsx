@@ -34,7 +34,7 @@ const Navbar: React.FC<NavbarProps> = () => {
   const productItems = [
     {
       id: "icarus",
-      label: "icarus",
+      label: "Icarus",
       path: "/products/icarus",
     },
     {

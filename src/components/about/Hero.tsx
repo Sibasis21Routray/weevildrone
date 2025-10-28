@@ -103,7 +103,7 @@ function Hero() {
 
           {/* Target Drone */}
           <motion.div
-            className="flex justify-center lg:justify-end relative order-1 lg:order-2 mb-8 lg:mb-0 "
+            className="flex justify-center lg:justify-end relative order-1 lg:order-2  -mt-[10vh] md:-mt-[15vh] lg:mt-0"
             // variants={droneVariants}
             initial="hidden"
             animate="visible"

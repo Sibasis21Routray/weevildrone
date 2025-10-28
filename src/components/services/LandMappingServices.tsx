@@ -117,7 +117,7 @@ export const LandMappingServices: React.FC = () => {
                 <h3 className="text-lg lg:text-xl font-bold text-white mb-1">
                   Cutting-Edge DGPS RTK Technology
                 </h3>
-                <p className="text-white text-xs lg:text-sm">
+                <p className="text-white text-md ">
                   Advanced drone-based mapping with millimeter-level accuracy
                   for precision agriculture and industrial applications
                 </p>
@@ -148,7 +148,7 @@ export const LandMappingServices: React.FC = () => {
                 Agricultural Sector Expertise
               </h3>
             </div>
-            <p className="text-gray-700 mb-4 lg:mb-6 text-sm lg:text-md leading-tight text-left">
+            <p className="text-gray-700 mb-4 lg:mb-6 text-md lg:text-md leading-tight text-left">
               Specialized in agricultural land geo-fencing with DGPS RTK survey
               technology. Successfully completed mapping of Goodrick Tea Garden
               (2.54 Hectares) at North Bengal, West Bengal.
@@ -171,7 +171,7 @@ export const LandMappingServices: React.FC = () => {
                 <div className="text-gray-300 text-xs lg:text-sm">Coverage</div>
               </div>
             </div>
-            <p className="text-center mt-3 text-xs lg:text-sm italic text-secondary">
+            <p className="text-center mt-3 text-sm lg:text-sm italic text-secondary">
               Precision mapping of Goodrick Tea Garden (2.54 Hectares) in North
               Bengal, West Bengal
             </p>
@@ -209,7 +209,7 @@ export const LandMappingServices: React.FC = () => {
               className="rounded-lg shadow-2xl w-full h-56 lg:h-72 object-cover border-4 border-white lg:mt-12"
             />
             <p
-              className="text-center mt-3 text-xs lg:text-sm italic"
+              className="text-center mt-3 text-sm lg:text-sm italic"
               style={{ color: "var(--color-primary)" }}
             >
               Detailed mapping analysis and data visualization
@@ -246,13 +246,13 @@ export const LandMappingServices: React.FC = () => {
                       <app.icon className="text-white text-xs lg:text-sm" />
                     </div>
                     <h4
-                      className="font-semibold text-sm lg:text-sm"
+                      className="font-semibold text-md"
                       style={{ color: "var(--color-secondary)" }}
                     >
                       {app.sector}
                     </h4>
                   </div>
-                  <p className="text-gray-600 text-xs leading-tight">
+                  <p className="text-gray-600 text-md leading-tight text-left">
                     {app.description}
                   </p>
                 </motion.div>
@@ -277,7 +277,7 @@ export const LandMappingServices: React.FC = () => {
               className="rounded-lg shadow-2xl w-screen h-64 lg:h-80 object-cover border-4 border-white"
             />
             <p
-              className="text-center mt-3 text-xs lg:text-sm italic mb-4 lg:mb-5"
+              className="text-center mt-3 text-sm lg:text-sm italic mb-4 lg:mb-5"
               style={{ color: "var(--color-primary)" }}
             >
               Aerial view of completed mapping project
@@ -336,13 +336,13 @@ export const LandMappingServices: React.FC = () => {
                       {spec.features.map((feature, featureIndex) => (
                         <li
                           key={featureIndex}
-                          className="flex items-start space-x-1"
+                          className="flex  space-x-4 items-center"
                         >
-                          <span className="text-[var(--color-tertiary)] mt-1 text-xs flex-shrink-0">
+                          <span className="text-[var(--color-tertiary)] mt-1 text-md flex-shrink-0">
                             •
                           </span>
-                          <span className="text-gray-600 text-sm leading-tight">
-                            {feature}
+                          <span className="text-gray-600 text-md leading-tight">
+                            {feature} 
                           </span>
                         </li>
                       ))}
