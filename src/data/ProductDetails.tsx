@@ -2,14 +2,15 @@
 import { AiOutlineFieldTime } from "react-icons/ai";
 import { GiAirplane, GiElectric, GiGasPump, GiHelicopter, GiJetFighter, GiNetworkBars, GiSpeedometer, GiTargetDummy, GiWeight, GiWoodBeam } from "react-icons/gi";
 import { RiRadarLine, RiRadioLine } from "react-icons/ri";
-import { GiSteelClaws } from "react-icons/gi";
+// import { GiSteelClaws } from "react-icons/gi";
 import { FaNetworkWired, FaVideo } from "react-icons/fa";  
+import { Shield } from "lucide-react";
 
 export const products = [
   {
     id: 1,
     name: "ICARUS",
-    title: "Professional VTOL UAV",
+    title: "VTOL LONG-RANGE UAV",
     category: "Defense Series",
     url: "/products/icarus",
     layout: "left",
@@ -56,16 +57,16 @@ export const products = [
       },
       {
         icon: <GiElectric />,
-        text: "Dual power system: Electric + Gas option",
+        text: "Configurable for both electric and gas power with composite construction",
       },
       {
         icon: <RiRadioLine />,
         text: "Advanced GPS communication with RF backup",
       },
-      {
-        icon: <GiSteelClaws />,
-        text: "Composite carbon fiber + fiberglass construction",
-      },
+      // {
+      //   icon: <GiSteelClaws />,
+      //   text: "Composite carbon fiber + fiberglass construction",
+      // },
     ],
 
     //  Technical Specifications
@@ -76,7 +77,7 @@ export const products = [
       flyingWeight: "~4.4 kg",
       construction: "Carbon fiber / fiberglass composite",
       power: "Configurable for electric or gas",
-      assembly: "ARF (Almost Ready to Fly) kit",
+      assembly: "Typically provided as an ARF (Almost Ready to Fly) kit",
     },
 
     //  Electric System
@@ -105,7 +106,7 @@ export const products = [
   {
     id: 2,
     name: "EAGLE EYE",
-    title: "Professional Fixed-Wing UAV",
+    title: " MID-RANGE FIXED-WING UAV",
     category: "Defense Series",
     url: "/products/eagle-eye",
     description:
@@ -133,20 +134,20 @@ export const products = [
     keyFeatures: [
       {
         icon: <AiOutlineFieldTime />,
-        text: "Extended flight time with reliable mid-range performance",
+        text: "Optimized flight duration with reliable performance under standard conditions",
       },
       {
         icon: <GiElectric />,
-        text: "Electric-powered system with rechargeable battery",
+        text: "Rechargeable battery system with composite balsa wood construction",
       },
       {
         icon: <RiRadioLine />,
-        text: "RF + GPS communication with autopilot mode support",
+        text: "Advanced GPS communication system designed for reliable operation in busy environments",
       },
-      {
-        icon: <GiWoodBeam />,
-        text: "Composite last-cut balsa wood construction",
-      },
+      // {
+      //   icon: <GiWoodBeam />,
+      //   text: "Composite last-cut balsa wood construction",
+      // },
     ],
 
     // General Specifications
@@ -185,7 +186,7 @@ export const products = [
   {
     id: 3,
     name: "NAYANAVAT",
-    title: "Fuel-Based Training UAV",
+    title: "OS 0.46 / 0.56 - FUEL-BASED UAV",
     category: "Training Series",
     url: "/products/nayanavat",
     description:
@@ -223,10 +224,10 @@ export const products = [
         icon: <GiTargetDummy />,
         text: "Designed for military target training simulations",
       },
-      {
-        icon: <GiWoodBeam />,
-        text: "Durable balsa wood and plywood construction",
-      },
+      // {
+      //   icon: <GiWoodBeam />,
+      //   text: "Durable balsa wood and plywood construction",
+      // },
     ],
 
     //  Technical Specifications
@@ -321,7 +322,7 @@ export const products = [
         text: "Swarm deployment support for 2–10+ coordinated units",
       },
       {
-        icon: <GiNetworkBars />,
+        icon: <Shield />,
         text: "Carbon fiber 450 class quadcopter frame",
       },
     ],
@@ -340,8 +341,8 @@ export const products = [
     // Radar Integration Module
     radarIntegration: {
       detection:
-        "Over-the-horizon compact drone detection radar (COTS/military)",
-      range: "5–10 km",
+        "Over-the-horizon compact drone detection radar (COTS or military grade)",
+      range: "5-10 km (optimized for small UAVs like quadcopters)",
       detectionSpeed: "Detects targets at 0.2–4 m/s airspeed",
       trackingTime: ">5 seconds continuous tracking",
       outputFormat: "Target GPS coordinates (latitude/longitude)",
@@ -354,8 +355,7 @@ export const products = [
         "Detection: Radar identifies a suspicious UAV.",
         "Target Data: GPS coordinates and motion vectors are extracted.",
         "Drone Dispatch: Gandiva interceptor is dispatched to target location.",
-        "Interception: Drone engages target using onboard systems or directed countermeasures.",
-        "Autonomous Defense: Integrated air defense network responds to threats automatically.",
+        "Interception:  Drone engages target using onboard systems or directed countermeasures. The system creates an integrated air defense network capable of autonomous threat response.",
       ],
       advancedCapabilities:
         "The Gandiva Interceptor features high-speed carbon fiber construction enabling rapid deployment and interception capabilities. Swarm coordination allows multiple units to work together for comprehensive area coverage. The Arduflot-based flight controller provides reliable autonomous operation with manual override capabilities for complex mission scenarios.",
@@ -397,20 +397,20 @@ export const products = [
     keyFeatures: [
       {
         icon: <GiHelicopter />,
-        text: "Vertical take-off and landing (VTOL) with hybrid design",
+        text: "Vertical take-off and landing combined with efficient fixed-wing forward flight for maximum versatility",
       },
       {
         icon: <AiOutlineFieldTime />,
-        text: "45–60 minutes extended endurance flight capability",
+        text: "45-60 minutes flight time with efficient aerodynamic design for long-range missions",
       },
       {
         icon: <GiWeight />,
-        text: "0.5 kg mission payload capacity",
+        text: "0.5 kg payload capacity with lightweight 1.5-2.0 kg take-off weight for optimal performance",
       },
-      {
-        icon: <GiAirplane />,
-        text: "Efficient fixed-wing flight for long-range operations",
-      },
+      // {
+      //   icon: <GiAirplane />,
+      //   text: "Efficient fixed-wing flight for long-range operations",
+      // },
     ],
 
     //  Technical Specifications
@@ -479,20 +479,20 @@ export const products = [
     keyFeatures: [
       {
         icon: <GiSpeedometer />,
-        text: "High-speed performance up to 150 km/h for tactical missions",
+        text: "Cruise speed of 90-100 km/h with top speed reaching 150 km/h for rapid deployment and tactical operations",
       },
       {
         icon: <FaVideo />,
-        text: "Advanced FPV system with 10-inch frame and HD video feed",
+        text: "10-inch First-Person View system with 7-inch digital display for real-time operational control",
       },
       {
         icon: <FaNetworkWired />,
-        text: "Optical fiber communication with up to 20 km range",
+        text: "Advanced 2-20 kilometer optical fiber length with digital signals to optical signals conversion",
       },
-      {
-        icon: <FaNetworkWired />,
-        text: "Secure signal transmission immune to interference and jamming",
-      },
+      // {
+      //   icon: <FaNetworkWired />,
+      //   text: "Secure signal transmission immune to interference and jamming",
+      // },
     ],
 
     // Technical Specifications
@@ -510,7 +510,8 @@ export const products = [
       opticalFiberLength: "2 – 20 Kilometer",
       groundControlUnit: "Digital Signals to Optical Signals Conversion",
       lcdDisplay: "7 inch Digital Display",
-      communicationType: "Optic Fiber Communication",
+      communicationType:
+        "Optic Fiber Communication for secure, interference-free operation",
       controlRange:
         "Extended range capability up to 20 kilometers via optical fiber",
     },

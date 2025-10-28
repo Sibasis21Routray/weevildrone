@@ -17,6 +17,7 @@ interface HeroProps {
 
 const Hero: React.FC<HeroProps> = ({
   name,
+  title,
   description,
   image,
   layout,
@@ -61,7 +62,7 @@ const Hero: React.FC<HeroProps> = ({
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 0.5 }}
               >
-                Professional Series
+                {title}
               </motion.span>
             </motion.h1>
 
@@ -75,33 +76,27 @@ const Hero: React.FC<HeroProps> = ({
               {description}
             </motion.p>
 
-            {/* Key Features Grid */}
-            {keyFeatures && (
-              <motion.div
-                className="grid grid-cols-1 sm:grid-cols-2 gap-4 py-1"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.6 }}
+            {/* CTA Buttons */}
+            <motion.div
+              className="flex flex-col sm:flex-row gap-4 pt-4"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.8 }}
+            >
+              <button className="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-orange-600 hover:to-orange-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center justify-center space-x-2">
+                <span>Buy Now</span>
+                <span className="text-xl">
+                  <FaArrowRight />
+                </span>
+              </button>
+
+              <button
+                onClick={onScrollClick}
+                className="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-xl font-semibold text-lg hover:border-orange-500 hover:text-orange-600 transition-all duration-300 bg-white"
               >
-                {keyFeatures.map((feature, index) => (
-                  <motion.div
-                    key={index}
-                    className="flex items-center space-x-3 p-3 rounded-lg bg-white border border-gray-200 hover:border-orange-300 transition-colors group"
-                    whileHover={{ scale: 1.02 }}
-                    transition={{ type: "spring", stiffness: 400, damping: 25 }}
-                  >
-                    <div className="flex-shrink-0 w-10 h-10 bg-orange-100 rounded-lg flex items-center justify-center group-hover:bg-orange-500 transition-colors">
-                      <div className="text-orange-600 group-hover:text-white text-lg transition-colors">
-                        {feature.icon}
-                      </div>
-                    </div>
-                    <span className="text-sm font-medium text-gray-700 group-hover:text-gray-900 transition-colors">
-                      {feature.text}
-                    </span>
-                  </motion.div>
-                ))}
-              </motion.div>
-            )}
+                View Specifications
+              </button>
+            </motion.div>
           </motion.div>
 
           {/* Image Content */}
@@ -151,26 +146,6 @@ const Hero: React.FC<HeroProps> = ({
                       2-Year Warranty
                     </span>
                   </div>
-                </motion.div>
-
-                {/* CTA Buttons */}
-                <motion.div
-                  className="flex flex-col sm:flex-row gap-4 pt-4"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.8 }}
-                >
-                  <button className="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-orange-600 hover:to-orange-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center justify-center space-x-2">
-                    <span>Buy Now</span>
-                    <span className="text-xl"><FaArrowRight/></span>
-                  </button>
-
-                  <button
-                    onClick={onScrollClick}
-                    className="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-xl font-semibold text-lg hover:border-orange-500 hover:text-orange-600 transition-all duration-300 bg-white"
-                  >
-                    View Specifications
-                  </button>
                 </motion.div>
               </motion.div>
             </div>
