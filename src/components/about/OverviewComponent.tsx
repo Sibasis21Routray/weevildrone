@@ -73,7 +73,7 @@ const MissionValues = () => {
       icon: FaHistory, // Changed from FaAward to FaHistory for Story
       title: "Our Story",
       description:
-        "Started in 2019 with a vision to redefine and extend the potential of unmanned aerial systems. Over the years, we have evolved into a trusted partner for industries across the world. We have provided them with drones that have reinvented efficiency and reliability, In the skies of the future, our drones shall be technologically equipped to brave every challenge",
+        "Started in 2019 with a vision to redefine and extend the potential of unmanned aerial systems. Over the years, we have evolved into a trusted partner for industries across the world. We have provided them with drones that have reinvented efficiency and reliability, In the skies of the future, our drones shall be technologically equipped to brave every challenge.",
     },
   ];
 

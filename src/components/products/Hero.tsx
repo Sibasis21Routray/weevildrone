@@ -29,7 +29,7 @@ const Hero: React.FC<HeroProps> = ({
       // style={{
       //   backgroundImage:
       //     "url('https://img.freepik.com/free-photo/background-gradient-lights_23-2149304995.jpg')",
-      // }}
+      // }} 
     >
       {/* Main Container */}
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 ">
@@ -40,7 +40,7 @@ const Hero: React.FC<HeroProps> = ({
         >
           {/* Text Content */}
           <motion.div
-            className={`space-y-8 text-left ${
+            className={`space-y-8 text-left  md:h-[70vh] ${
               layout === "right" ? "lg:col-start-2" : ""
             }`}
             initial={{ opacity: 0, x: layout === "right" ? 100 : -100 }}
@@ -67,7 +67,7 @@ const Hero: React.FC<HeroProps> = ({
 
             {/* Description */}
             <motion.p
-              className="text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl"
+              className="text-lg md:text-lg text-gray-600 leading-tight max-w-2xl"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}

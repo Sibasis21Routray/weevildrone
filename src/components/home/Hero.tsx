@@ -8,8 +8,8 @@ const Hero: React.FC = () => {
       {/* Video Background https://r2.imgtoimg.ai/images/2025/10/27/7d3e91fbe95242adb0b3f9af301e5e3b.jpg */}
       <div className="absolute inset-0 z-0 lg:items-center items-start flex justify-center overflow-hidden">
         <img
-          src="/Untitled design (3).png"
-          className="object-fill w-[100vw] lg:w-[70vw] items-center mt-0 lg:mt-[30vh]"
+          src="/DroneHero.png"
+          className="object-fill w-[100vw] lg:w-[70vw] items-center mt-0 lg:mt-[10vh]"
         />
       </div>
 

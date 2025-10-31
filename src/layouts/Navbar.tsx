@@ -193,7 +193,7 @@ const Navbar: React.FC<NavbarProps> = () => {
               <img
                 src="https://weevildrone.co.in/wp-content/uploads/2025/09/cropped-WhatsApp-Image-2025-08-27-at-1.11.53-PM.jpeg"
                 alt="Logo"
-                className="h-8 w-auto md:h-10"
+                className="h-8 w-auto md:h-12 object-center"
               />
             </Link>
           </motion.div>
@@ -410,7 +410,6 @@ const Navbar: React.FC<NavbarProps> = () => {
               animate="open"
               exit="closed"
             >
-              
               <div className="py-2 px-4 space-y-1">
                 {navItems.map((item, index) => (
                   <motion.div

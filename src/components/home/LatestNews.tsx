@@ -6,7 +6,7 @@ const LatestNews = () => {
       date: "19th September 2025",
       title: "Meeting with Defence Minister",
       content:
-        "A remarkable evening — I met Mr. Sanjay Seth, the State Minister of Defence, at a dinner party and exchanged ideas in a truly insightful discussion.",
+        "19th September 2025 will be remembered as a remarkable evening —  I met Mr. Sanjay Seth, the State Minister of Defence, at a dinner party and exchanged ideas in a truly insightful discussion.",
       author: "Ashis Saha",
       position: "CEO",
       type: "event",
@@ -18,7 +18,11 @@ const LatestNews = () => {
       date: "19-21 September 2025",
       title: "East Tech 2025 Participation",
       content:
-        "Weevils Drones Pvt. Ltd. is proud to announce our participation at East Tech 2025 — India's Defence Technology Symposium.",
+        "Weevils Drones Pvt. Ltd. is proud to announce our participation at East Tech 2025 — India’s Defence Technology Symposium.",
+      content2:
+        "We were honoured to receive this Certificate of Appreciation in recognition of our valuable participation at the event, held in Ranchi from 19–21 September 2025.",
+      content3:
+        "This recognition reflects our ongoing commitment to advancing cutting-edge drone technology and supporting India’s defence and security ecosystem through innovation, reliability, and excellence.",
       type: "participation",
       image:
         "https://weevildrone.co.in/wp-content/uploads/2025/09/WhatsApp-Image-2025-09-23-at-10.17.48-AM-e1758606381915-1536x1101.jpeg",
@@ -89,15 +93,15 @@ const LatestNews = () => {
                     {news.title}
                   </h3>
 
-                  <p className="text-secondary/80 leading-relaxed mb-4">
+                  {/* <p className="text-secondary/80 leading-relaxed mb-4">
                     {news.content}
-                  </p>
+                  </p> */}
 
                   {/* CEO Quote Section */}
                   {news.author && (
                     <div className="border-l-4 border-tertiary pl-4 py-2 mb-4">
                       <blockquote className="text-secondary/80 italic">
-                        "{news.content.split("— ")[1]}"
+                        "{news.content}"
                       </blockquote>
                       <div className="mt-2">
                         <p className="font-semibold text-secondary text-sm">
@@ -112,15 +116,16 @@ const LatestNews = () => {
 
                   {/* Achievement Section */}
                   {news.achievement && (
-                    <div className="bg-secondary/5 p-4 border border-secondary/10">
-                      <div className="flex items-center space-x-3 mb-3">
-                        <div className="w-2 h-2 bg-tertiary"></div>
-                        <span className="font-semibold text-secondary">
-                          {news.achievement}
-                        </span>
-                      </div>
+                    <div className="flex flex-col text-left gap-2 text-secondary"> 
+                     
                       <p className="text-secondary/70 text-sm leading-relaxed">
-                        {news.recognition}
+                        {news.content}
+                      </p>
+                      <p className="text-secondary/70 text-sm leading-relaxed">
+                        {news.content2}
+                      </p>
+                      <p className="text-secondary/70 text-sm leading-relaxed">
+                        {news.content3}
                       </p>
                     </div>
                   )}

@@ -12,7 +12,7 @@ const PartnershipComponent = () => {
     {
       title: "Partnership",
       icon: <FaHandshake className="text-xl text-tertiary" />,
-      text: "IIT Kharagpur collaborated with Weevils Drones",
+      text: "IIT Kharagpur collaborated with Bhubaneswar-based Weevils Drones",
     },
     {
       title: "Purpose",

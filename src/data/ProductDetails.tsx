@@ -4,7 +4,6 @@ import {  GiElectric, GiGasPump, GiHelicopter, GiJetFighter, GiNetworkBars, GiSp
 import { RiRadarLine, RiRadioLine } from "react-icons/ri";
 // import { GiSteelClaws } from "react-icons/gi";
 import { FaNetworkWired, FaVideo } from "react-icons/fa";  
-import { Shield } from "lucide-react";
 
 export const products = [
   {
@@ -222,7 +221,7 @@ export const products = [
       },
       {
         icon: <GiTargetDummy />,
-        text: "Designed for military target training simulations",
+        text: "Frequently used for target practice in military training, offering safer alternatives to manned targets",
       },
       // {
       //   icon: <GiWoodBeam />,
@@ -315,16 +314,16 @@ export const products = [
       },
       {
         icon: <RiRadarLine />,
-        text: "Radar detection with 5–10 km range",
+        text: "Advanced radar detection capabilities with 5-10 km range for small UAVs and quadcopters",
       },
       {
         icon: <GiNetworkBars />,
-        text: "Swarm deployment support for 2–10+ coordinated units",
+        text: "Quantity scalable deployment in swarms of 2-10+ units with coordinated mission capabilities",
       },
-      {
-        icon: <Shield />,
-        text: "Carbon fiber 450 class quadcopter frame",
-      },
+      // {
+      //   icon: <Shield />,
+      //   text: "Carbon fiber 450 class quadcopter frame",
+      // },
     ],
 
     //  Technical Specifications

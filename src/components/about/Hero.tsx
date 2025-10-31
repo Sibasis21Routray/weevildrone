@@ -73,9 +73,11 @@ function Hero() {
 
             <motion.div variants={itemVariants} className="o">
               <p className="text-base sm:text-lg lg:text-xl text-gray-300 leading-relaxed">
-                Weevildrone represents the pinnacle of drone engineering,
-                combining cutting-edge AI, robust construction, and unparalleled
-                performance for industrial applications.
+                Weevils Drones is the pioneer and the pre-eminent market leader
+                in the Indian unmanned aircraft systems (UAS) market. We lead
+                the largest operational deployment of indigenous UAVs across
+                India, with a Weevils Trade Marked drone taking off every five
+                minutes for surveillance and mapping on an average day.
               </p>
             </motion.div>
 

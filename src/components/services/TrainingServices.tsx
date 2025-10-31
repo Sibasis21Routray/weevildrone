@@ -1,11 +1,11 @@
 import { motion } from "framer-motion";
 import {
   FaTools,
-  FaHelicopter,
-  FaCertificate,
   FaChalkboardTeacher,
   FaUniversity,
+  FaFighterJet,
 } from "react-icons/fa";
+import { FaJetFighter } from "react-icons/fa6";
 
 const trainingFeatures = [
   {
@@ -21,16 +21,16 @@ const trainingFeatures = [
     icon: FaTools,
   },
   {
-    title: "Flight Operations",
+    title: "Flight Training",
     description:
       "Practical drone flying training for both multi-rotor and fixed-wing aircraft",
-    icon: FaHelicopter,
+    icon: FaFighterJet,
   },
   {
-    title: "Government Certified Programs",
+    title: "Drone Types & UAVs",
     description:
-      "Central Government mandated training programs for NCC students",
-    icon: FaCertificate,
+      "Different types of Drones/UAVs and their specific applications",
+    icon: FaJetFighter,
   },
 ];
 

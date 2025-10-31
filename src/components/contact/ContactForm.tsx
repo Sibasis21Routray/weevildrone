@@ -93,8 +93,7 @@ const ContactForm: React.FC = () => {
               <span className="block text-tertiary">Connect</span>
             </h2>
             <p className="text-md text-gray-600 leading-tight max-w-lg font-light text-left lg:ml-10">
-              Ready to transform your ideas into reality? Let's discuss how we
-              can help bring your vision to life with cutting-edge solutions.
+              Let’s discuss how our drone solutions can transform your business.
             </p>
           </div>
 
