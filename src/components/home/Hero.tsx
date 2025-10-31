@@ -9,7 +9,7 @@ const Hero: React.FC = () => {
       <div className="absolute inset-0 z-0 lg:items-center items-start flex justify-center overflow-hidden">
         <img
           src="/DroneHero.png"
-          className="object-fill w-[100vw] lg:w-[70vw] items-center mt-0 lg:mt-[10vh]"
+          className="object-fill w-[100vw] lg:w-[60vw] items-center mt-0 lg:mt-[-5vh]"
         />
       </div>
 

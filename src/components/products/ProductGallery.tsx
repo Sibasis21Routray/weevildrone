@@ -80,7 +80,7 @@ const ProductGallery: React.FC<ProductGalleryProps> = ({ photos, videos }) => {
   }, [selectedPhoto, selectedVideo]);
 
   return (
-    <div className="w-full bg-white">
+    <div className="w-full bg-white mt-10 md:mt-0 lg:mt-10">
       {/* Photo Gallery Section */}
       <section className="py-6 sm:py-10 lg:py-1 px-6 sm:px-8 lg:px-16">
         <div className="max-w-7xl mx-auto">

@@ -253,13 +253,6 @@ const Navbar: React.FC<NavbarProps> = () => {
                               "0 20px 40px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(255, 105, 0, 0.05)",
                           }}
                         >
-                          {/* Dropdown Header */}
-                          <div className="px-4 py-2 border-b border-gray-100/60 mb-1">
-                            <h3 className="text-xs font-semibold text-gray-500 uppercase tracking-wider">
-                              Our Products
-                            </h3>
-                          </div>
-
                           {/* Product Items */}
                           <div className="space-y-1">
                             {productItems.map((product, index) => (
@@ -326,12 +319,7 @@ const Navbar: React.FC<NavbarProps> = () => {
                             ))}
                           </div>
 
-                          {/* Dropdown Footer */}
-                          <div className="px-4 py-2 border-t border-gray-100/60 mt-2">
-                            <div className="text-xs text-gray-400 text-center">
-                              {productItems.length} innovative solutions
-                            </div>
-                          </div>
+                          
                         </motion.div>
                       )}
                     </AnimatePresence>

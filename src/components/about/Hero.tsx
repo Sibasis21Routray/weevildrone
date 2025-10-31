@@ -45,14 +45,14 @@ function Hero() {
       {/* Main Content Section */}
       <div
         ref={sectionRef}
-        className="relative bg-gradient-to-br from-slate-900 via-gray-900 to-black text-left"
+        className="relative bg-gradient-to-br from-slate-900 via-gray-900 to-black text-left "
       >
         {/* Parallax Background */}
         <div className="absolute inset-0 ">
           <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3')] bg-cover bg-center opacity-30"></div>
         </div>
 
-        <div className="relative container mx-auto px-7 grid grid-cols-1 lg:grid-cols-2  items-center">
+        <div className="relative container mx-auto px-7 grid grid-cols-1 lg:grid-cols-2  items-center ml-0 md:ml-5">
           {/* Content */}
           <motion.div
             ref={textRef}
@@ -71,7 +71,7 @@ function Hero() {
               </h1>
             </motion.div>
 
-            <motion.div variants={itemVariants} className="o">
+            <motion.div variants={itemVariants} className="">
               <p className="text-base sm:text-lg lg:text-xl text-gray-300 leading-relaxed">
                 Weevils Drones is the pioneer and the pre-eminent market leader
                 in the Indian unmanned aircraft systems (UAS) market. We lead
@@ -89,7 +89,7 @@ function Hero() {
               {stats.map((stat, index) => (
                 <div
                   key={index}
-                  className="text-center w-full pl-4 pr-4 sm:pl-6 sm:pr-6"
+                  className="text-left  w-full"
                 >
                   <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-1 sm:mb-2">
                     <span className="stat-number">{stat.number}</span>

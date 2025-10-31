@@ -313,7 +313,7 @@ const Footer = () => {
         >
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-gray-400 text-sm">
-              © 2024 WEEVILS DRONES PRIVATE LIMITED. All rights reserved.
+              © 2025 WEEVILS DRONES PRIVATE LIMITED. All rights reserved.
             </p>
 
             

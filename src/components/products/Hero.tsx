@@ -25,22 +25,22 @@ const Hero: React.FC<HeroProps> = ({
 }) => {
   return (
     <div
-      className=" bg-primary relative bg-cover bg-center bg-no-repeat overflow-hidden"
+      className=" bg-primary relative bg-cover bg-center bg-no-repeat overflow-hidden ml-0 lg:ml-8"
       // style={{
       //   backgroundImage:
       //     "url('https://img.freepik.com/free-photo/background-gradient-lights_23-2149304995.jpg')",
-      // }} 
+      // }}
     >
       {/* Main Container */}
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 ">
         <div
-          className={`grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start min-h-[80vh] mt-4 ${
+          className={`grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start md:h-[80vh] lg:h-[70vh] mt-4 ${
             layout === "right" ? "lg:grid-flow-dense" : ""
           }`}
         >
           {/* Text Content */}
           <motion.div
-            className={`space-y-8 text-left  md:h-[70vh] ${
+            className={`space-y-8 text-left  md:h-[10vh] ${
               layout === "right" ? "lg:col-start-2" : ""
             }`}
             initial={{ opacity: 0, x: layout === "right" ? 100 : -100 }}
@@ -74,11 +74,32 @@ const Hero: React.FC<HeroProps> = ({
             >
               {description}
             </motion.p>
+
+            {/* Trust Indicators */}
+            <motion.div
+              className="flex flex-col items-start gap-4"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 1 }}
+            >
+              <div className="flex items-center space-x-2">
+                <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                <span className="text-sm text-gray-600">In Stock</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <div className="w-5 h-5 text-green-600">✓</div>
+                <span className="text-sm text-gray-600">Free Shipping</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <div className="w-5 h-5 text-blue-600">🛡️</div>
+                <span className="text-sm text-gray-600">2-Year Warranty</span>
+              </div>
+            </motion.div>
           </motion.div>
 
           {/* Image Content */}
           <motion.div
-            className={`relative ${layout === "right" ? "lg:col-start-1" : ""}`}
+            className={`relative mt-0 md:mt-[10vh] lg:mt-0  ${layout === "right" ? "lg:col-start-1" : ""}`}
             initial={{
               opacity: 0,
               scale: 0.95,
@@ -89,7 +110,7 @@ const Hero: React.FC<HeroProps> = ({
           >
             <div className="relative">
               {/* Main Image Container */}
-              <motion.div className="relative bg-white rounded-3xl  p-8 border border-gray-200 fex  justify-center ">
+              <motion.div className="relative bg-white rounded-3xl  p-4 border border-gray-200 fex  justify-center ">
                 {/* Image */}
                 <div className="relative rounded-2xl overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200 p-4">
                   <img
@@ -102,52 +123,29 @@ const Hero: React.FC<HeroProps> = ({
                   <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 rounded-xl" />
                 </div>
 
-                {/* Trust Indicators */}
+                {/*  Buttons */}
                 <motion.div
-                  className="flex items-center space-x-6 pt-6"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ delay: 1 }}
+                  className="flex flex-col sm:flex-row gap-4 mt-5 "
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.8 }}
                 >
-                  <div className="flex items-center space-x-2">
-                    <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                    <span className="text-sm text-gray-600">In Stock</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <div className="w-5 h-5 text-green-600">✓</div>
-                    <span className="text-sm text-gray-600">Free Shipping</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <div className="w-5 h-5 text-blue-600">🛡️</div>
-                    <span className="text-sm text-gray-600">
-                      2-Year Warranty
+                  <button className="bg-gradient-to-r rounded-lg from-orange-500 to-orange-600 text-white px-8 py-4  font-semibold text-lg hover:from-orange-600 hover:to-orange-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center justify-center space-x-2">
+                    Buy Now
+                    <span className="text-xl">
+                      <FaArrowRight />
                     </span>
-                  </div>
+                  </button>
+
+                  <button
+                    onClick={onScrollClick}
+                    className="border-2 border-gray-300 text-gray-700 px-8 py-4  font-semibold text-lg hover:border-orange-500 hover:text-orange-600 transition-all duration-300 bg-white"
+                  >
+                    View Specifications
+                  </button>
                 </motion.div>
               </motion.div>
             </div>
-          </motion.div>
-
-          {/*  Buttons */}
-          <motion.div
-            className="flex flex-col sm:flex-row gap-4 mt-0 lg:-mt-[30vh]"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.8 }}
-          >
-            <button className="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-8 py-4  font-semibold text-lg hover:from-orange-600 hover:to-orange-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center justify-center space-x-2">
-              <span>Buy Now</span>
-              <span className="text-xl">
-                <FaArrowRight />
-              </span>
-            </button>
-
-            <button
-              onClick={onScrollClick}
-              className="border-2 border-gray-300 text-gray-700 px-8 py-4  font-semibold text-lg hover:border-orange-500 hover:text-orange-600 transition-all duration-300 bg-white"
-            >
-              View Specifications
-            </button>
           </motion.div>
         </div>
       </div>
