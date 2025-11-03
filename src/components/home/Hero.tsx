@@ -4,12 +4,12 @@ import {  Shield, Swords, PencilRuler } from "lucide-react";
 
 const Hero: React.FC = () => {
   return (
-    <div className="relative w-full h-screen  bg-cover bg-center bg-no-repeat overflow-hidden">
+    <div className="relative w-full h-screen md:h-[70vh]  lg:h-screen bg-cover bg-center bg-no-repeat overflow-hidden">
       {/* Video Background https://r2.imgtoimg.ai/images/2025/10/27/7d3e91fbe95242adb0b3f9af301e5e3b.jpg */}
       <div className="absolute inset-0 z-0 lg:items-center items-start flex justify-center overflow-hidden">
         <img
           src="/DroneHero.png"
-          className="object-fill w-[100vw] lg:w-[60vw] items-center mt-0 lg:mt-[-5vh]"
+          className="object-fill w-[100vw]  lg:w-[60vw] items-center mt-0 md:mt-[-10vh] lg:mt-[-5vh]"
         />
       </div>
 
@@ -18,7 +18,7 @@ const Hero: React.FC = () => {
         initial={{ opacity: 0, x: -50 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8, delay: 0.3 }}
-        className="absolute left-2 sm:left-4 md:left-6 lg:left-16 top-1/2 -translate-y-1/2 space-y-8 sm:space-y-10 lg:space-y-12 z-40  sm:flex flex-col"
+        className="absolute left-0 md:left-6 lg:left-16 top-1/2  md:top-1/3 lg:top-1/2 -translate-y-1/2 space-y-8 sm:space-y-10 lg:space-y-12 z-40  flex flex-row md:flex-col"
       >
         {/* Field Proven */}
         <motion.div
@@ -89,17 +89,18 @@ const Hero: React.FC = () => {
         initial={{ opacity: 0, x: 50 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8, delay: 0.3 }}
-        className="absolute right-2 sm:right-4 md:right-6 lg:right-12 top-1/2 -translate-y-1/2 flex flex-col items-end space-y-6 sm:space-y-7 lg:space-y-8 z-40"
+        // className="absolute right-2 sm:right-4 md:right-6 lg:right-12 top-1/2 -translate-y-1/2 flex flex-col items-end space-y-6 sm:space-y-7 lg:space-y-8 z-40"
+        className="flex flex-row sm:flex-col  justify-center absolute top-[60vh] md:top-1/4  sm:top-1/3 left-[17vw] sm:right-6 gap-4  z-40"
       >
         {/* Active */}
-        <motion.div className="flex flex-col items-end">
+        <motion.div className="flex flex-row md:flex-col gap-4 items-end">
           <div className="text-sm sm:text-base lg:text-lg font-bold text-[#FF6900] mb-1 tracking-wider uppercase">
             Military
           </div>
           <div className="w-1 h-6 sm:h-7 lg:h-8 bg-[#FF6900] rounded-full" />
         </motion.div>
 
-        <motion.div className="flex flex-col items-end">
+        <motion.div className="flex flex-row md:flex-col gap-4 items-end">
           <div className="text-sm sm:text-base lg:text-lg font-bold text-[#333333] mb-1 tracking-wider uppercase">
             Agricutural
           </div>
@@ -149,7 +150,7 @@ const Hero: React.FC = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 0.9 }}
-        className="absolute bottom-4 sm:bottom-48 lg:bottom-8 xl:bottom-12 left-1/2 -translate-x-1/2 w-full max-w-2xl  lg:max-w-2xl xl:max-w-4xl z-20 px-3 sm:px-4 lg:px-6"
+        className="absolute bottom-20 md:bottom-20 lg:bottom-8 xl:bottom-12 left-1/2 -translate-x-1/2 w-full max-w-2xl  lg:max-w-2xl xl:max-w-4xl z-20 px-3 sm:px-4 lg:px-6"
       >
         <div className="text-center space-y-4 sm:space-y-5 lg:space-y-6">
           {/* Description Text  */}
