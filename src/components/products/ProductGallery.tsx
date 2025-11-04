@@ -104,7 +104,7 @@ const ProductGallery: React.FC<ProductGalleryProps> = ({ photos, videos }) => {
           </motion.div>
 
           {/* Photo Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 my-12 ">
             {photos.map((photo, index) => (
               <motion.div
                 key={index}
@@ -127,11 +127,6 @@ const ProductGallery: React.FC<ProductGalleryProps> = ({ photos, videos }) => {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
                     <p className="text-white font-semibold text-lg">{photo.caption}</p>
                   </div>
-                </div>
-                
-                {/* Caption Below */}
-                <div className="mt-4">
-                  <p className="text-[#333333] font-medium">{photo.caption}</p>
                 </div>
               </motion.div>
             ))}

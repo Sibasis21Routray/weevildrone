@@ -64,9 +64,9 @@ const ContactUs = () => {
         >
           <motion.div variants={itemVariants} className="">
             <img
-              src="https://static.vecteezy.com/system/resources/previews/017/055/715/non_2x/contact-us-button-web-banner-templates-illustration-free-vector.jpg"
+              src="/contact.jpg"
               alt="Contact Us"
-              className="object-cover h-[50vh] w-full rounded-lg "
+              className="object-fill h-fit lg:h-[40vh] w-full rounded-lg mt-5 "
               onError={(e) => {
                 // Fallback if image fails to load
                 e.currentTarget.src =
@@ -76,7 +76,7 @@ const ContactUs = () => {
           </motion.div>
 
           {/* Contact Information */}
-          <div className="space-y-1 text-left">
+          <div className="space-y-1 text-left mt-3">
             <motion.div
               variants={itemVariants}
               whileHover={{ scale: 1.02, y: -2 }}

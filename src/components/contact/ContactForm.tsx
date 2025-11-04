@@ -58,7 +58,7 @@ const ContactForm: React.FC = () => {
 
     setTimeout(() => {
       const { name, email, subject, message } = formData;
-      window.location.href = `mailto:info@quotus.co.in?subject=${encodeURIComponent(
+      window.location.href = `mailto:info@Weevildrone.co.in?subject=${encodeURIComponent(
         subject
       )}&body=${encodeURIComponent(
         `Name: ${name}\nEmail: ${email}\n\n${message}`
@@ -77,7 +77,7 @@ const ContactForm: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen py-12 px-4 sm:px-6 lg:px-8">
+    <div className="h-full py-3 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto">
         <motion.div
           initial="hidden"
@@ -232,24 +232,6 @@ const ContactForm: React.FC = () => {
           </div>
         </motion.div>
 
-        {/* Additional Info */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.4 }}
-          viewport={{ once: true }}
-          className="text-center"
-        >
-          <p className="text-gray-600 text-sm">
-            Prefer to email directly?{" "}
-            <a
-              href="mailto:info@quotus.co.in"
-              className="text-tertiary hover:text-orange-600 font-medium underline"
-            >
-              info@quotus.co.in
-            </a>
-          </p>
-        </motion.div>
       </div>
     </div>
   );
