@@ -54,7 +54,7 @@ const ProductShowcase = () => {
     if (!isAutoPlaying) return;
     const timer = setInterval(() => {
       paginate(1);
-    }, 4000);
+    }, 20000);
     return () => clearInterval(timer);
   }, [currentIndex, isAutoPlaying]);
 

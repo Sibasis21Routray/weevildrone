@@ -133,7 +133,7 @@ const Footer = () => {
               />
               <div>
                 <h3 className="text-xl font-bold bg-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-transparent">
-                  WEEVILS DRONES
+                  WEEVILSDRONES
                 </h3>
                 <p className="text-gray-400 text-sm">PRIVATE LIMITED</p>
               </div>
@@ -169,10 +169,10 @@ const Footer = () => {
                   <Mail />
                 </motion.div>
                 <a
-                  href="mailto:info@weevildrone.co.in"
+                  href="mailto:info@weevilsdrones.co.in"
                   className="text-sm hover:text-orange-400 transition-colors"
                 >
-                  info@weevildrone.co.in
+                  info@weevilsdrones.co.in
                 </a>
               </div>
             </div>
@@ -313,7 +313,7 @@ const Footer = () => {
         >
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-gray-400 text-sm">
-              © 2025 WEEVILS DRONES PRIVATE LIMITED. All rights reserved.
+              © 2025 WEEVILSDRONES PRIVATE LIMITED. All rights reserved.
             </p>
 
             

@@ -14,7 +14,7 @@ function App() {
         <ScrollToTop/>
         <AppRoutes />
       </div>
-      <Footer />
+      <Footer />  
     </div>
   );
 }

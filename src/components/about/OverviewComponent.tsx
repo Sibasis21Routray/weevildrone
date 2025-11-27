@@ -59,21 +59,21 @@ const MissionValues = () => {
       icon: FaEye, // Changed from FaCogs to FaEye for Vision
       title: "Our Vision",
       description:
-        "To innovate and manufacture with perfection and precision every thought a client .",
+        "To design and manufacture drones with precision, perfection, and innovation—transforming every client’s idea into reality.",
     },
     {
       id: 2,
       icon: FaBullseye, // Changed from FaRocket to FaBullseye for Mission
       title: "Our Mission",
       description:
-        "To provide cutting-edge drone solutions that seemingly never existed.",
+        "To pioneer advanced drones and deliver groundbreaking drone solutions that go beyond conventional limits.",
     },
     {
       id: 3,
       icon: FaHistory, // Changed from FaAward to FaHistory for Story
       title: "Our Story",
       description:
-        "Started in 2019 with a vision to redefine and extend the potential of unmanned aerial systems. Over the years, we have evolved into a trusted partner for industries across the world. We have provided them with drones that have reinvented efficiency and reliability, In the skies of the future, our drones shall be technologically equipped to brave every challenge.",
+        "Founded in 2024, we set out with a vision to redefine and expand the possibilities of unmanned aerial systems. Since then, we have grown into a trusted global partner, delivering drones that elevate efficiency and reliability across industries. As we look to the future, our aerial systems will continue to advance—engineered to meet every challenge with cutting-edge technology and unwavering performance.",
     },
   ];
 

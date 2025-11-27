@@ -8,8 +8,9 @@ const Hero: React.FC = () => {
       {/* Video Background https://r2.imgtoimg.ai/images/2025/10/27/7d3e91fbe95242adb0b3f9af301e5e3b.jpg */}
       <div className="absolute inset-0 z-0 lg:items-center items-start flex justify-center overflow-hidden">
         <img
-          src="/DroneHero.png"
-          className="object-cover w-[100vw]  lg:w-[60vw] items-center mt-0 md:mt-[-10vh] lg:mt-[-5vh]"
+          // src="/DroneHero.png"
+          src="/drones/varchas2.png"
+          className="object-cover w-[100vw] md:w-[65vw]  lg:w-[50vw] items-center mt-[12vh] md:mt-[10vh] lg:mt-[-5vh]"
         />
       </div>
 
@@ -132,14 +133,14 @@ const Hero: React.FC = () => {
           className="relative w-full flex justify-center pointer-events-none select-none z-10 mb-4 sm:mb-5 lg:mb-6 "
         >
           <div
-            className="text-[12vw] sm:text-[11vw] lg:text-[10vw] font-black text-[#333333]/30 tracking-tighter leading-none whitespace-nowrap"
+            className="text-[12vw] sm:text-[11vw] lg:text-[9vw] font-black text-[#333333]/30 tracking-tighter leading-none whitespace-nowrap"
             style={{
               fontFamily: "system-ui, -apple-system, sans-serif",
               fontWeight: 900,
               letterSpacing: "-0.05em",
             }}
           >
-            WEEVILDRONE
+            WEEVILSDRONES
           </div>
         </motion.div>
 
@@ -148,7 +149,7 @@ const Hero: React.FC = () => {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.5 }}
-          className="text-center z-20 -mt-2 sm:-mt-10 lg:-mt-12 w-full"
+          className="text-center z-20 -mt-2 sm:-mt-10 lg:-mt-[5vh] w-full"
         >
           <h1
             className="text-xl sm:text-2xl lg:text-2xl font-light text-[#333333] tracking-[0.2em] uppercase drop-shadow-2xl w-full"
@@ -169,7 +170,7 @@ const Hero: React.FC = () => {
         <div className="text-center space-y-4 sm:space-y-5 lg:space-y-6">
           {/* Description Text  */}
           <p className="text-[#333333] text-xs sm:text-sm lg:text-base leading-relaxed  mx-auto font-light tracking-wide drop-shadow-sm px-2 sm:px-0">
-            At Weevils Drones, we design, manufacture, and deploy advanced
+            At WeevilsDrones, we design, manufacture, and deploy advanced
             drones that redefine operational excellence. We empower businesses
             across industries and a multitude of platforms, with cutting edge
             technology to achieve efficiency, precision, and sustainability like

@@ -85,13 +85,13 @@ const Application = () => {
                 className="relative overflow-hidden"
               >
                 <img
-                  src="https://weevildrone.co.in/wp-content/uploads/2024/12/drone-quad-copter-green-corn-field_93200-2621.avif"
+                  src="/drones/indrajit .png"
                   alt="Farming Surveillance"
-                  className="w-full h-64 lg:h-72 object-cover"
+                  className="w-full h-64 lg:h-72 object-fill"
                 />
 
                 {/* Text Overlay */}
-                <div className="absolute bottom-4 left-4">
+                <div className="absolute bottom-4 left-4 hidden md:block">
                   <div className="flex space-x-3">
                     <span className="bg-tertiary text-white px-3 py-1 rounded-full text-sm font-medium">
                       Agricultural Technology
@@ -192,13 +192,13 @@ const Application = () => {
                 className="relative overflow-hidden"
               >
                 <img
-                  src="https://weevildrone.co.in/wp-content/uploads/2024/12/drone-construction-site_36051-636-1.avif"
+                  src="/aboutUs/Mapping_Surveying.jpg"
                   alt="Mapping and Surveying"
                   className="w-full h-64 lg:h-72 object-cover"
                 />
 
                 {/* Text Overlay */}
-                <div className="absolute bottom-4 left-4">
+                <div className="absolute bottom-4 left-4 hidden md:block">
                   <div className="flex space-x-3">
                     <span className="bg-tertiary text-white px-3 py-1 rounded-full text-sm font-medium">
                       Geospatial Solutions

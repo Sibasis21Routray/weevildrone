@@ -11,11 +11,11 @@ interface HeroSectionProps {
 
 const Hero: React.FC<HeroSectionProps> = ({
   title = "Checkout our Gallery",
-  subtitle = "Weevils Drones engaged with IIT Kharagpur via Incubation process. We set up a UAV workshop at Science and Technology Entrepreneurs’ Park (STEP). The workshop was inaugurated by Prof Khanindra Pathak on 11th February 2025.",
+  subtitle = "WeevilsDrones engaged with IIT Kharagpur via Incubation process. We set up a UAV workshop at Science and Technology Entrepreneurs’ Park (STEP). The workshop was inaugurated by Prof Khanindra Pathak on 11th February 2025.",
   backgroundImages = [
-    "https://assets.telegraphindia.com/telegraph/2021/Dec/1639480768_resized_11zon-1.jpg",
-    "https://flyingmag1.b-cdn.net/wp-content/uploads/sites/2/2024/12/travel-drones.jpg",
-    "https://geospatialmedia.s3.amazonaws.com/wp-content/uploads/2019/07/UAVs-help2.jpg",
+    "/gallery/P1919255-scaled.jpg",
+    "/gallery/P1919197.jpg",
+    "/gallery/P1919175.jpg",
   ],
 }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);

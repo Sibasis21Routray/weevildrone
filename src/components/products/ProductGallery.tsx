@@ -93,13 +93,13 @@ const ProductGallery: React.FC<ProductGalleryProps> = ({ photos, videos }) => {
             className="mb-12"
           >
             <div className="flex items-center space-x-4 mb-4">
-              <div className="w-12 h-1 bg-[#FF6900]" />
+              <div className="w-12 h-1 bg-tertiary" />
               <h2 className="text-sm uppercase tracking-widest text-[#333333] font-semibold">
                 Gallery
               </h2>
             </div>
             <h3 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#333333] tracking-tight">
-              Visual <span className="text-[#FF6900]">Collection</span>
+              Visual <span className="text-tertiary">Collection</span>
             </h3>
           </motion.div>
 
@@ -121,11 +121,12 @@ const ProductGallery: React.FC<ProductGalleryProps> = ({ photos, videos }) => {
                     alt={photo.caption}
                     className="w-full h-full object-fill transition-transform duration-500 group-hover:scale-110"
                   />
-                  <div className="absolute inset-0 bg-[#FF6900] opacity-0 group-hover:opacity-20 transition-opacity duration-300" />
-                  
+
                   {/* Overlay Caption */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                    <p className="text-white font-semibold text-lg">{photo.caption}</p>
+                    <p className="text-white font-semibold text-lg">
+                      {photo.caption}
+                    </p>
                   </div>
                 </div>
               </motion.div>
@@ -146,13 +147,13 @@ const ProductGallery: React.FC<ProductGalleryProps> = ({ photos, videos }) => {
             className="mb-12"
           >
             <div className="flex items-center space-x-4 mb-4">
-              <div className="w-12 h-1 bg-[#FF6900]" />
+              <div className="w-12 h-1 bg-tertiary" />
               <h2 className="text-sm uppercase tracking-widest text-white font-semibold">
                 Videos
               </h2>
             </div>
             <h3 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white tracking-tight">
-              In <span className="text-[#FF6900]">Action</span>
+              In <span className="text-tertiary">Action</span>
             </h3>
           </motion.div>
 
@@ -181,7 +182,7 @@ const ProductGallery: React.FC<ProductGalleryProps> = ({ photos, videos }) => {
 
                   {/* Play Overlay */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent flex items-center justify-center group-hover:bg-black/50 transition-all duration-300">
-                    <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-[#FF6900] flex items-center justify-center transform group-hover:scale-110 transition-transform">
+                    <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-tertiary flex items-center justify-center transform group-hover:scale-110 transition-transform">
                       <div className="w-0 h-0 border-t-8 border-t-transparent border-l-12 border-l-white border-b-8 border-b-transparent ml-1" />
                     </div>
                   </div>
@@ -196,8 +197,12 @@ const ProductGallery: React.FC<ProductGalleryProps> = ({ photos, videos }) => {
 
                 {/* Video Info */}
                 <div className="mt-6">
-                  <h4 className="text-xl sm:text-2xl font-bold text-white mb-2">{video.title}</h4>
-                  <p className="text-gray-400 text-sm sm:text-base leading-relaxed">{video.description}</p>
+                  <h4 className="text-xl sm:text-2xl font-bold text-white mb-2">
+                    {video.title}
+                  </h4>
+                  <p className="text-gray-400 text-sm sm:text-base leading-relaxed">
+                    {video.description}
+                  </p>
                 </div>
               </motion.div>
             ))}
@@ -264,7 +269,9 @@ const ProductGallery: React.FC<ProductGalleryProps> = ({ photos, videos }) => {
                 className="w-full h-auto max-h-[85vh] object-contain"
               />
               <div className="mt-6 text-center">
-                <p className="text-white text-lg font-semibold">{photos[selectedPhoto].caption}</p>
+                <p className="text-white text-lg font-semibold">
+                  {photos[selectedPhoto].caption}
+                </p>
                 <p className="text-gray-400 text-sm mt-2">
                   {selectedPhoto + 1} / {photos.length}
                 </p>
@@ -374,7 +381,7 @@ const ProductGallery: React.FC<ProductGalleryProps> = ({ photos, videos }) => {
             </motion.div>
 
             {/* Accent Line */}
-            <div className="absolute bottom-0 left-0 right-0 h-1 bg-[#FF6900]" />
+            <div className="absolute bottom-0 left-0 right-0 h-1 bg-tertiary" />
           </motion.div>
         )}
       </AnimatePresence>

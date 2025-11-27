@@ -6,6 +6,9 @@ import OurServices from "../pages/OurServices";
 import Team from "../pages/Team";
 import Gallery from "../pages/Gallery";
 import Product from "../pages/Product";
+import News1 from "../pages/LatestNewsPages/NewsMeetingWithDefenceMinister";
+import East_Tech_2025 from "../pages/LatestNewsPages/ East_Tech_2025";
+import East_Tech from "../pages/LatestNewsPages/East_Tech";
 
 function AppRoutes() {
   return (
@@ -16,9 +19,19 @@ function AppRoutes() {
       <Route path="/ourservices" element={<OurServices />} />
       <Route path="/team" element={<Team />} />
       <Route path="/gallery" element={<Gallery />} />
-
       {/** Dynamic product route */}
       <Route path="/products/:slug" element={<Product />} />
+      {/**  news route */}
+      <Route
+        path="/news/meeting-with-minister-of-state-for-defence"
+        element={<News1 />}
+      />
+      <Route path="/news/east-tech-X-2025" element={<East_Tech_2025 />} />
+      <Route path="/news/east-tech-X-2025" element={<East_Tech_2025 />} />{" "}
+      <Route
+        path="/news/east-tech-2025-participation-certificate-of-appreciation"
+        element={<East_Tech />}
+      />
     </Routes>
   );
 }

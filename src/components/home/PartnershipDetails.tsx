@@ -1,18 +1,15 @@
 import { motion } from "framer-motion";
 import { GiTargetPoster } from "react-icons/gi";
-import {  FaHandshake } from "react-icons/fa";
+import { FaHandshake } from "react-icons/fa";
 import { FaFontAwesomeFlag } from "react-icons/fa";
 import { FaGraduationCap } from "react-icons/fa6";
 
-
-
 const PartnershipComponent = () => {
-
   const cards = [
     {
       title: "Partnership",
       icon: <FaHandshake className="text-xl text-tertiary" />,
-      text: "IIT Kharagpur collaborated with Bhubaneswar-based Weevils Drones",
+      text: "IIT Kharagpur collaborated with Bhubaneswar-based WeevilsDrones",
     },
     {
       title: "Purpose",
@@ -31,7 +28,6 @@ const PartnershipComponent = () => {
     },
   ];
 
-  
   return (
     <section className="w-full ">
       <div className="max-w-6xl mx-auto px-4">
@@ -72,9 +68,9 @@ const PartnershipComponent = () => {
                 "
               </div>
               <blockquote className="text-sm lg:text-md text-secondary leading-relaxed mb-6 relative z-10 italic">
-                "Weevils is one of the most trusted drone manufacturers in
-                India. Together, we aim to build drones with more advanced
-                technology, right here at IIT Kharagpur."
+                &nbsp; &nbsp;"Weevils is one of the most trusted drone
+                manufacturers in India. Together, we aim to build drones with
+                more advanced technology, right here at IIT Kharagpur."
               </blockquote>
               <div className="border-t border-secondary/10 pt-4">
                 <p className="font-semibold text-secondary text-lg">
@@ -110,7 +106,7 @@ const PartnershipComponent = () => {
                   Siddharth Sarkar
                 </p>
                 <p className="text-sm text-secondary/70">
-                  Director of Weevils Drones
+                  Director of WeevilsDrones
                 </p>
               </div>
             </div>

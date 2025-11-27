@@ -51,7 +51,7 @@ function Hero() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.6 }}
           >
-            weevildrone
+            WeevilsDrones
           </motion.h2>
         </div>
       </div>
@@ -65,8 +65,8 @@ function Hero() {
           className="flex justify-center"
         >
           <img
-            src="/DroneHero.png"
-            alt="Weevil Drone"
+            src="/drones/Icarus.png"
+            alt="WeevilsDrones"
             className="w-full max-w-lg md:max-w-2xl lg:max-w-xl xl:max-w-2xl object-contain drop-shadow-2xl"
           />
         </motion.div>

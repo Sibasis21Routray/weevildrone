@@ -57,7 +57,7 @@ const PartnershipShowcase = () => {
             <div className="space-y-6 text-secondary">
               <p className="text-sm leading-relaxed">
                 Indian Institute of Technology (IIT) Kharagpur partnered with{" "}
-                <span className="font-semibold">Weevils Drones</span>, a drone
+                <span className="font-semibold">WeevilsDrones</span>, a drone
                 manufacturer from Bhubaneswar, to establish an advanced drone
                 manufacturing factory under the Startup Ecosystem Promotion
                 (STEP) program. This new facility was inaugurated on February
@@ -101,12 +101,12 @@ const PartnershipShowcase = () => {
                 </div>
 
                 <h3 className="text-2xl font-light leading-tight mb-4">
-                  Weevils Drones listed in the Science & Technology
+                  WeevilsDrones listed in the Science & Technology
                   Entrepreneurs' Park
                 </h3>
 
                 <p className="text-primary/80 mb-8 leading-relaxed">
-                  IIT Kharagpur has officially recognized Weevils Drones as an
+                  IIT Kharagpur has officially recognized WeevilsDrones as an
                   innovative startup within their prestigious Science &
                   Technology Entrepreneurs' Park ecosystem.
                 </p>

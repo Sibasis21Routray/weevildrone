@@ -30,36 +30,14 @@ function Product() {
         title={product.title}
         description={product.description}
         image={product.image}
-        layout={product.layout}
-        keyFeatures={product.keyFeatures}
+        catagory={product.category}
         onScrollClick={scrollToSection}
       />
-      <ProductGallery photos={product.gallery} videos={product.videos} />
+      {product.gallery && product.gallery.length > 0 && (
+        <ProductGallery photos={product.gallery} videos={product.videos} />
+      )}
 
-      <ProductDetails
-        sectionRef={sectionRef}
-        
-        keyFeatures={product.keyFeatures}
-        generalSpecifications={product.generalSpecifications}
-        electricPowerSystem={product.electricPowerSystem}
-        communicationAndPerformance={
-          product.radioRequirementsAndFlightPerformance
-        }
-        performanceSpecifications={product.performanceSpecifications}
-        radarIntegration={product.radarIntegration}
-        communicationSystem={product.communicationSystem}
-        flightCharacteristics={product.flightCharacteristics}
-        additionalKeyComponentsAndApplications={
-          product.additionalKeyComponentsAndApplications
-        }
-        radarDroneIntegrationWorkflowAndApplications={
-          product.radarDroneIntegrationWorkflowAndApplications
-        }
-        vtolTechnologyAndApplications={product.vtolTechnologyAndApplications}
-        advancedFeaturesAndApplications={
-          product.advancedFeaturesAndApplications
-        }
-      />
+      <ProductDetails sectionRef={sectionRef} productData={product} />
     </div>
   );
 }

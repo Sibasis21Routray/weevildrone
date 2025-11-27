@@ -38,6 +38,11 @@ const Navbar: React.FC<NavbarProps> = () => {
       path: "/products/icarus",
     },
     {
+      id: "icarus-II",
+      label: "Icarus-II",
+      path: "/products/IcarusII",
+    },
+    {
       id: "eagle-eye",
       label: "Eagle Eye",
       path: "/products/eagle-eye",
@@ -181,7 +186,7 @@ const Navbar: React.FC<NavbarProps> = () => {
       animate={{ y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
     >
-      <div className="max-w-7xl  md:px-4 sm:px-6 lg:px-8">
+      <div className="  md:px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-3 md:py-4">
           {/* Logo */}
           <motion.div
@@ -318,8 +323,6 @@ const Navbar: React.FC<NavbarProps> = () => {
                               </motion.div>
                             ))}
                           </div>
-
-                          
                         </motion.div>
                       )}
                     </AnimatePresence>
@@ -411,11 +414,7 @@ const Navbar: React.FC<NavbarProps> = () => {
                   >
                     {item.id === "product" ? (
                       <div
-                        className={`rounded-xl transition-all duration-200 ${
-                          isProductActive
-                            ? "bg-gradient-to-r from-orange-50 to-red-50 ring-1 ring-orange-200"
-                            : "hover:bg-gray-50"
-                        }`}
+                        className={`rounded-xl transition-all duration-200 }`}
                       >
                         <button
                           onClick={() =>
@@ -468,7 +467,7 @@ const Navbar: React.FC<NavbarProps> = () => {
                               animate="open"
                               exit="closed"
                             >
-                              <div className="bg-white/80 rounded-lg p-2 border border-gray-100 shadow-sm">
+                              <div className="bg-white/80 rounded-xl p-2 border border-gray-100 shadow-sm">
                                 {productItems.map((product, productIndex) => (
                                   <motion.div
                                     key={product.id}
@@ -547,7 +546,7 @@ const Navbar: React.FC<NavbarProps> = () => {
               >
                 <div className="text-center">
                   <p className="text-xs text-gray-500 font-medium">
-                    WEEVILS DRONES PRIVATE LIMITED
+                    WeevilsDrones PRIVATE LIMITED
                   </p>
                   <p className="text-[10px] text-gray-400 mt-1">
                     Advanced Drone Technology Solutions

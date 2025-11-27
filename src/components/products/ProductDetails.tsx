@@ -1,10 +1,17 @@
-import React, { useState } from "react";
+import React from "react";
+import CommunicationPerformance from "./CommunicationPerformance";
+import AdditionalInformation from "./AdditionalInformation";
+import TechnicalSpecifications from "./TechnicalSpecifications";
+import KeyFeaturesSection from "./KeyFeaturesSection";
+import CTASection from "./CTASection";
+import TextContent from "./components/TextContent";
+import BulletList from "./components/BulletList";
 
 // Define all possible specification interfaces
-interface KeyFeature {
-  icon: React.ReactNode;
-  text: string;
-}
+// interface KeyFeature {
+//   icon: React.ReactNode;
+//   text: string;
+// }
 
 interface GeneralSpecifications {
   wingspan?: string;
@@ -38,6 +45,7 @@ interface GeneralSpecifications {
   material?: string;
   [key: string]: string | undefined;
 }
+
 
 interface ElectricPowerSystem {
   pusherMotor?: string;
@@ -99,7 +107,9 @@ interface FlightCharacteristics {
 
 interface ProductDetailsProps {
   sectionRef: React.RefObject<HTMLDivElement | null>;
-  keyFeatures: KeyFeature[];
+  productData: any;
+  // productName: string;
+  // keyFeatures: KeyFeature[];
   generalSpecifications?: GeneralSpecifications;
   electricPowerSystem?: ElectricPowerSystem;
   communicationAndPerformance?: CommunicationAndPerformance;
@@ -115,143 +125,19 @@ interface ProductDetailsProps {
 
 const ProductDetails: React.FC<ProductDetailsProps> = ({
   sectionRef,
-  keyFeatures,
-  generalSpecifications,
-  electricPowerSystem,
-  communicationAndPerformance,
-  performanceSpecifications,
-  radarIntegration,
-  communicationSystem,
-  flightCharacteristics,
-  additionalKeyComponentsAndApplications,
-  radarDroneIntegrationWorkflowAndApplications,
-  vtolTechnologyAndApplications,
-  advancedFeaturesAndApplications,
+  productData ,
 }) => {
-  const [activeTab, setActiveTab] = useState<string>('general');
 
-  // Dynamic tabs based on available data
-  const availableTabs = [
-    { id: 'general', label: 'General', data: generalSpecifications },
-    { id: 'power', label: 'Power', data: electricPowerSystem },
-    { id: 'performance', label: 'Performance', data: performanceSpecifications },
-    { id: 'communication', label: 'Communication', data: communicationSystem },
-    { id: 'radar', label: 'Radar', data: radarIntegration },
-    { id: 'flight', label: 'Flight', data: flightCharacteristics },
-  ].filter(tab => tab.data && Object.keys(tab.data).length > 0);
-
-  // Additional content sections
-  const additionalSections = [
-    { id: 'components', label: 'Components & Applications', data: additionalKeyComponentsAndApplications },
-    { id: 'workflow', label: 'Integration Workflow', data: radarDroneIntegrationWorkflowAndApplications },
-    { id: 'technology', label: 'Technology', data: vtolTechnologyAndApplications },
-    { id: 'advanced', label: 'Advanced Features', data: advancedFeaturesAndApplications },
-  ].filter(section => section.data);
-
-  // Helper function to format keys for display
-  const formatKey = (key: string): string => {
-    return key
-      .replace(/([A-Z])/g, " $1")
-      .replace(/([a-z])([A-Z])/g, "$1 $2")
-      .split(' ')
-      .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-      .join(' ');
-  };
-
-  // Render specification cards
-  const renderSpecificationCards = (data: any, title: string) => (
-    <div className="bg-white rounded-lg border border-gray-200">
-      <div className="bg-gray-900 px-4 py-3">
-        <h4 className="text-lg font-semibold text-white">{title}</h4>
-      </div>
-      <div className="p-4">
-        <div className="space-y-3">
-          {Object.entries(data).map(([key, value]) => (
-            <div
-              key={key}
-              className="flex flex-col sm:flex-row sm:items-start gap-1 p-3 bg-gray-50 rounded-lg"
-            >
-              <span className="text-gray-700 font-medium text-sm sm:w-2/5">
-                {formatKey(key)}
-              </span>
-              <span className="text-gray-900 font-semibold text-sm sm:w-3/5">
-                {value as string}
-              </span>
-            </div>
-          ))}
-        </div>
-      </div>
-    </div>
-  );
-
-  // Render content sections
-  const renderContentSection = (data: any, title: string) => (
-    <div className="bg-white rounded-lg border border-gray-200">
-      <div className="bg-gray-900 px-4 py-3">
-        <h4 className="text-lg font-semibold text-white">{title}</h4>
-      </div>
-      <div className="p-4 space-y-4">
-        {data.militaryTrainingApplications && (
-          <div>
-            <h5 className="text-base font-semibold text-gray-900 mb-2">Military Training Applications</h5>
-            <p className="text-gray-700 text-sm leading-relaxed">{data.militaryTrainingApplications}</p>
-          </div>
-        )}
-        {data.keyComponents && (
-          <div>
-            <h5 className="text-base font-semibold text-gray-900 mb-2">Key Components</h5>
-            <p className="text-gray-700 text-sm leading-relaxed">{data.keyComponents}</p>
-          </div>
-        )}
-        {data.integrationWorkflow && Array.isArray(data.integrationWorkflow) && (
-          <div>
-            <h5 className="text-base font-semibold text-gray-900 mb-2">Integration Workflow</h5>
-            <ol className="list-decimal list-inside space-y-1 text-sm text-gray-700">
-              {data.integrationWorkflow.map((step: string, index: number) => (
-                <li key={index} className="leading-relaxed">{step}</li>
-              ))}
-            </ol>
-          </div>
-        )}
-        {data.advancedCapabilities && (
-          <div>
-            <h5 className="text-base font-semibold text-gray-900 mb-2">Advanced Capabilities</h5>
-            <p className="text-gray-700 text-sm leading-relaxed">{data.advancedCapabilities}</p>
-          </div>
-        )}
-        {data.hybridDesignAdvantages && (
-          <div>
-            <h5 className="text-base font-semibold text-gray-900 mb-2">Hybrid Design Advantages</h5>
-            <p className="text-gray-700 text-sm leading-relaxed">{data.hybridDesignAdvantages}</p>
-          </div>
-        )}
-        {data.missionApplications && (
-          <div>
-            <h5 className="text-base font-semibold text-gray-900 mb-2">Mission Applications</h5>
-            <p className="text-gray-700 text-sm leading-relaxed">{data.missionApplications}</p>
-          </div>
-        )}
-        {data.opticalFiberAdvantages && (
-          <div>
-            <h5 className="text-base font-semibold text-gray-900 mb-2">Optical Fiber Advantages</h5>
-            <p className="text-gray-700 text-sm leading-relaxed">{data.opticalFiberAdvantages}</p>
-          </div>
-        )}
-        {data.tacticalApplications && (
-          <div>
-            <h5 className="text-base font-semibold text-gray-900 mb-2">Tactical Applications</h5>
-            <p className="text-gray-700 text-sm leading-relaxed">{data.tacticalApplications}</p>
-          </div>
-        )}
-      </div>
-    </div>
+  console.log(
+    "Product Data in ProductDetails:",
+    productData.operationalCharacteristics
   );
 
   return (
-    <div className="bg-white py-12 " ref={sectionRef}>
+    <div className="bg-white py-12" ref={sectionRef}>
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-left mb-12">
+        {/* <div className="text-left mb-12">
           <div className="flex items-center space-x-3 mb-3">
             <div className="w-8 h-0.5 bg-orange-500" />
             <span className="text-xs uppercase tracking-wider text-gray-600 font-medium">
@@ -264,164 +150,177 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({
           <p className="text-gray-600 text-base max-w-2xl">
             Comprehensive specifications and features
           </p>
-        </div>
+        </div> */}
 
         <div className="space-y-12">
           {/* Key Features Section */}
-          {keyFeatures && keyFeatures.length > 0 && (
-            <div>
-              <div className="flex items-center space-x-3 mb-6">
-                <div className="w-1 h-6 bg-orange-500" />
-                <h3 className="text-xl font-bold text-gray-900">
-                  Key Features
-                </h3>
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {keyFeatures.map((feature, index) => (
-                  <div
-                    key={index}
-                    className="flex  items-center gap-3 p-4 bg-gray-50 rounded-lg border border-gray-200"
-                  >
-                    <div className="flex-shrink-0 w-10 h-10 bg-orange-100 rounded-lg flex items-center justify-center text-orange-600 text-lg">
-                      {feature.icon}
-                    </div>
-                    <p className="text-gray-700 text-sm leading-relaxed">
-                      {feature.text}
-                    </p>
-                  </div>
-                ))}
-              </div>
-            </div>
+          {productData.keyFeatures && productData.keyFeatures.length > 0 && (
+            <KeyFeaturesSection keyFeatures={productData.keyFeatures} />
           )}
 
-          {/* Tabbed Specifications Section */}
-          {availableTabs.length > 0 && (
-            <div>
-              <div className="flex items-center space-x-3 mb-6">
-                <div className="w-1 h-6 bg-orange-500" />
-                <h3 className="text-xl font-bold text-gray-900">
-                  Technical Specifications
-                </h3>
-              </div>
-
-              {/* Tab Navigation */}
-              <div className="flex flex-wrap gap-2 mb-6">
-                {availableTabs.map((tab) => (
-                  <button
-                    key={tab.id}
-                    onClick={() => setActiveTab(tab.id)}
-                    className={`px-4 py-2 rounded-lg font-medium text-sm transition-all duration-200 ${
-                      activeTab === tab.id
-                        ? "bg-orange-500 text-white shadow-sm"
-                        : "bg-white text-gray-700 border border-gray-300 hover:border-orange-300"
-                    }`}
-                  >
-                    {tab.label}
-                  </button>
-                ))}
-              </div>
-
-              {/* Tab Content */}
-              <div>
-                {activeTab === "general" &&
-                  generalSpecifications &&
-                  renderSpecificationCards(
-                    generalSpecifications,
-                    "General Specifications"
-                  )}
-
-                {activeTab === "power" &&
-                  electricPowerSystem &&
-                  renderSpecificationCards(electricPowerSystem, "Power System")}
-
-                {activeTab === "performance" &&
-                  performanceSpecifications &&
-                  renderSpecificationCards(
-                    performanceSpecifications,
-                    "Performance Specifications"
-                  )}
-
-                {activeTab === "communication" &&
-                  communicationSystem &&
-                  renderSpecificationCards(
-                    communicationSystem,
-                    "Communication System"
-                  )}
-
-                {activeTab === "radar" &&
-                  radarIntegration &&
-                  renderSpecificationCards(
-                    radarIntegration,
-                    "Radar Integration"
-                  )}
-
-                {activeTab === "flight" &&
-                  flightCharacteristics &&
-                  renderSpecificationCards(
-                    flightCharacteristics,
-                    "Flight Characteristics"
-                  )}
-              </div>
-            </div>
+          {/* Technical Specifications */}
+          {(productData.generalSpecifications ||
+            productData.operationalCharacteristics ||
+            productData.electricPowerSystem ||
+            productData.performanceSpecifications ||
+            productData.communicationSystem ||
+            productData.radarIntegration ||
+            productData.flightCharacteristics) && (
+            <TechnicalSpecifications
+              generalSpecifications={productData.generalSpecifications}
+              operationalCharacteristics={
+                productData.operationalCharacteristics
+              }
+              electricPowerSystem={productData.electricPowerSystem}
+              performanceSpecifications={productData.performanceSpecifications}
+              communicationSystem={productData.communicationSystem}
+              radarIntegration={productData.radarIntegration}
+              flightCharacteristics={productData.flightCharacteristics}
+            />
           )}
 
-          {/* Communication & Performance Section */}
-          {communicationAndPerformance && (
-            <div>
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                {communicationAndPerformance.communicationSystem && (
-                  <div className="bg-white rounded-lg border border-gray-200">
-                    <div className="bg-gray-900 px-4 py-3">
-                      <h4 className="text-lg font-semibold text-white">
-                        Communication System
-                      </h4>
-                    </div>
-                    <div className="p-4 text-left">
-                      <p className="text-gray-700 text-sm leading-relaxed">
-                        {communicationAndPerformance.communicationSystem}
-                      </p>
-                    </div>
-                  </div>
-                )}
+          {/* Additional paragraphs */}
 
-                {communicationAndPerformance.flightCapabilities && (
-                  <div className="bg-white rounded-lg border border-gray-200">
-                    <div className="bg-gray-900 px-4 py-3">
-                      <h4 className="text-lg font-semibold text-white">
-                        Flight Capabilities
-                      </h4>
-                    </div>
-                    <div className="p-4 text-left">
-                      <p className="text-gray-700 text-sm leading-relaxed">
-                        {communicationAndPerformance.flightCapabilities}
-                      </p>
-                    </div>
-                  </div>
-                )}
-              </div>
-            </div>
+          {productData.radioRequirementsAndFlightTime && (
+            <TextContent
+              heading={productData.radioRequirementsAndFlightTime.heading}
+              paragraph={productData.radioRequirementsAndFlightTime.paragraph}
+            />
+          )}
+          {productData.additionalKeyComponents && (
+            <TextContent
+              heading={productData.additionalKeyComponents.heading}
+              paragraph={productData.additionalKeyComponents.paragraph}
+            />
           )}
 
-          {/* Additional Content Sections */}
-          {additionalSections.length > 0 && (
-            <div>
-              <div className="flex items-center space-x-3 mb-6">
-                <div className="w-1 h-6 bg-orange-500" />
-                <h3 className="text-xl font-bold text-gray-900">
-                  Additional Information
-                </h3>
-              </div>
-
-              <div className="space-y-6 text-left">
-                {additionalSections.map((section) => (
-                  <div key={section.id}>
-                    {renderContentSection(section.data, section.label)}
-                  </div>
-                ))}
-              </div>
-            </div>
+          {/* ardupilot paragraphs */}
+          {productData.ardupilot && (
+            <TextContent
+              heading={productData.ardupilot.heading}
+              paragraph={productData.ardupilot.paragraph}
+            />
           )}
+
+          {/* flightController paragraphs */}
+          {productData.ardupilot && (
+            <TextContent
+              heading={productData.flightController.heading}
+              paragraph={productData.flightController.paragraph}
+            />
+          )}
+
+          {/* overview paragraphs */}
+          {productData.overview && (
+            <TextContent
+              heading={productData.overview.heading}
+              paragraph={productData.overview.paragraph}
+            />
+          )}
+
+          {/* carbonFiberModelCharacteristics paragraphs */}
+          {productData.carbonFiberModelCharacteristics && (
+            <TextContent
+              heading={productData.carbonFiberModelCharacteristics.heading}
+              paragraph={productData.carbonFiberModelCharacteristics.paragraph}
+            />
+          )}
+          {/* agricultureSector paragraphs */}
+          {productData.agricultureSector && (
+            <TextContent
+              heading={productData.agricultureSector.heading}
+              paragraph={productData.agricultureSector.paragraph}
+            />
+          )}
+
+          {/* Bullet list */}
+          {productData.advantagesData && (
+            <BulletList
+              heading={productData.advantagesData.heading}
+              items={productData.advantagesData.items}
+            />
+          )}
+
+          {productData.missionModes && (
+            <BulletList
+              heading={productData.missionModes.heading}
+              items={productData.missionModes.items}
+            />
+          )}
+
+          {productData.trackingAndLogging && (
+            <BulletList
+              heading={productData.trackingAndLogging.heading}
+              items={productData.trackingAndLogging.items}
+            />
+          )}
+
+          {productData.hardwareComponents && (
+            <BulletList
+              heading={productData.hardwareComponents.heading}
+              items={productData.hardwareComponents.items}
+            />
+          )}
+
+          {productData.radarIntegrationModule && (
+            <BulletList
+              heading={productData.radarIntegrationModule.heading}
+              items={productData.radarIntegrationModule.items}
+            />
+          )}
+
+          {productData.radarDroneIntegrationWorkflow && (
+            <BulletList
+              heading={productData.radarDroneIntegrationWorkflow.heading}
+              items={productData.radarDroneIntegrationWorkflow.items}
+            />
+          )}
+
+          {productData.healthCareSector && (
+            <BulletList
+              heading={productData.healthCareSector.heading}
+              items={productData.healthCareSector.items}
+            />
+          )}
+
+          {productData.miningAndElectricalSector && (
+            <BulletList
+              heading={productData.miningAndElectricalSector.heading}
+              items={productData.miningAndElectricalSector.items}
+            />
+          )}
+
+          {/* Communication & Performance */}
+          {productData.communicationAndPerformance && (
+            <CommunicationPerformance
+              communicationAndPerformance={
+                productData.communicationAndPerformance
+              }
+            />
+          )}
+
+          {/* Additional Information */}
+          {(productData.additionalKeyComponentsAndApplications ||
+            productData.radarDroneIntegrationWorkflowAndApplications ||
+            productData.vtolTechnologyAndApplications ||
+            productData.advancedFeaturesAndApplications) && (
+            <AdditionalInformation
+              additionalKeyComponentsAndApplications={
+                productData.additionalKeyComponentsAndApplications
+              }
+              radarDroneIntegrationWorkflowAndApplications={
+                productData.radarDroneIntegrationWorkflowAndApplications
+              }
+              vtolTechnologyAndApplications={
+                productData.vtolTechnologyAndApplications
+              }
+              advancedFeaturesAndApplications={
+                productData.advancedFeaturesAndApplications
+              }
+            />
+          )}
+
+          <CTASection />
         </div>
       </div>
     </div>

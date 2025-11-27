@@ -8,14 +8,14 @@ function Hero() {
   const sectionRef = useRef(null);
   const textRef = useRef(null);
 
-  const stats = [
-    { number: 95, suffix: "%", label: "Success Rate" },
-    { number: 100, suffix: "+", label: "Projects Completed" },
-    { number: 3, suffix: "mins", label: "Average Response Time" },
-    { number: 37, suffix: "+", label: "Years Experience" },
-  ];
+  // const stats = [
+  //   { number: 95, suffix: "%", label: "Success Rate" },
+  //   { number: 100, suffix: "+", label: "Projects Completed" },
+  //   { number: 3, suffix: "mins", label: "Average Response Time" },
+  //   { number: 37, suffix: "+", label: "Years Experience" },
+  // ];
 
-  const containerVariants :Variants= {
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -37,19 +37,16 @@ function Hero() {
     },
   };
 
-
- 
-
   return (
     <div ref={heroRef} className="relative ">
       {/* Main Content Section */}
       <div
         ref={sectionRef}
-        className="relative bg-gradient-to-br from-slate-900 via-gray-900 to-black text-left "
+        className="relative bg-gradient-to-br from-slate-900 via-gray-900 to-black text-left h-full py-12 "
       >
         {/* Parallax Background */}
         <div className="absolute inset-0 ">
-          <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3')] bg-cover bg-center opacity-30"></div>
+          <div className="absolute inset-0 bg-[url('/aboutbg.jpeg')] bg-cover bg-center opacity-30"></div>
         </div>
 
         <div className="relative container mx-auto px-7 grid grid-cols-1 lg:grid-cols-2  items-center ml-0 md:ml-5">
@@ -73,7 +70,7 @@ function Hero() {
 
             <motion.div variants={itemVariants} className="">
               <p className="text-base sm:text-lg lg:text-xl text-gray-300 leading-relaxed">
-                Weevils Drones is the pioneer and the pre-eminent market leader
+                WeevilsDrones is the pioneer and the pre-eminent market leader
                 in the Indian unmanned aircraft systems (UAS) market. We lead
                 the largest operational deployment of indigenous UAVs across
                 India, with a Weevils Trade Marked drone taking off every five
@@ -82,15 +79,12 @@ function Hero() {
             </motion.div>
 
             {/* Stats */}
-            <motion.div
+            {/* <motion.div
               variants={itemVariants}
               className="stats-section grid grid-cols-2 gap-4 sm:flex sm:gap-0 mb-10 lg:mb-0 "
             >
               {stats.map((stat, index) => (
-                <div
-                  key={index}
-                  className="text-left  w-full"
-                >
+                <div key={index} className="text-left  w-full">
                   <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-1 sm:mb-2">
                     <span className="stat-number">{stat.number}</span>
                     <span className="text-[#FF6900]">{stat.suffix}</span>
@@ -100,7 +94,7 @@ function Hero() {
                   </div>
                 </div>
               ))}
-            </motion.div>
+            </motion.div> */}
           </motion.div>
 
           {/* Target Drone */}
@@ -112,8 +106,8 @@ function Hero() {
           >
             <div ref={targetDroneRef} className="relative">
               <motion.img
-                src="/DroneHero.png"
-                alt="Weevil Drone"
+                src="/dronesGallery/VARCHAS/varchas-preview.png"
+                alt="WeevilsDrones"
                 className="w-full  object-contain drop-shadow-2xl "
               />
             </div>

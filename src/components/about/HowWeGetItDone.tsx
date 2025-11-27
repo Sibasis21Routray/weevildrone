@@ -23,8 +23,7 @@ const processCards: ProcessCard[] = [
   {
     id: 1,
     icon: <FaMapMarkedAlt className="w-6 h-6" />,
-    bgImage:
-      "https://irp.cdn-website.com/381aca84/dms3rep/multi/Aerial+Drone+Photography+December+2023.jpg",
+    bgImage: "/aboutUs/Aerial_Mapping.jpg",
     title: "Aerial Mapping",
     description:
       "High-precision drone mapping services that provide accurate topographic data for construction, agriculture, and surveying projects.",
@@ -32,8 +31,7 @@ const processCards: ProcessCard[] = [
   {
     id: 2,
     icon: <FaCogs className="w-6 h-6" />,
-    bgImage:
-      "https://flightapprentice.com/wp-content/uploads/2020/03/cross_country_header-1024x712.jpeg",
+    bgImage: "/aboutUs/Flight_Planning.jpeg",
     title: "Flight Planning",
     description:
       "Our intelligent software creates optimized drone flight paths for efficient and safe data collection in various environments.",
@@ -41,8 +39,7 @@ const processCards: ProcessCard[] = [
   {
     id: 3,
     icon: <FaCheckCircle className="w-6 h-6" />,
-    bgImage:
-      "https://cdn.prod.website-files.com/65a4fdb423a76722fd6d8265/65cdbc33b9d510ec993c0ca8_654cb08a6abde0a5598a3040_Operator%2520in%2520Control%2520Room-min.jpeg",
+    bgImage: "/aboutUs/Real_Time_Inspection.jpg",
     title: "Real-Time Inspection",
     description:
       "Conduct real-time aerial inspections for infrastructure, utilities, and agriculture with live video feeds and analytics.",
@@ -50,8 +47,7 @@ const processCards: ProcessCard[] = [
   {
     id: 4,
     icon: <FaRocket className="w-6 h-6" />,
-    bgImage:
-      "https://www.dragonspears.com/hubfs/images/blog/4-reasons-to-embrace-application-deployment-automation-1260x630px.jpg",
+    bgImage: "/aboutUs/Deployment_Support.jpeg",
     title: "Deployment & Support",
     description:
       "From setup to flight operations and post-mission analytics, we provide full deployment and ongoing technical support.",
@@ -141,11 +137,11 @@ const processCards: ProcessCard[] = [
                   <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/20" />
                 </div>
                 {/* Circular Icon with higher z-index */}
-                <motion.div
+                {/* <motion.div
                   className="absolute mt-[10vh] md:mt-[8vh] lg:mt-[15vh] left-1 w-12 h-12 bg-tertiary rounded-full flex items-center justify-center text-white shadow-lg "
                 >
                   {card.icon}
-                </motion.div>
+                </motion.div> */}
                 {/* Content Area - More compact */}
                 <div className="pt-6 pb-4 px-5 flex-1 flex flex-col">
                   {" "}

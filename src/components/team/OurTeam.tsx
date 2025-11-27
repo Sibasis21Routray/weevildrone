@@ -23,7 +23,7 @@ const OurTeam = () => {
       id: 1,
       name: "Sagarika Parija",
       position: "Promoter / Director",
-      company: "Weevils Drones Initial Funding",
+      company: "WeevilsDrones Initial Funding",
       description:
         "Visionary leader driving innovation in drone technology with extensive experience in business development and strategic planning.",
       skills: [
@@ -38,9 +38,9 @@ const OurTeam = () => {
       id: 2,
       name: "Ashis Saha",
       position: "CEO",
-      company: "Weevils Drones",
+      company: "WeevilsDrones",
       description:
-        "Leading Weevils Drones with 37 years of extensive experience in IT Industries, driving technological innovation and business growth.",
+        "Leading WeevilsDrones with 37 years of extensive experience in IT Industries, driving technological innovation and business growth.",
       skills: ["IT Leadership", "Business Strategy", "Technology Innovation"],
       image:
         "https://weevildrone.co.in/wp-content/uploads/2025/02/Ashis-saha-286x300.jpg",
@@ -49,7 +49,7 @@ const OurTeam = () => {
       id: 3,
       name: "Narendra Das",
       position: "CTO",
-      company: "Weevils Drones",
+      company: "WeevilsDrones",
       description:
         "Chief Technology Officer with 25 years of experience in IT Industries and CEO of Quotus Solutions, bringing financial expertise and strategic oversight.",
       skills: [
@@ -64,7 +64,7 @@ const OurTeam = () => {
       id: 4,
       name: "Siddhartha Sircar",
       position: "Director",
-      company: "Weevils Drones",
+      company: "WeevilsDrones",
       description:
         "Director with 37 years of experience in Education Domain, in charge of IIT KGP STEP Workshop, driving technological advancement in drone.",
       skills: [
@@ -79,7 +79,7 @@ const OurTeam = () => {
       id: 5,
       name: "Prasun Kr. Paul",
       position: "Director Sales",
-      company: "Weevils Drones",
+      company: "WeevilsDrones",
       description:
         "Director Sales with 30 years of experience in IT service Industries, specializing in sales and marketing of group companies.",
       skills: ["Sales Management", "IT Services", "Marketing Strategy"],

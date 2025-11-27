@@ -51,7 +51,7 @@ export default function ImagesReveal() {
   return (
     <div>
       <h1 className="text-center text-2xl font-semibold text-tertiary/80">
-        Weevildrone Events
+        WeevilsDrones Events
       </h1>
       <div className="relative my-10 ml-10 flex flex-row justify-center md:ml-20">
         {cards.map((card, i) => (

@@ -103,10 +103,10 @@ const ContactUs = () => {
               <div className="flex-1">
                 <p className="font-medium text-gray-600">Email Us</p>
                 <a
-                  href="mailto:connect@Weevildrone.ai"
+                  href="mailto:connect@Weevilsdrones.ai"
                   className="text-lg text-blue-600 hover:text-blue-800 transition-colors duration-300"
                 >
-                  info@Weevildrone.co.in
+                  info@Weevilsdrones.co.in
                 </a>
               </div>
             </motion.div>
