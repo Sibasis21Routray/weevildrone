@@ -16,6 +16,11 @@ const Footer = () => {
       path: "/products/icarus",
     },
     {
+      id: "icarus-II",
+      label: "Icarus-II",
+      path: "/products/IcarusII",
+    },
+    {
       id: "eagle-eye",
       label: "Eagle Eye",
       path: "/products/eagle-eye",
