@@ -173,7 +173,7 @@ const NewsMeetingWithDefenceMinister = () => {
 
                 <div className="p-4 rounded-lg bg-gray-50 border border-gray-200">
                   <p className="text-gray-700 italic lg:text-justify text-left">
-                    👉 As India prepares for a new era of aerial intelligence
+                    As India prepares for a new era of aerial intelligence
                     and autonomous defence, WeevilsDrones remains dedicated to
                     contributing through cutting-edge drone technology, deep
                     research collaborations, and an unwavering spirit of

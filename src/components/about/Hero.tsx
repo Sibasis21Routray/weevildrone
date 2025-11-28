@@ -46,7 +46,7 @@ function Hero() {
       >
         {/* Parallax Background */}
         <div className="absolute inset-0 ">
-          <div className="absolute inset-0 bg-[url('/aboutbg.jpeg')] bg-cover bg-center opacity-30"></div>
+          <div className="absolute inset-0 bg-[url('/aboutUs/aboutbg.jpeg')] bg-cover bg-center opacity-30"></div>
         </div>
 
         <div className="relative container mx-auto px-7 grid grid-cols-1 lg:grid-cols-2  items-center ml-0 md:ml-5">
@@ -69,12 +69,16 @@ function Hero() {
             </motion.div>
 
             <motion.div variants={itemVariants} className="">
-              <p className="text-base sm:text-lg lg:text-xl text-gray-300 leading-relaxed">
-                WeevilsDrones is the pioneer and the pre-eminent market leader
-                in the Indian unmanned aircraft systems (UAS) market. We lead
-                the largest operational deployment of indigenous UAVs across
-                India, with a Weevils Trade Marked drone taking off every five
-                minutes for surveillance and mapping on an average day.
+              <p className="text-base sm:text-lg lg:text-xl text-gray-300 leading-tight">
+                Weevils Drones is an ambitious UAV manufacturer offering
+                flexible, customized drone solutions. Founded in the Science &
+                Technology Park at IIT Kharagpur, we benefit from advanced
+                testing facilities, simulation labs, and expert support from IIT
+                KGP faculty in Robotics and Aeronautics. We produce a wide range
+                of UAVs, including Fixed Wing, VTOL hybrids, and multirotor
+                systems such as FPVs, tethered, and optical-fiber drones. With a
+                skilled technical team and strong R&D backing, we continue to
+                pursue innovation and excellence in every stage of development.
               </p>
             </motion.div>
 
