@@ -46,7 +46,7 @@ function Hero() {
       >
         {/* Parallax Background */}
         <div className="absolute inset-0 ">
-          <div className="absolute inset-0 bg-[url('/aboutUs/aboutbg.jpeg')] bg-cover bg-center opacity-30"></div>
+          {/* <div className="absolute inset-0 bg-[url('/aboutUs/aboutbg.jpeg')] bg-cover bg-center opacity-30"></div> */}
         </div>
 
         <div className="relative container mx-auto px-7 grid grid-cols-1 lg:grid-cols-2  items-center ml-0 md:ml-5">

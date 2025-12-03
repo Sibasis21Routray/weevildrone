@@ -152,7 +152,7 @@ const Hero: React.FC<HeroProps> = ({
                   <span>
                     <FaShieldHalved className="text-tertiary" />
                   </span>
-                  <span>2-Year Warranty</span>
+                  <span>1-Year Warranty</span>
                 </div>
               </motion.div>
             )}
