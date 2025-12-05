@@ -10,8 +10,7 @@ export const newsData = [
     author: "Ashis Saha",
     position: "CEO",
     type: "event",
-    image:
-      "https://weevildrone.co.in/wp-content/uploads/2025/09/WhatsApp-Image-2025-09-20-at-9.04.01-AM-1536x1153.jpeg",
+    image: "/news/meeting_defence_minister.jpeg",
     layout: "image-right",
     url: "/news/meeting-with-minister-of-state-for-defence",
   },
@@ -57,36 +56,5 @@ export const newsData = [
     url: "/news/icarus-hrudel-test-successful-demo",
   },
 
-  // {
-  //   id: "4",
-  //   date: "12th October 2025",
-  //   title: "Collaboration with IIT Kanpur for Advanced Drone Research",
-  //   descreption:
-  //     "WeevilsDrones Pvt. Ltd. announces a research collaboration with IIT Kanpur to jointly develop next-generation drone control algorithms and real-time data processing systems.",
-  //   content:
-  //     "This strategic partnership with IIT Kanpur focuses on co-developing advanced flight controllers and AI-powered mission planning modules. The collaboration aims to strengthen India’s indigenous drone ecosystem through academic and industrial synergy.",
-  //   author: "Ravi Kumar",
-  //   position: "Head of R&D",
-  //   type: "collaboration",
-  //   image:
-  //     "https://images.unsplash.com/photo-1581090700227-1e37b190418e?auto=format&fit=crop&w=1200&q=80",
-  //   layout: "image-right",
-  //   url: "/news/collaboration-with-iit-kanpur-for-advanced-drone-research",
-  // },
-  // {
-  //   id: "5",
-  //   date: "28th October 2025",
-  //   title: "WeevilsDrones Receives ISO 9001:2025 Certification",
-  //   descreption:
-  //     "WeevilsDrones Pvt. Ltd. achieves ISO 9001:2025 certification for Quality Management Systems, reaffirming our commitment to excellence and global standards in drone manufacturing.",
-  //   content:
-  //     "This certification marks a major step in our journey toward operational excellence. The ISO 9001:2025 standard recognizes our dedication to maintaining quality, safety, and continuous improvement across all departments.",
-  //   author: "Priya Sharma",
-  //   position: "Operations Manager",
-  //   type: "achievement",
-  //   image:
-  //     "https://images.unsplash.com/photo-1581090700227-1e37b190418e?auto=format&fit=crop&w=1200&q=80",
-  //   layout: "image-left",
-  //   url: "/news/weevils-drones-receives-iso-9001-2025-certification",
-  // },
+  
 ];

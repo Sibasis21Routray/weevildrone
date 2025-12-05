@@ -196,7 +196,7 @@ const Navbar: React.FC<NavbarProps> = () => {
           >
             <Link to="/" className="flex items-center space-x-2 no-underline">
               <img
-                src="https://weevildrone.co.in/wp-content/uploads/2025/09/cropped-WhatsApp-Image-2025-08-27-at-1.11.53-PM.jpeg"
+                src="/logo.jpeg"
                 alt="Logo"
                 className="h-8 w-auto md:h-12 object-center"
               />

@@ -46,7 +46,7 @@ function Hero() {
 
           {/* Second Heading */}
           <motion.h2
-            className="text-5xl md:text-[100px] lg:text-[120px] font-semibold text-transparent bg-gray-700 bg-[url('https://www.transparenttextures.com/patterns/asfalt-light.png')] bg-clip-text mt-2"
+            className="text-5xl md:text-[100px] lg:text-[120px] font-semibold text-transparent bg-gray-700 bg-[url('/serviceTextBg.png')] bg-clip-text mt-2"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.6 }}

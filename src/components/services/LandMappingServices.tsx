@@ -76,7 +76,10 @@ const sectorApplications = [
 
 export const LandMappingServices: React.FC = () => {
   return (
-    <section id="mapping" className="py-12 lg:py-20 bg-[var(--color-secondary)]">
+    <section
+      id="mapping"
+      className="py-12 lg:py-20 bg-[var(--color-secondary)]"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
@@ -161,7 +164,9 @@ export const LandMappingServices: React.FC = () => {
                 <div className="text-lg lg:text-xl font-bold text-white mb-1">
                   3-4 kms/day
                 </div>
-                <div className="text-gray-300 text-xs lg:text-sm">Production Rate</div>
+                <div className="text-gray-300 text-xs lg:text-sm">
+                  Production Rate
+                </div>
               </div>
               <div className="bg-[var(--color-tertiary)] rounded-lg p-3 lg:p-4 text-center">
                 <FaMap className="text-white text-xl lg:text-2xl mx-auto mb-2" />
@@ -186,7 +191,7 @@ export const LandMappingServices: React.FC = () => {
             className="flex flex-col"
           >
             <img
-              src="https://weevildrone.co.in/wp-content/uploads/2025/09/Goodrick-Tea-Project_1-1536x1151.jpg"
+              src="/landmapping.jpg"
               alt="Precision mapping of Goodrick Tea Garden (2.54 Hectares) in North Bengal, West Bengal"
               className="rounded-lg shadow-2xl w-full h-64 lg:h-96 object-cover border-4 border-white"
             />
@@ -204,7 +209,7 @@ export const LandMappingServices: React.FC = () => {
             className="flex flex-col order-2 lg:order-1"
           >
             <img
-              src="https://weevildrone.co.in/wp-content/uploads/2025/09/Goodrick-Tea-Project_3_1.png"
+              src="precessionmapping.png"
               alt="Precision mapping analysis of Goodrick Tea Garden"
               className="rounded-lg shadow-2xl w-full h-56 lg:h-72 object-cover border-4 border-white lg:mt-12"
             />
@@ -272,7 +277,7 @@ export const LandMappingServices: React.FC = () => {
             className="flex flex-col justify-center lg:order-1"
           >
             <img
-              src="https://weevildrone.co.in/wp-content/uploads/2025/09/Goodrick-Tea-Project_0.jpg"
+              src="/arealmapping.jpg"
               alt="Goodrick Tea Garden aerial mapping results"
               className="rounded-lg shadow-2xl w-screen h-64 lg:h-80 object-cover border-4 border-white"
             />
@@ -283,75 +288,73 @@ export const LandMappingServices: React.FC = () => {
               Aerial view of completed mapping project
             </p>
           </motion.div>
-
-         
         </div>
-         {/*  Technical Specifications */}
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="bg-white rounded-lg shadow-2xl p-6 border-2 border-gray-200"
-          >
-            <div className="flex items-center space-x-3 mb-6">
-              <div className="w-10 h-10 bg-[var(--color-tertiary)] rounded-lg flex items-center justify-center">
-                <FaCog className="text-white text-xl" />
-              </div>
-              <h3
-                className="text-2xl font-bold"
-                style={{ color: "var(--color-secondary)" }}
-              >
-                Technical Specifications
-              </h3>
+        {/*  Technical Specifications */}
+        <motion.div
+          initial={{ opacity: 0, x: 50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="bg-white rounded-lg shadow-2xl p-6 border-2 border-gray-200"
+        >
+          <div className="flex items-center space-x-3 mb-6">
+            <div className="w-10 h-10 bg-[var(--color-tertiary)] rounded-lg flex items-center justify-center">
+              <FaCog className="text-white text-xl" />
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 text-left">
-              {technicalSpecs.map((spec, index) => {
-                const IconComponent = spec.icon;
-                return (
-                  <motion.div
-                    key={spec.category}
-                    className="bg-white border border-gray-200 rounded-lg p-3 shadow-md hover:shadow-lg transition-all duration-300"
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.3, delay: index * 0.1 }}
-                    viewport={{ once: true }}
-                    whileHover={{ scale: 1.01 }}
-                  >
-                    {/* Header */}
-                    <div className="flex items-center space-x-2 mb-2">
-                      <div className="w-8 h-8 bg-[var(--color-tertiary)] rounded-lg flex items-center justify-center flex-shrink-0">
-                        <IconComponent className="text-white text-sm" />
-                      </div>
-                      <h4
-                        className="font-semibold text-base"
-                        style={{ color: "var(--color-secondary)" }}
-                      >
-                        {spec.category}
-                      </h4>
+            <h3
+              className="text-2xl font-bold"
+              style={{ color: "var(--color-secondary)" }}
+            >
+              Technical Specifications
+            </h3>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 text-left">
+            {technicalSpecs.map((spec, index) => {
+              const IconComponent = spec.icon;
+              return (
+                <motion.div
+                  key={spec.category}
+                  className="bg-white border border-gray-200 rounded-lg p-3 shadow-md hover:shadow-lg transition-all duration-300"
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.3, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  whileHover={{ scale: 1.01 }}
+                >
+                  {/* Header */}
+                  <div className="flex items-center space-x-2 mb-2">
+                    <div className="w-8 h-8 bg-[var(--color-tertiary)] rounded-lg flex items-center justify-center flex-shrink-0">
+                      <IconComponent className="text-white text-sm" />
                     </div>
+                    <h4
+                      className="font-semibold text-base"
+                      style={{ color: "var(--color-secondary)" }}
+                    >
+                      {spec.category}
+                    </h4>
+                  </div>
 
-                    {/* Features */}
-                    <ul className="space-y-3 mt-5">
-                      {spec.features.map((feature, featureIndex) => (
-                        <li
-                          key={featureIndex}
-                          className="flex  space-x-4 items-center"
-                        >
-                          <span className="text-[var(--color-tertiary)] mt-1 text-md flex-shrink-0">
-                            •
-                          </span>
-                          <span className="text-gray-600 text-md leading-tight">
-                            {feature} 
-                          </span>
-                        </li>
-                      ))}
-                    </ul>
-                  </motion.div>
-                );
-              })}
-            </div>{" "}
-          </motion.div>
+                  {/* Features */}
+                  <ul className="space-y-3 mt-5">
+                    {spec.features.map((feature, featureIndex) => (
+                      <li
+                        key={featureIndex}
+                        className="flex  space-x-4 items-center"
+                      >
+                        <span className="text-[var(--color-tertiary)] mt-1 text-md flex-shrink-0">
+                          •
+                        </span>
+                        <span className="text-gray-600 text-md leading-tight">
+                          {feature}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                </motion.div>
+              );
+            })}
+          </div>{" "}
+        </motion.div>
       </div>
     </section>
   );

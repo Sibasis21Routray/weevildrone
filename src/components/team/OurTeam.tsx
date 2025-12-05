@@ -31,8 +31,7 @@ const OurTeam = () => {
         "Business Development",
         "Innovation Management",
       ],
-      image:
-        "https://weevildrone.co.in/wp-content/uploads/2025/02/sagarika-parija-e1739941191700-200x300.jpg",
+      image: "/team/sagarika-parija.jpg",
     },
     {
       id: 2,
@@ -42,8 +41,7 @@ const OurTeam = () => {
       description:
         "Leading WeevilsDrones with 37 years of extensive experience in IT Industries, driving technological innovation and business growth.",
       skills: ["IT Leadership", "Business Strategy", "Technology Innovation"],
-      image:
-        "https://weevildrone.co.in/wp-content/uploads/2025/02/Ashis-saha-286x300.jpg",
+      image: "/team/Ashis-saha.jpg",
     },
     {
       id: 3,
@@ -57,8 +55,7 @@ const OurTeam = () => {
         "IT Industry Experience",
         "Strategic Planning",
       ],
-      image:
-        "https://weevildrone.co.in/wp-content/uploads/2025/02/Narendra-Das-e1739941082342-276x300.jpg",
+      image: "/team/Narendra-Das.jpg",
     },
     {
       id: 4,
@@ -72,8 +69,7 @@ const OurTeam = () => {
         "IIT KGP STEP Workshop",
         "Technical Leadership",
       ],
-      image:
-        "https://weevildrone.co.in/wp-content/uploads/2025/02/sidharth-sircar.jpg",
+      image: "/team/sidharth-sircar.jpg",
     },
     {
       id: 5,
@@ -83,8 +79,7 @@ const OurTeam = () => {
       description:
         "Director Sales with 30 years of experience in IT service Industries, specializing in sales and marketing of group companies.",
       skills: ["Sales Management", "IT Services", "Marketing Strategy"],
-      image:
-        "https://weevildrone.co.in/wp-content/uploads/2025/02/prasun-kr-paul-300x296.jpg",
+      image: "/team/prasun-kr-paul.jpg",
     },
   ];
 

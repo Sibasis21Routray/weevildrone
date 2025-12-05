@@ -446,7 +446,7 @@ export const products = [
     videos: [
       {
         title: "Operational Flight Test",
-        url: "https://weevildrone.co.in/wp-content/uploads/2025/09/1-Bengal-Air-NCC_Training_4-Trim.mp4#t=1,20",
+        url: "/dronesGallery/NAYANAVAT/nayanavat.mp4",
         description: "Watch the Nayanavat demonstration.",
       },
     ],
@@ -540,18 +540,15 @@ export const products = [
     //  Photo Gallery
     gallery: [
       {
-        image:
-          "https://weevildrone.co.in/wp-content/uploads/2025/09/Gandive_6.jpg",
+        image: "/dronesGallery/GANDIVA/Gandive1.jpg",
         caption: "Gandiva landed view",
       },
       {
-        image:
-          "https://weevildrone.co.in/wp-content/uploads/elementor/thumbs/Screenshot-2025-09-17-145242-rbvtfn132wf8ymy73cfvi52ed3flb2yjbda6owyid2.png",
+        image: "/dronesGallery/GANDIVA/Gandive2.png",
         caption: "High-altitude operational view",
       },
       {
-        image:
-          "https://weevildrone.co.in/wp-content/uploads/elementor/thumbs/Screenshot-2025-09-17-150359-rbvtu2tu2a6tazz5s34kazwav69kjpa3mu1p2xjss6.png",
+        image: "/dronesGallery/GANDIVA/Gandive3.png",
         caption: "Radar simulation view",
       },
     ],
@@ -560,13 +557,13 @@ export const products = [
     videos: [
       {
         title: "Operational Flight Test",
-        url: "https://weevildrone.co.in/wp-content/uploads/2025/09/Gandiva_2.mp4#t=1,20",
+        url: "/dronesGallery/GANDIVA/Gandive.mp4",
         description:
           "Watch the Gandiva demonstrate its high-speed interception capabilities and autonomous flight modes.",
       },
       {
         title: "Radar Integration Demo",
-        url: "https://weevildrone.co.in/wp-content/uploads/2025/09/Gandiva_Radar-side-simulation-Trim.mp4",
+        url: "/dronesGallery/GANDIVA/Gandive2.mp4",
         description:
           "Detailed walkthrough of the radar detection system and autonomous target engagement workflow.",
       },
@@ -788,16 +785,14 @@ export const products = [
     layout: "left",
 
     specs: ["FPV Control", "Optical Fiber Communication", "High Speed"],
-    image:
-      "https://weevildrone.co.in/wp-content/uploads/2025/09/indrajit-removebg-preview.png",
+    image: "/dronesGallery/INDRAJIT/indrajit1.png",
     color: "from-gray-700 to-black",
     accent: "bg-gray-800",
 
     //  Media Gallery
     gallery: [
       {
-        image:
-          "https://weevildrone.co.in/wp-content/uploads/2025/09/indrajit-removebg-preview.png",
+        image: "/dronesGallery/INDRAJIT/indrajit1.png",
         caption: "INDRAJIT FPV Drone View",
       },
     ],
@@ -806,7 +801,7 @@ export const products = [
     videos: [
       {
         title: "Operational Flight Test",
-        url: "https://weevildrone.co.in/wp-content/uploads/2025/09/1-Bengal-Air-NCC_Training_2.mp4#t=1,20",
+        url: "/dronesGallery/INDRAJIT/indrajit.mp4",
         description: "Watch the INDRAJIT FPV drone in tactical demonstration.",
       },
     ],

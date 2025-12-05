@@ -171,7 +171,7 @@ const MissionValues = () => {
                 className="relative"
               >
                 <img
-                  src="https://media.licdn.com/dms/image/v2/D5612AQEDUDcu7Otl-w/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1655080622287?e=2147483647&v=beta&t=Kz8UKcGmr7qn6a9csEVeSKPtbqdZyv_igejPGmJ2RZs"
+                  src="/mission.png"
                   alt="Why Choose Our Drone Solutions"
                   className="w-full h-96 object-fill "
                 />

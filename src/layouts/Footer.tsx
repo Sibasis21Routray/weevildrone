@@ -132,7 +132,7 @@ const Footer = () => {
               className="flex items-center gap-3 mb-6"
             >
               <img
-                src="https://weevildrone.co.in/wp-content/uploads/2025/09/cropped-WhatsApp-Image-2025-08-27-at-1.11.53-PM.jpeg"
+                src="/logo.jpeg"
                 alt="Logo"
                 className="h-8 w-auto"
               />

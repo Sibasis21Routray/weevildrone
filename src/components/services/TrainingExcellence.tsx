@@ -98,7 +98,7 @@ export const TrainingExcellence: React.FC = () => {
             viewport={{ once: true }}
           >
             <img
-              src="https://weevildrone.co.in/wp-content/uploads/2025/09/1-Bengal-Air-NCC_Training_9-768x346.jpg" // Replace with your NCC training image
+              src="trainning1.jpg" 
               alt="NCC students receiving hands-on drone training at Behala Flying Club, Kolkata"
               className="rounded-lg shadow-2xl w-full h-96 object-cover"
             />
