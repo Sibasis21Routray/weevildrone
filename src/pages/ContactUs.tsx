@@ -79,8 +79,7 @@ const ContactUs = () => {
           <div className="space-y-1 text-left mt-3">
             <motion.div
               variants={itemVariants}
-              whileHover={{ scale: 1.02, y: -2 }}
-              className="group flex items-start gap-4 p-4 rounded-lg hover:bg-gray-50 transition-colors duration-300"
+              className="group flex items-start gap-4 p-4 rounded-lg "
             >
               <div className="p-2 bg-gray-100 rounded-lg  transition-colors duration-300">
                 <MapPin className="h-6 w-6 text-gray-600 " />
@@ -94,8 +93,7 @@ const ContactUs = () => {
 
             <motion.div
               variants={itemVariants}
-              whileHover={{ scale: 1.02, y: -2 }}
-              className="group flex items-start gap-4 p-4 rounded-lg hover:bg-gray-50 transition-colors duration-300"
+              className="group flex items-start gap-4 p-4 rounded-lg "
             >
               <div className="p-2 bg-gray-100 rounded-lg transition-colors duration-300">
                 <Mail className="h-6 w-6 text-gray-600 " />
@@ -113,8 +111,7 @@ const ContactUs = () => {
 
             <motion.div
               variants={itemVariants}
-              whileHover={{ scale: 1.02, y: -2 }}
-              className="group flex items-start gap-4 p-4 rounded-lg hover:bg-gray-50 transition-colors duration-300"
+              className="group flex items-start gap-4 p-4 rounded-lg "
             >
               <div className="p-2 bg-gray-100 rounded-lg transition-colors duration-300">
                 <Phone className="h-6 w-6 text-gray-600" />
