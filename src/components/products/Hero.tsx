@@ -116,7 +116,7 @@ const Hero: React.FC<HeroProps> = ({
                     image ||
                     "https://images.unsplash.com/photo-1581091870622-9b6c31d84b36?auto=format&fit=crop&w=1200&q=80"
                   }
-                  alt={name}
+                  alt={name} loading="eager"
                   className="w-full h-auto object-contain rounded-xl transform hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 rounded-xl"></div>

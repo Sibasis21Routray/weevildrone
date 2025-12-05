@@ -3,12 +3,12 @@ import Hero from "../components/products/Hero";
 import ProductGallery from "../components/products/ProductGallery";
 import { products } from "../data/ProductDetails";
 import ProductDetails from "../components/products/ProductDetails";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 
 function Product() {
   const { slug } = useParams<{ slug: string }>();
   const sectionRef = useRef<HTMLDivElement | null>(null);
-
+  const [loading,setLoading]=useState(false);
 
   //scroll to secification section on btn click
     const scrollToSection = () => {
@@ -21,6 +21,7 @@ function Product() {
   }
 
   const product = products.find((p) => p.url.includes(slug));
+  
   if (!product) return <div>Product not found</div>;
 
   return (
