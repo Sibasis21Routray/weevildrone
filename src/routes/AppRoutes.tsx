@@ -35,7 +35,7 @@ function AppRoutes() {
       />
 
       {/** thank you page */}
-      <Route path="contact/thank-you" element={<ThankYouPage />} />
+      <Route path="/contact/thank-you" element={<ThankYouPage />} />
     </Routes>
   );
 }
