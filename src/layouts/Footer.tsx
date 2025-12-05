@@ -98,7 +98,7 @@ const Footer = () => {
   const handleSubscribe = (e: any) => {
     e.preventDefault();
     // Handle subscription logic here
-    console.log("Subscribed:", email);
+    // console.log("Subscribed:", email);
     setEmail("");
     // Add your subscription API call here
   };

@@ -10,6 +10,7 @@ import News1 from "../pages/LatestNewsPages/NewsMeetingWithDefenceMinister";
 import East_Tech_2025 from "../pages/LatestNewsPages/ East_Tech_2025";
 import East_Tech from "../pages/LatestNewsPages/East_Tech";
 import ThankYouPage from "../components/contact/ThankYouPage";
+import Icarus_Successful_Demo from "../pages/LatestNewsPages/Icarus_Successful_Demo";
 
 function AppRoutes() {
   return (
@@ -33,7 +34,10 @@ function AppRoutes() {
         path="/news/east-tech-2025-participation-certificate-of-appreciation"
         element={<East_Tech />}
       />
-
+      <Route
+        path="/news/icarus-hrudel-test-successful-demo"
+        element={<Icarus_Successful_Demo />}
+      />
       {/** thank you page */}
       <Route path="/contact/thank-you" element={<ThankYouPage />} />
     </Routes>

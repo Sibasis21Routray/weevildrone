@@ -25,6 +25,8 @@ const Hero: React.FC<HeroProps> = ({
   layout = "left",
   onScrollClick,
 }) => {
+
+  
   return (
     <section className="relative w-full bg-primary text-secondary overflow-hidden">
       {/* Background gradient */}

@@ -128,10 +128,10 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({
   productData ,
 }) => {
 
-  console.log(
-    "Product Data in ProductDetails:",
-    productData.operationalCharacteristics
-  );
+  // console.log(
+  //   "Product Data in ProductDetails:",
+  //   productData.operationalCharacteristics
+  // );
 
   return (
     <div className="bg-white py-12" ref={sectionRef}>

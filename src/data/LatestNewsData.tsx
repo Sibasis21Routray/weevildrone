@@ -43,6 +43,20 @@ export const newsData = [
     layout: "image-right",
     url: "/news/east-tech-2025-participation-certificate-of-appreciation",
   },
+  {
+    id: "4",
+    date: "26 November 2025",
+    title: "Icarus UAV – Successful Hrudel Test Demonstration",
+    descreption:
+      "WeevilsDrones Pvt. Ltd. successfully conducted a Hrudel Test demonstration of the ICARUS VTOL UAV, supported by an autonomous quadcopter system. The test validated flight stability, transition performance, and coordinated air-support capabilities, highlighting ICARUS’s efficiency in real-field operational conditions.",
+    content:
+      "The ICARUS UAV underwent a successful Hrudel Test, showcasing exceptional stability during vertical takeoff, forward-flight transition, and precision landing. Supported by an assisting quadcopter for situational monitoring and telemetry tracking, the demonstration confirmed the system's readiness for advanced surveillance, terrain testing, and long-duration autonomous missions. This milestone further strengthens our commitment to delivering high-reliability UAV solutions for defense and industrial applications.",
+    type: "demo",
+    image: "/news/icarus-demo/icarus-demo-2.jpeg",
+    layout: "image-left",
+    url: "/news/icarus-hrudel-test-successful-demo",
+  },
+
   // {
   //   id: "4",
   //   date: "12th October 2025",

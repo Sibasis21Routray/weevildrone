@@ -204,7 +204,7 @@ const ProductShowcase = () => {
                   dragConstraints={{ left: 0, right: 0 }}
                   dragElastic={0.8}
                   onDragEnd={(e, { offset, velocity }) => {
-                    console.log(e);
+                    // console.log(e);
                     const swipe = swipePower(offset.x, velocity.x);
                     if (swipe < -swipeConfidenceThreshold) {
                       paginate(1);

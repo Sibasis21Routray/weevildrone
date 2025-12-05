@@ -20,9 +20,9 @@ const NewsMeetingWithDefenceMinister = () => {
       return postSlug === slug;
     });
 
-    console.log("Current URL:", location.pathname);
-    console.log("Slug:", slug);
-    console.log("Found Post:", foundPost);
+    // console.log("Current URL:", location.pathname);
+    // console.log("Slug:", slug);
+    // console.log("Found Post:", foundPost);
 
     setCurrentPost(foundPost || null);
   }, [location.pathname]);

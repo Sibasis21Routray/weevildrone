@@ -28,7 +28,7 @@ const RelatedNews: React.FC<RelatedNewsProps> = ({ skipId }) => {
             transition={{ delay: index * 0.1 }}
           >
             {/* Thumbnail */}
-            <div className="relative min-w-[90px] h-[70px] overflow-hidden ">
+            <div className="relative w-[90px] h-[70px] overflow-hidden ">
               <img
                 src={item.image}
                 alt={item.title}
