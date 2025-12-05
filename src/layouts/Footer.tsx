@@ -92,7 +92,7 @@ const Footer = () => {
     { name: "Services", path: "/ourservices" },
     { name: "Team", path: "/team" },
     { name: "Gallery", path: "/gallery" },
-    { name: "Contact", path: "/contactus" },
+    { name: "Contact", path: "/contact" },
   ];
 
   const handleSubscribe = (e: any) => {

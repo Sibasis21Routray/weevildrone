@@ -9,12 +9,13 @@ import Product from "../pages/Product";
 import News1 from "../pages/LatestNewsPages/NewsMeetingWithDefenceMinister";
 import East_Tech_2025 from "../pages/LatestNewsPages/ East_Tech_2025";
 import East_Tech from "../pages/LatestNewsPages/East_Tech";
+import ThankYouPage from "../components/contact/ThankYouPage";
 
 function AppRoutes() {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/contactus" element={<ContactUs />} />
+      <Route path="/contact" element={<ContactUs />} />
       <Route path="/about" element={<AboutUs />} />
       <Route path="/ourservices" element={<OurServices />} />
       <Route path="/team" element={<Team />} />
@@ -32,6 +33,9 @@ function AppRoutes() {
         path="/news/east-tech-2025-participation-certificate-of-appreciation"
         element={<East_Tech />}
       />
+
+      {/** thank you page */}
+      <Route path="contact/thank-you" element={<ThankYouPage />} />
     </Routes>
   );
 }

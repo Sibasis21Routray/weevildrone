@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 
 const CTASection: React.FC = () => {
   const navigate = useNavigate();
-  const handleContactClick = () => navigate("/contactUs");
+  const handleContactClick = () => navigate("/contact");
 
   return (
     <div className={`bg-primary py-6`}>

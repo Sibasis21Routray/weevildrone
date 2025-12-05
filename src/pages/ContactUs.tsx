@@ -44,13 +44,13 @@ const ContactUs = () => {
 
   return (
     <div className="relative overflow-hidden min-h-screen bg-white">
-      <section id="contact" className="flex flex-col lg:flex-row lg:gap-[10vw]">
+      <section id="contact" className="flex flex-col items-center justify-center lg:flex-row ">
         {/* Contact Form */}
         <motion.div
           initial={{ opacity: 0, x: 50 }}
           animate={isVisible ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
           transition={{ duration: 0.7, delay: 0.3 }}
-          className="order-1 lg:flex-1 lg:order-2 mb-8 lg:mb-0"
+          className="order-1 lg:flex-1 lg:order-2 mb-8 lg:mb-0 text-right items-end flex justify-end"
         >
           <ContactForm />
         </motion.div>
@@ -66,7 +66,7 @@ const ContactUs = () => {
             <img
               src="/contact.jpg"
               alt="Contact Us"
-              className="object-fill h-fit lg:h-[40vh] w-full rounded-lg mt-5 "
+              className="object-fill h-fit lg:h-[20vh] w-fit rounded-lg mt-5 "
               onError={(e) => {
                 // Fallback if image fails to load
                 e.currentTarget.src =
