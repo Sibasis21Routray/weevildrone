@@ -36,7 +36,10 @@ const trainingFeatures = [
 
 export const TrainingServices: React.FC = () => {
   return (
-    <section id="training" className="py-1 bg-[var(--color-primary)] md:mt-10 lg:mt-4">
+    <section
+      id="training"
+      className="py-1 bg-[var(--color-primary)] md:mt-10 lg:mt-4"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           className="text-center mb-16"
@@ -135,19 +138,19 @@ export const TrainingServices: React.FC = () => {
             className="w-full"
           >
             <div className="flex flex-col lg:flex-row gap-6 lg:gap-10 items-center text-center lg:text-left">
-              <h3 className="text-2xl font-bold text-primary bg-tertiary p-3 lg:w-1/3 w-full">
+              <h3 className="text-2xl font-bold text-tertiary   lg:w-1/3 w-full ">
                 Comprehensive Drone Training
               </h3>
               <div className="flex flex-col gap-4 lg:w-2/3 w-full">
                 <p className="text-md leading-relaxed">
                   Comprehensive drone training program for 1 Bengal Air NCC
                   students at Behala Flying Club, Kolkata, West Bengal. Central
-                  Government makes it mandatory for NCC students to get trained on
-                  Drone Technology.
+                  Government makes it mandatory for NCC students to get trained
+                  on Drone Technology.
                 </p>
                 <p className="text-md leading-relaxed">
-                  NCC students receiving hands-on drone training at Behala Flying
-                  Club, Kolkata
+                  NCC students receiving hands-on drone training at Behala
+                  Flying Club, Kolkata
                 </p>
               </div>
             </div>

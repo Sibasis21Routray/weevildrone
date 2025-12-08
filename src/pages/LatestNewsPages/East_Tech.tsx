@@ -47,7 +47,7 @@ const East_Tech = () => {
             <div className="container mx-auto max-w-full sm:max-w-3xl lg:max-w-4xl px-4 sm:px-6">
               <div className="max-w-4xl mx-auto px-4 py-8">
                 <h2 className="text-2xl font-semibold mb-4">
-                  1. East Tech X 2025 – Participation & Recognition
+                  East Tech X 2025 – Participation & Recognition
                 </h2>
 
                 <p className="text-gray-600 mb-6 lg:text-justify text-left">

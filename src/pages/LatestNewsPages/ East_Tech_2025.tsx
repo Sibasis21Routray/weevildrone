@@ -47,7 +47,7 @@ const East_Tech_2025 = () => {
             <div className="container mx-auto max-w-full sm:max-w-3xl lg:max-w-4xl px-4 sm:px-6">
               <div className="max-w-4xl mx-auto px-4 py-8">
                 <h2 className="text-2xl font-semibold mb-4">
-                  1. WeevilsDrones Achieves Excellence at EAST TECH X – High
+                  WeevilsDrones Achieves Excellence at EAST TECH X – High
                   Altitude Trials
                 </h2>
 
